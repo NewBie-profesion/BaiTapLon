@@ -1,0 +1,10 @@
+E:\ltnc\winform\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe.config
+E:\ltnc\winform\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.exe
+E:\ltnc\winform\BaiTapLon\BaiTapLon\bin\Debug\BaiTapLon.pdb
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csprojAssemblyReference.cache
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Form1.resources
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.Properties.Resources.resources
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csproj.GenerateResource.cache
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.csproj.CoreCompileInputs.cache
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.exe
+E:\ltnc\winform\BaiTapLon\BaiTapLon\obj\Debug\BaiTapLon.pdb
