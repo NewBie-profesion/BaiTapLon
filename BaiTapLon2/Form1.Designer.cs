@@ -35,25 +35,28 @@ namespace BaiTapLon2
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txbMatKhau = new System.Windows.Forms.TextBox();
+            this.txbTaiKhoan = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSuDung = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.txbTimKiem = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
+            this.bunifuThinButton254 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbTaiKhoan1 = new System.Windows.Forms.TextBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -114,10 +117,6 @@ namespace BaiTapLon2
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bunifuThinButton254 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton255 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -132,7 +131,6 @@ namespace BaiTapLon2
             this.splitContainer2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -195,13 +193,13 @@ namespace BaiTapLon2
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox3);
-            this.groupBox4.Controls.Add(this.bunifuThinButton21);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.btnDangKi);
+            this.groupBox4.Controls.Add(this.txbMatKhau);
+            this.groupBox4.Controls.Add(this.txbTaiKhoan);
             this.groupBox4.Controls.Add(this.panel3);
             this.groupBox4.Controls.Add(this.panel1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.ForeColor = System.Drawing.Color.Aquamarine;
+            this.groupBox4.ForeColor = System.Drawing.Color.DarkKhaki;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(304, 522);
@@ -219,52 +217,59 @@ namespace BaiTapLon2
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
-            // bunifuThinButton21
+            // btnDangKi
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Đăng kí ";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(39, 385);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(230, 41);
-            this.bunifuThinButton21.TabIndex = 14;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDangKi.ActiveBorderThickness = 1;
+            this.btnDangKi.ActiveCornerRadius = 20;
+            this.btnDangKi.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnDangKi.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDangKi.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDangKi.BackgroundImage")));
+            this.btnDangKi.ButtonText = "Đăng kí ";
+            this.btnDangKi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangKi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKi.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnDangKi.IdleBorderThickness = 1;
+            this.btnDangKi.IdleCornerRadius = 20;
+            this.btnDangKi.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnDangKi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDangKi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDangKi.Location = new System.Drawing.Point(39, 385);
+            this.btnDangKi.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDangKi.Name = "btnDangKi";
+            this.btnDangKi.Size = new System.Drawing.Size(230, 41);
+            this.btnDangKi.TabIndex = 14;
+            this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
-            // textBox2
+            // txbMatKhau
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(39, 334);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 20);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.Text = "Mật Khẩu";
+            this.txbMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbMatKhau.ForeColor = System.Drawing.Color.Silver;
+            this.txbMatKhau.Location = new System.Drawing.Point(39, 334);
+            this.txbMatKhau.Name = "txbMatKhau";
+            this.txbMatKhau.Size = new System.Drawing.Size(230, 20);
+            this.txbMatKhau.TabIndex = 19;
+            this.txbMatKhau.Text = "Mật Khẩu";
+            this.txbMatKhau.Click += new System.EventHandler(this.txbTaiKhoan_Click);
+            this.txbMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTaiKhoan_KeyPress);
+            this.txbMatKhau.Leave += new System.EventHandler(this.txbMatKhau_Leave);
             // 
-            // textBox1
+            // txbTaiKhoan
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(39, 285);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Text = "Tài Khoản";
+            this.txbTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTaiKhoan.ForeColor = System.Drawing.Color.Silver;
+            this.txbTaiKhoan.Location = new System.Drawing.Point(39, 285);
+            this.txbTaiKhoan.Name = "txbTaiKhoan";
+            this.txbTaiKhoan.Size = new System.Drawing.Size(230, 20);
+            this.txbTaiKhoan.TabIndex = 20;
+            this.txbTaiKhoan.Text = "Tài Khoản";
+            this.txbTaiKhoan.Click += new System.EventHandler(this.txbTaiKhoan_Click);
+            this.txbTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTaiKhoan_KeyPress);
+            this.txbTaiKhoan.Leave += new System.EventHandler(this.txbTaiKhoan_Leave);
             // 
             // panel3
             // 
@@ -296,10 +301,9 @@ namespace BaiTapLon2
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.splitContainer2.Panel2.Controls.Add(this.bunifuThinButton255);
+            this.splitContainer2.Panel2.Controls.Add(this.btnSuDung);
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
-            this.splitContainer2.Panel2.Controls.Add(this.bunifuCustomTextbox1);
-            this.splitContainer2.Panel2.Controls.Add(this.pictureBox4);
+            this.splitContainer2.Panel2.Controls.Add(this.txbTimKiem);
             this.splitContainer2.Size = new System.Drawing.Size(662, 522);
             this.splitContainer2.SplitterDistance = 333;
             this.splitContainer2.TabIndex = 0;
@@ -309,7 +313,7 @@ namespace BaiTapLon2
             this.groupBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(662, 333);
@@ -322,10 +326,39 @@ namespace BaiTapLon2
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
             this.dataGridView1.Location = new System.Drawing.Point(3, 23);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(656, 307);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // btnSuDung
+            // 
+            this.btnSuDung.ActiveBorderThickness = 1;
+            this.btnSuDung.ActiveCornerRadius = 20;
+            this.btnSuDung.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnSuDung.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSuDung.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSuDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSuDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSuDung.BackgroundImage")));
+            this.btnSuDung.ButtonText = "Sử Dụng";
+            this.btnSuDung.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuDung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuDung.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnSuDung.IdleBorderThickness = 1;
+            this.btnSuDung.IdleCornerRadius = 20;
+            this.btnSuDung.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSuDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSuDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSuDung.Location = new System.Drawing.Point(190, 95);
+            this.btnSuDung.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSuDung.Name = "btnSuDung";
+            this.btnSuDung.Size = new System.Drawing.Size(206, 41);
+            this.btnSuDung.TabIndex = 12;
+            this.btnSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSuDung.Click += new System.EventHandler(this.btnSuDung_Click);
             // 
             // panel2
             // 
@@ -335,29 +368,21 @@ namespace BaiTapLon2
             this.panel2.Size = new System.Drawing.Size(300, 1);
             this.panel2.TabIndex = 7;
             // 
-            // bunifuCustomTextbox1
+            // txbTimKiem
             // 
-            this.bunifuCustomTextbox1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuCustomTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomTextbox1.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(143, 50);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(264, 20);
-            this.bunifuCustomTextbox1.TabIndex = 0;
-            this.bunifuCustomTextbox1.Text = "Tìm Kiếm";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(413, 40);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
+            this.txbTimKiem.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txbTimKiem.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.txbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTimKiem.ForeColor = System.Drawing.Color.Silver;
+            this.txbTimKiem.Location = new System.Drawing.Point(143, 50);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(264, 20);
+            this.txbTimKiem.TabIndex = 0;
+            this.txbTimKiem.Text = "Tìm Kiếm";
+            this.txbTimKiem.Click += new System.EventHandler(this.txbTaiKhoan_Click);
+            this.txbTimKiem.TextChanged += new System.EventHandler(this.txbTimKiem_TextChanged);
+            this.txbTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTaiKhoan_KeyPress);
+            this.txbTimKiem.Leave += new System.EventHandler(this.txbTimKiem_Leave);
             // 
             // tabPage2
             // 
@@ -387,8 +412,7 @@ namespace BaiTapLon2
             this.splitContainer3.Panel1.Controls.Add(this.label1);
             this.splitContainer3.Panel1.Controls.Add(this.textBox5);
             this.splitContainer3.Panel1.Controls.Add(this.textBox4);
-            this.splitContainer3.Panel1.Controls.Add(this.textBox3);
-           
+            this.splitContainer3.Panel1.Controls.Add(this.txbTaiKhoan1);
             // 
             // splitContainer3.Panel2
             // 
@@ -407,7 +431,31 @@ namespace BaiTapLon2
             this.label3.Size = new System.Drawing.Size(258, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "*Lưu Ý: Tài Khoản Chỉ có Thể đặt 1 máy";
-
+            // 
+            // bunifuThinButton254
+            // 
+            this.bunifuThinButton254.ActiveBorderThickness = 1;
+            this.bunifuThinButton254.ActiveCornerRadius = 20;
+            this.bunifuThinButton254.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton254.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton254.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton254.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuThinButton254.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton254.BackgroundImage")));
+            this.bunifuThinButton254.ButtonText = "Trả Máy";
+            this.bunifuThinButton254.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton254.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton254.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton254.IdleBorderThickness = 1;
+            this.bunifuThinButton254.IdleCornerRadius = 20;
+            this.bunifuThinButton254.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuThinButton254.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton254.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton254.Location = new System.Drawing.Point(150, 263);
+            this.bunifuThinButton254.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton254.Name = "bunifuThinButton254";
+            this.bunifuThinButton254.Size = new System.Drawing.Size(112, 42);
+            this.bunifuThinButton254.TabIndex = 0;
+            this.bunifuThinButton254.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuThinButton23
             // 
@@ -434,6 +482,15 @@ namespace BaiTapLon2
             this.bunifuThinButton23.TabIndex = 0;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 194);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Số Giờ Chơi";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -452,22 +509,28 @@ namespace BaiTapLon2
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài Khoản";
             // 
+            // textBox5
+            // 
+            this.textBox5.Enabled = false;
+            this.textBox5.Location = new System.Drawing.Point(19, 217);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(234, 27);
+            this.textBox5.TabIndex = 0;
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(19, 159);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(234, 27);
             this.textBox4.TabIndex = 0;
-
             // 
-            // textBox3
+            // txbTaiKhoan1
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(19, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 27);
-            this.textBox3.TabIndex = 0;
-
+            this.txbTaiKhoan1.Enabled = false;
+            this.txbTaiKhoan1.Location = new System.Drawing.Point(19, 100);
+            this.txbTaiKhoan1.Name = "txbTaiKhoan1";
+            this.txbTaiKhoan1.Size = new System.Drawing.Size(234, 27);
+            this.txbTaiKhoan1.TabIndex = 0;
             // 
             // splitContainer4
             // 
@@ -1944,81 +2007,14 @@ namespace BaiTapLon2
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 23);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(964, 496);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // bunifuThinButton254
-            // 
-            this.bunifuThinButton254.ActiveBorderThickness = 1;
-            this.bunifuThinButton254.ActiveCornerRadius = 20;
-            this.bunifuThinButton254.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton254.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton254.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton254.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton254.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton254.BackgroundImage")));
-            this.bunifuThinButton254.ButtonText = "Trả Máy";
-            this.bunifuThinButton254.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton254.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton254.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton254.IdleBorderThickness = 1;
-            this.bunifuThinButton254.IdleCornerRadius = 20;
-            this.bunifuThinButton254.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton254.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton254.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton254.Location = new System.Drawing.Point(150, 263);
-            this.bunifuThinButton254.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton254.Name = "bunifuThinButton254";
-            this.bunifuThinButton254.Size = new System.Drawing.Size(112, 42);
-            this.bunifuThinButton254.TabIndex = 0;
-            this.bunifuThinButton254.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton255
-            // 
-            this.bunifuThinButton255.ActiveBorderThickness = 1;
-            this.bunifuThinButton255.ActiveCornerRadius = 20;
-            this.bunifuThinButton255.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton255.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton255.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton255.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuThinButton255.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton255.BackgroundImage")));
-            this.bunifuThinButton255.ButtonText = "Sử Dụng";
-            this.bunifuThinButton255.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton255.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton255.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton255.IdleBorderThickness = 1;
-            this.bunifuThinButton255.IdleCornerRadius = 20;
-            this.bunifuThinButton255.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuThinButton255.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton255.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton255.Location = new System.Drawing.Point(190, 95);
-            this.bunifuThinButton255.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton255.Name = "bunifuThinButton255";
-            this.bunifuThinButton255.Size = new System.Drawing.Size(206, 41);
-            this.bunifuThinButton255.TabIndex = 12;
-            this.bunifuThinButton255.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(19, 217);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(234, 27);
-            this.textBox5.TabIndex = 0;
-
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Enabled = false;
-            this.label6.Location = new System.Drawing.Point(15, 194);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Số Giờ Chơi";
             // 
             // Form1
             // 
@@ -2033,6 +2029,7 @@ namespace BaiTapLon2
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2049,7 +2046,6 @@ namespace BaiTapLon2
             this.splitContainer2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -2083,13 +2079,12 @@ namespace BaiTapLon2
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txbTimKiem;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbTaiKhoan1;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -2152,15 +2147,15 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton229;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnDangKi;
+        private System.Windows.Forms.TextBox txbMatKhau;
+        private System.Windows.Forms.TextBox txbTaiKhoan;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataGridView2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton254;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton255;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnSuDung;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
     }
