@@ -468,6 +468,7 @@ namespace BaiTapLon2
             this.bDatMay.Size = new System.Drawing.Size(112, 42);
             this.bDatMay.TabIndex = 0;
             this.bDatMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bDatMay.Click += new System.EventHandler(this.bDatMay_Click);
             // 
             // label6
             // 
@@ -628,6 +629,7 @@ namespace BaiTapLon2
             this.bunifuThinButton228.Size = new System.Drawing.Size(59, 54);
             this.bunifuThinButton228.TabIndex = 24;
             this.bunifuThinButton228.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton228.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton227
             // 
@@ -654,6 +656,7 @@ namespace BaiTapLon2
             this.bunifuThinButton227.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton227.TabIndex = 23;
             this.bunifuThinButton227.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton227.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton226
             // 
@@ -680,6 +683,7 @@ namespace BaiTapLon2
             this.bunifuThinButton226.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton226.TabIndex = 22;
             this.bunifuThinButton226.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton226.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton225
             // 
@@ -706,6 +710,7 @@ namespace BaiTapLon2
             this.bunifuThinButton225.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton225.TabIndex = 21;
             this.bunifuThinButton225.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton225.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton224
             // 
@@ -732,6 +737,7 @@ namespace BaiTapLon2
             this.bunifuThinButton224.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton224.TabIndex = 20;
             this.bunifuThinButton224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton224.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton223
             // 
@@ -758,6 +764,7 @@ namespace BaiTapLon2
             this.bunifuThinButton223.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton223.TabIndex = 19;
             this.bunifuThinButton223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton223.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton222
             // 
@@ -784,6 +791,7 @@ namespace BaiTapLon2
             this.bunifuThinButton222.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton222.TabIndex = 18;
             this.bunifuThinButton222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton222.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton221
             // 
@@ -810,6 +818,7 @@ namespace BaiTapLon2
             this.bunifuThinButton221.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton221.TabIndex = 17;
             this.bunifuThinButton221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton221.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton220
             // 
@@ -836,6 +845,7 @@ namespace BaiTapLon2
             this.bunifuThinButton220.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton220.TabIndex = 16;
             this.bunifuThinButton220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton220.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton219
             // 
@@ -862,6 +872,7 @@ namespace BaiTapLon2
             this.bunifuThinButton219.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton219.TabIndex = 15;
             this.bunifuThinButton219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton219.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton218
             // 
@@ -888,6 +899,7 @@ namespace BaiTapLon2
             this.bunifuThinButton218.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton218.TabIndex = 14;
             this.bunifuThinButton218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton218.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton217
             // 
@@ -914,6 +926,7 @@ namespace BaiTapLon2
             this.bunifuThinButton217.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton217.TabIndex = 13;
             this.bunifuThinButton217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton217.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton216
             // 
@@ -940,6 +953,7 @@ namespace BaiTapLon2
             this.bunifuThinButton216.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton216.TabIndex = 12;
             this.bunifuThinButton216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton216.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton215
             // 
@@ -966,6 +980,7 @@ namespace BaiTapLon2
             this.bunifuThinButton215.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton215.TabIndex = 11;
             this.bunifuThinButton215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton215.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton214
             // 
@@ -992,6 +1007,7 @@ namespace BaiTapLon2
             this.bunifuThinButton214.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton214.TabIndex = 10;
             this.bunifuThinButton214.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton214.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton213
             // 
@@ -1018,6 +1034,7 @@ namespace BaiTapLon2
             this.bunifuThinButton213.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton213.TabIndex = 9;
             this.bunifuThinButton213.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton213.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton212
             // 
@@ -1044,6 +1061,7 @@ namespace BaiTapLon2
             this.bunifuThinButton212.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton212.TabIndex = 8;
             this.bunifuThinButton212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton212.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton211
             // 
@@ -1070,6 +1088,7 @@ namespace BaiTapLon2
             this.bunifuThinButton211.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton211.TabIndex = 7;
             this.bunifuThinButton211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton211.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton210
             // 
@@ -1096,6 +1115,7 @@ namespace BaiTapLon2
             this.bunifuThinButton210.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton210.TabIndex = 6;
             this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton210.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton29
             // 
@@ -1122,6 +1142,7 @@ namespace BaiTapLon2
             this.bunifuThinButton29.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton29.TabIndex = 5;
             this.bunifuThinButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton29.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton28
             // 
@@ -1148,6 +1169,7 @@ namespace BaiTapLon2
             this.bunifuThinButton28.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton28.TabIndex = 4;
             this.bunifuThinButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton28.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton27
             // 
@@ -1174,6 +1196,7 @@ namespace BaiTapLon2
             this.bunifuThinButton27.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton27.TabIndex = 3;
             this.bunifuThinButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton27.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton26
             // 
@@ -1200,6 +1223,7 @@ namespace BaiTapLon2
             this.bunifuThinButton26.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton26.TabIndex = 2;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton26.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton25
             // 
@@ -1226,6 +1250,7 @@ namespace BaiTapLon2
             this.bunifuThinButton25.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton25.TabIndex = 1;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton24
             // 
@@ -1252,6 +1277,7 @@ namespace BaiTapLon2
             this.bunifuThinButton24.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton24.TabIndex = 0;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.buttons_Click);
             // 
             // groupBox3
             // 
@@ -1345,6 +1371,7 @@ namespace BaiTapLon2
             this.bunifuThinButton253.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton253.TabIndex = 24;
             this.bunifuThinButton253.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton253.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton252
             // 
@@ -1371,6 +1398,7 @@ namespace BaiTapLon2
             this.bunifuThinButton252.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton252.TabIndex = 23;
             this.bunifuThinButton252.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton252.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton251
             // 
@@ -1397,6 +1425,7 @@ namespace BaiTapLon2
             this.bunifuThinButton251.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton251.TabIndex = 22;
             this.bunifuThinButton251.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton251.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton250
             // 
@@ -1423,6 +1452,7 @@ namespace BaiTapLon2
             this.bunifuThinButton250.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton250.TabIndex = 21;
             this.bunifuThinButton250.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton250.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton249
             // 
@@ -1449,6 +1479,7 @@ namespace BaiTapLon2
             this.bunifuThinButton249.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton249.TabIndex = 20;
             this.bunifuThinButton249.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton249.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton248
             // 
@@ -1475,6 +1506,7 @@ namespace BaiTapLon2
             this.bunifuThinButton248.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton248.TabIndex = 19;
             this.bunifuThinButton248.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton248.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton247
             // 
@@ -1501,6 +1533,7 @@ namespace BaiTapLon2
             this.bunifuThinButton247.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton247.TabIndex = 18;
             this.bunifuThinButton247.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton247.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton246
             // 
@@ -1527,6 +1560,7 @@ namespace BaiTapLon2
             this.bunifuThinButton246.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton246.TabIndex = 17;
             this.bunifuThinButton246.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton246.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton245
             // 
@@ -1553,6 +1587,7 @@ namespace BaiTapLon2
             this.bunifuThinButton245.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton245.TabIndex = 16;
             this.bunifuThinButton245.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton245.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton244
             // 
@@ -1579,6 +1614,7 @@ namespace BaiTapLon2
             this.bunifuThinButton244.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton244.TabIndex = 15;
             this.bunifuThinButton244.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton244.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton243
             // 
@@ -1605,6 +1641,7 @@ namespace BaiTapLon2
             this.bunifuThinButton243.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton243.TabIndex = 14;
             this.bunifuThinButton243.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton243.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton242
             // 
@@ -1631,6 +1668,7 @@ namespace BaiTapLon2
             this.bunifuThinButton242.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton242.TabIndex = 13;
             this.bunifuThinButton242.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton242.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton241
             // 
@@ -1657,6 +1695,7 @@ namespace BaiTapLon2
             this.bunifuThinButton241.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton241.TabIndex = 12;
             this.bunifuThinButton241.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton241.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton240
             // 
@@ -1683,6 +1722,7 @@ namespace BaiTapLon2
             this.bunifuThinButton240.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton240.TabIndex = 11;
             this.bunifuThinButton240.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton240.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton239
             // 
@@ -1709,6 +1749,7 @@ namespace BaiTapLon2
             this.bunifuThinButton239.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton239.TabIndex = 10;
             this.bunifuThinButton239.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton239.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton238
             // 
@@ -1735,6 +1776,7 @@ namespace BaiTapLon2
             this.bunifuThinButton238.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton238.TabIndex = 9;
             this.bunifuThinButton238.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton238.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton237
             // 
@@ -1761,6 +1803,7 @@ namespace BaiTapLon2
             this.bunifuThinButton237.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton237.TabIndex = 8;
             this.bunifuThinButton237.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton237.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton236
             // 
@@ -1787,6 +1830,7 @@ namespace BaiTapLon2
             this.bunifuThinButton236.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton236.TabIndex = 7;
             this.bunifuThinButton236.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton236.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton235
             // 
@@ -1813,6 +1857,7 @@ namespace BaiTapLon2
             this.bunifuThinButton235.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton235.TabIndex = 6;
             this.bunifuThinButton235.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton235.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton234
             // 
@@ -1839,6 +1884,7 @@ namespace BaiTapLon2
             this.bunifuThinButton234.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton234.TabIndex = 5;
             this.bunifuThinButton234.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton234.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton233
             // 
@@ -1865,6 +1911,7 @@ namespace BaiTapLon2
             this.bunifuThinButton233.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton233.TabIndex = 4;
             this.bunifuThinButton233.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton233.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton232
             // 
@@ -1891,6 +1938,7 @@ namespace BaiTapLon2
             this.bunifuThinButton232.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton232.TabIndex = 3;
             this.bunifuThinButton232.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton232.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton231
             // 
@@ -1917,6 +1965,7 @@ namespace BaiTapLon2
             this.bunifuThinButton231.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton231.TabIndex = 2;
             this.bunifuThinButton231.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton231.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton230
             // 
@@ -1943,6 +1992,7 @@ namespace BaiTapLon2
             this.bunifuThinButton230.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton230.TabIndex = 1;
             this.bunifuThinButton230.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton230.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton229
             // 
@@ -1969,6 +2019,7 @@ namespace BaiTapLon2
             this.bunifuThinButton229.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton229.TabIndex = 0;
             this.bunifuThinButton229.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton229.Click += new System.EventHandler(this.buttons_Click);
             // 
             // tabPage3
             // 
