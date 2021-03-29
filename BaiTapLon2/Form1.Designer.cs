@@ -221,9 +221,9 @@ namespace BaiTapLon2
             // 
             this.bDangKi.ActiveBorderThickness = 1;
             this.bDangKi.ActiveCornerRadius = 20;
-            this.bDangKi.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bDangKi.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDangKi.ActiveForecolor = System.Drawing.Color.White;
-            this.bDangKi.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bDangKi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDangKi.BackgroundImage")));
             this.bDangKi.ButtonText = "Đăng kí ";
@@ -330,9 +330,9 @@ namespace BaiTapLon2
             // 
             this.bSuDung.ActiveBorderThickness = 1;
             this.bSuDung.ActiveCornerRadius = 20;
-            this.bSuDung.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bSuDung.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bSuDung.ActiveForecolor = System.Drawing.Color.White;
-            this.bSuDung.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bSuDung.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bSuDung.BackColor = System.Drawing.Color.DarkSlateGray;
             this.bSuDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bSuDung.BackgroundImage")));
             this.bSuDung.ButtonText = "Sử Dụng";
@@ -423,9 +423,9 @@ namespace BaiTapLon2
             // 
             this.bTraMay.ActiveBorderThickness = 1;
             this.bTraMay.ActiveCornerRadius = 20;
-            this.bTraMay.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bTraMay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTraMay.ActiveForecolor = System.Drawing.Color.White;
-            this.bTraMay.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bTraMay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTraMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bTraMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bTraMay.BackgroundImage")));
             this.bTraMay.ButtonText = "Trả Máy";
@@ -448,9 +448,9 @@ namespace BaiTapLon2
             // 
             this.bDatMay.ActiveBorderThickness = 1;
             this.bDatMay.ActiveCornerRadius = 20;
-            this.bDatMay.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bDatMay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDatMay.ActiveForecolor = System.Drawing.Color.White;
-            this.bDatMay.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bDatMay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDatMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bDatMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDatMay.BackgroundImage")));
             this.bDatMay.ButtonText = "Đặt Máy";
@@ -2034,14 +2034,16 @@ namespace BaiTapLon2
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(970, 522);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Quản Lý ";
+            this.groupBox5.Text = "Quản Lý máy đang chơi";
             // 
             // dgvDSTaiKhoanDangChoi
             // 
@@ -2063,6 +2065,7 @@ namespace BaiTapLon2
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "QlyQuanNet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

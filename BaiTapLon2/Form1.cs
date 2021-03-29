@@ -43,7 +43,7 @@ namespace BaiTapLon2
 
         const double soGioChoiPhongThuong = 3600 / (5000 * 1.0);
         const double soGioChoiPhongVip = 3600 / (10000 * 1.0);
-        int soGioCoTheChoi = 3600;
+        TimeSpan soGioCoTheChoi;
 
 
         /**** Phần code các hàm tự xây dựng ****/
@@ -64,23 +64,13 @@ namespace BaiTapLon2
         }
 
         /* Các hàm riêng */
-        void loopPhong()
-        {
-            //if ()
-        }
-
         string dinhDangGio(int seconds)
         {
-            soGioCoTheChoi = seconds;
-            TimeSpan soGioChoiMacDinh = TimeSpan.FromSeconds(seconds);
-            string formatSoGioChoiMacDinh
-                = string.Format(
-                    "{0:D2}h{1:D2}m{2:D2}s",
-                    soGioChoiMacDinh.Hours,
-                    soGioChoiMacDinh.Minutes,
-                    soGioChoiMacDinh.Seconds
-                );
-            return formatSoGioChoiMacDinh;
+            int gio = seconds/3600;
+            int phut = (seconds % 3600) / 60;
+            int giay = ((seconds % 3600) % 60);
+
+            return $"{gio}h:{phut}m:{giay}s";
         }
 
         void XoaTextBoxTabQlyMay()
@@ -168,7 +158,19 @@ namespace BaiTapLon2
 
         private void bDatMay_Click(object sender, EventArgs e)
         {
-
+            try 
+            {
+                int soTienNap = Convert.ToInt32(tbNapTien.Text);
+                if (soTienNap < 5000)
+                {
+                    HienThiThongBao("Số tiền nạp quá ít!", 0);
+                    return;
+                }
+                HienThiThongBao(soGioCoTheChoi.ToString());
+            } catch (Exception err)
+            {
+                HienThiThongBao(err.Message, 3);
+            }
         }
     }
 }
