@@ -1,7 +1,7 @@
 ﻿
 namespace BaiTapLon2
 {
-    partial class Form1
+    partial class QlyQuanNet
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,38 @@ namespace BaiTapLon2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QlyQuanNet));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txbMatKhau = new System.Windows.Forms.TextBox();
-            this.txbTaiKhoan = new System.Windows.Forms.TextBox();
+            this.bDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tbMatKhau = new System.Windows.Forms.TextBox();
+            this.tbTaiKhoan = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSuDung = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dgvDSTaiKhoan = new System.Windows.Forms.DataGridView();
+            this.bSuDung = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txbTimKiem = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.tbTimKiem = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuThinButton254 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bTraMay = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bDatMay = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txbTaiKhoan1 = new System.Windows.Forms.TextBox();
+            this.tbSoGioChoi = new System.Windows.Forms.TextBox();
+            this.tbNapTien = new System.Windows.Forms.TextBox();
+            this.tbTKSuDung = new System.Windows.Forms.TextBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpTang1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuThinButton228 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton227 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton226 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -88,7 +88,7 @@ namespace BaiTapLon2
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpPhong2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuThinButton253 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton252 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton251 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -116,7 +116,7 @@ namespace BaiTapLon2
             this.bunifuThinButton229 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -130,7 +130,7 @@ namespace BaiTapLon2
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoan)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -141,12 +141,12 @@ namespace BaiTapLon2
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpTang1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tlpPhong2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -193,9 +193,9 @@ namespace BaiTapLon2
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox3);
-            this.groupBox4.Controls.Add(this.btnDangKi);
-            this.groupBox4.Controls.Add(this.txbMatKhau);
-            this.groupBox4.Controls.Add(this.txbTaiKhoan);
+            this.groupBox4.Controls.Add(this.bDangKi);
+            this.groupBox4.Controls.Add(this.tbMatKhau);
+            this.groupBox4.Controls.Add(this.tbTaiKhoan);
             this.groupBox4.Controls.Add(this.panel3);
             this.groupBox4.Controls.Add(this.panel1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -217,59 +217,52 @@ namespace BaiTapLon2
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
-            // btnDangKi
+            // bDangKi
             // 
-            this.btnDangKi.ActiveBorderThickness = 1;
-            this.btnDangKi.ActiveCornerRadius = 20;
-            this.btnDangKi.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnDangKi.ActiveForecolor = System.Drawing.Color.White;
-            this.btnDangKi.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDangKi.BackgroundImage")));
-            this.btnDangKi.ButtonText = "Đăng kí ";
-            this.btnDangKi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangKi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKi.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnDangKi.IdleBorderThickness = 1;
-            this.btnDangKi.IdleCornerRadius = 20;
-            this.btnDangKi.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnDangKi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDangKi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDangKi.Location = new System.Drawing.Point(39, 385);
-            this.btnDangKi.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(230, 41);
-            this.btnDangKi.TabIndex = 14;
-            this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
+            this.bDangKi.ActiveBorderThickness = 1;
+            this.bDangKi.ActiveCornerRadius = 20;
+            this.bDangKi.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.ActiveForecolor = System.Drawing.Color.White;
+            this.bDangKi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDangKi.BackgroundImage")));
+            this.bDangKi.ButtonText = "Đăng kí ";
+            this.bDangKi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bDangKi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDangKi.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bDangKi.IdleBorderThickness = 1;
+            this.bDangKi.IdleCornerRadius = 20;
+            this.bDangKi.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bDangKi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.Location = new System.Drawing.Point(39, 385);
+            this.bDangKi.Margin = new System.Windows.Forms.Padding(5);
+            this.bDangKi.Name = "bDangKi";
+            this.bDangKi.Size = new System.Drawing.Size(230, 41);
+            this.bDangKi.TabIndex = 14;
+            this.bDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txbMatKhau
+            // tbMatKhau
             // 
-            this.txbMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbMatKhau.ForeColor = System.Drawing.Color.Silver;
-            this.txbMatKhau.Location = new System.Drawing.Point(39, 334);
-            this.txbMatKhau.Name = "txbMatKhau";
-            this.txbMatKhau.Size = new System.Drawing.Size(230, 20);
-            this.txbMatKhau.TabIndex = 19;
-            this.txbMatKhau.Text = "Mật Khẩu";
-            this.txbMatKhau.Click += new System.EventHandler(this.txbTaiKhoan_Click);
-            this.txbMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTaiKhoan_KeyPress);
-            this.txbMatKhau.Leave += new System.EventHandler(this.txbMatKhau_Leave);
+            this.tbMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMatKhau.ForeColor = System.Drawing.Color.Silver;
+            this.tbMatKhau.Location = new System.Drawing.Point(39, 334);
+            this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Size = new System.Drawing.Size(230, 20);
+            this.tbMatKhau.TabIndex = 19;
+            this.tbMatKhau.Text = "Mật Khẩu";
             // 
-            // txbTaiKhoan
+            // tbTaiKhoan
             // 
-            this.txbTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbTaiKhoan.ForeColor = System.Drawing.Color.Silver;
-            this.txbTaiKhoan.Location = new System.Drawing.Point(39, 285);
-            this.txbTaiKhoan.Name = "txbTaiKhoan";
-            this.txbTaiKhoan.Size = new System.Drawing.Size(230, 20);
-            this.txbTaiKhoan.TabIndex = 20;
-            this.txbTaiKhoan.Text = "Tài Khoản";
-            this.txbTaiKhoan.Click += new System.EventHandler(this.txbTaiKhoan_Click);
-            this.txbTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTaiKhoan_KeyPress);
-            this.txbTaiKhoan.Leave += new System.EventHandler(this.txbTaiKhoan_Leave);
+            this.tbTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTaiKhoan.ForeColor = System.Drawing.Color.Silver;
+            this.tbTaiKhoan.Location = new System.Drawing.Point(39, 285);
+            this.tbTaiKhoan.Name = "tbTaiKhoan";
+            this.tbTaiKhoan.Size = new System.Drawing.Size(230, 20);
+            this.tbTaiKhoan.TabIndex = 20;
+            this.tbTaiKhoan.Text = "Tài Khoản";
             // 
             // panel3
             // 
@@ -301,9 +294,9 @@ namespace BaiTapLon2
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.splitContainer2.Panel2.Controls.Add(this.btnSuDung);
+            this.splitContainer2.Panel2.Controls.Add(this.bSuDung);
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
-            this.splitContainer2.Panel2.Controls.Add(this.txbTimKiem);
+            this.splitContainer2.Panel2.Controls.Add(this.tbTimKiem);
             this.splitContainer2.Size = new System.Drawing.Size(662, 522);
             this.splitContainer2.SplitterDistance = 333;
             this.splitContainer2.TabIndex = 0;
@@ -311,7 +304,7 @@ namespace BaiTapLon2
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvDSTaiKhoan);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -321,44 +314,42 @@ namespace BaiTapLon2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Tài Khoản";
             // 
-            // dataGridView1
+            // dgvDSTaiKhoan
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(656, 307);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dgvDSTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSTaiKhoan.GridColor = System.Drawing.Color.Gray;
+            this.dgvDSTaiKhoan.Location = new System.Drawing.Point(3, 23);
+            this.dgvDSTaiKhoan.Name = "dgvDSTaiKhoan";
+            this.dgvDSTaiKhoan.ReadOnly = true;
+            this.dgvDSTaiKhoan.Size = new System.Drawing.Size(656, 307);
+            this.dgvDSTaiKhoan.TabIndex = 0;
             // 
-            // btnSuDung
+            // bSuDung
             // 
-            this.btnSuDung.ActiveBorderThickness = 1;
-            this.btnSuDung.ActiveCornerRadius = 20;
-            this.btnSuDung.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnSuDung.ActiveForecolor = System.Drawing.Color.White;
-            this.btnSuDung.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSuDung.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSuDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSuDung.BackgroundImage")));
-            this.btnSuDung.ButtonText = "Sử Dụng";
-            this.btnSuDung.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuDung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuDung.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnSuDung.IdleBorderThickness = 1;
-            this.btnSuDung.IdleCornerRadius = 20;
-            this.btnSuDung.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSuDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSuDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSuDung.Location = new System.Drawing.Point(190, 95);
-            this.btnSuDung.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSuDung.Name = "btnSuDung";
-            this.btnSuDung.Size = new System.Drawing.Size(206, 41);
-            this.btnSuDung.TabIndex = 12;
-            this.btnSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSuDung.Click += new System.EventHandler(this.btnSuDung_Click);
+            this.bSuDung.ActiveBorderThickness = 1;
+            this.bSuDung.ActiveCornerRadius = 20;
+            this.bSuDung.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.ActiveForecolor = System.Drawing.Color.White;
+            this.bSuDung.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bSuDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bSuDung.BackgroundImage")));
+            this.bSuDung.ButtonText = "Sử Dụng";
+            this.bSuDung.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bSuDung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSuDung.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bSuDung.IdleBorderThickness = 1;
+            this.bSuDung.IdleCornerRadius = 20;
+            this.bSuDung.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.bSuDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.Location = new System.Drawing.Point(190, 95);
+            this.bSuDung.Margin = new System.Windows.Forms.Padding(5);
+            this.bSuDung.Name = "bSuDung";
+            this.bSuDung.Size = new System.Drawing.Size(206, 41);
+            this.bSuDung.TabIndex = 12;
+            this.bSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -368,21 +359,17 @@ namespace BaiTapLon2
             this.panel2.Size = new System.Drawing.Size(300, 1);
             this.panel2.TabIndex = 7;
             // 
-            // txbTimKiem
+            // tbTimKiem
             // 
-            this.txbTimKiem.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.txbTimKiem.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.txbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbTimKiem.ForeColor = System.Drawing.Color.Silver;
-            this.txbTimKiem.Location = new System.Drawing.Point(143, 50);
-            this.txbTimKiem.Name = "txbTimKiem";
-            this.txbTimKiem.Size = new System.Drawing.Size(264, 20);
-            this.txbTimKiem.TabIndex = 0;
-            this.txbTimKiem.Text = "Tìm Kiếm";
-            this.txbTimKiem.Click += new System.EventHandler(this.txbTaiKhoan_Click);
-            this.txbTimKiem.TextChanged += new System.EventHandler(this.txbTimKiem_TextChanged);
-            this.txbTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTaiKhoan_KeyPress);
-            this.txbTimKiem.Leave += new System.EventHandler(this.txbTimKiem_Leave);
+            this.tbTimKiem.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbTimKiem.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.tbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTimKiem.ForeColor = System.Drawing.Color.Silver;
+            this.tbTimKiem.Location = new System.Drawing.Point(143, 50);
+            this.tbTimKiem.Name = "tbTimKiem";
+            this.tbTimKiem.Size = new System.Drawing.Size(264, 20);
+            this.tbTimKiem.TabIndex = 0;
+            this.tbTimKiem.Text = "Tìm Kiếm";
             // 
             // tabPage2
             // 
@@ -405,14 +392,14 @@ namespace BaiTapLon2
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.label3);
-            this.splitContainer3.Panel1.Controls.Add(this.bunifuThinButton254);
-            this.splitContainer3.Panel1.Controls.Add(this.bunifuThinButton23);
+            this.splitContainer3.Panel1.Controls.Add(this.bTraMay);
+            this.splitContainer3.Panel1.Controls.Add(this.bDatMay);
             this.splitContainer3.Panel1.Controls.Add(this.label6);
             this.splitContainer3.Panel1.Controls.Add(this.label2);
             this.splitContainer3.Panel1.Controls.Add(this.label1);
-            this.splitContainer3.Panel1.Controls.Add(this.textBox5);
-            this.splitContainer3.Panel1.Controls.Add(this.textBox4);
-            this.splitContainer3.Panel1.Controls.Add(this.txbTaiKhoan1);
+            this.splitContainer3.Panel1.Controls.Add(this.tbSoGioChoi);
+            this.splitContainer3.Panel1.Controls.Add(this.tbNapTien);
+            this.splitContainer3.Panel1.Controls.Add(this.tbTKSuDung);
             // 
             // splitContainer3.Panel2
             // 
@@ -432,55 +419,56 @@ namespace BaiTapLon2
             this.label3.TabIndex = 2;
             this.label3.Text = "*Lưu Ý: Tài Khoản Chỉ có Thể đặt 1 máy";
             // 
-            // bunifuThinButton254
+            // bTraMay
             // 
-            this.bunifuThinButton254.ActiveBorderThickness = 1;
-            this.bunifuThinButton254.ActiveCornerRadius = 20;
-            this.bunifuThinButton254.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton254.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton254.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton254.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton254.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton254.BackgroundImage")));
-            this.bunifuThinButton254.ButtonText = "Trả Máy";
-            this.bunifuThinButton254.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton254.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton254.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton254.IdleBorderThickness = 1;
-            this.bunifuThinButton254.IdleCornerRadius = 20;
-            this.bunifuThinButton254.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton254.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton254.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton254.Location = new System.Drawing.Point(150, 263);
-            this.bunifuThinButton254.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton254.Name = "bunifuThinButton254";
-            this.bunifuThinButton254.Size = new System.Drawing.Size(112, 42);
-            this.bunifuThinButton254.TabIndex = 0;
-            this.bunifuThinButton254.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bTraMay.ActiveBorderThickness = 1;
+            this.bTraMay.ActiveCornerRadius = 20;
+            this.bTraMay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTraMay.ActiveForecolor = System.Drawing.Color.White;
+            this.bTraMay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTraMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bTraMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bTraMay.BackgroundImage")));
+            this.bTraMay.ButtonText = "Trả Máy";
+            this.bTraMay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bTraMay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bTraMay.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bTraMay.IdleBorderThickness = 1;
+            this.bTraMay.IdleCornerRadius = 20;
+            this.bTraMay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bTraMay.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTraMay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTraMay.Location = new System.Drawing.Point(150, 263);
+            this.bTraMay.Margin = new System.Windows.Forms.Padding(5);
+            this.bTraMay.Name = "bTraMay";
+            this.bTraMay.Size = new System.Drawing.Size(112, 42);
+            this.bTraMay.TabIndex = 0;
+            this.bTraMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuThinButton23
+            // bDatMay
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Đặt Máy";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton23.Location = new System.Drawing.Point(8, 263);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(112, 42);
-            this.bunifuThinButton23.TabIndex = 0;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bDatMay.ActiveBorderThickness = 1;
+            this.bDatMay.ActiveCornerRadius = 20;
+            this.bDatMay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDatMay.ActiveForecolor = System.Drawing.Color.White;
+            this.bDatMay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDatMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bDatMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDatMay.BackgroundImage")));
+            this.bDatMay.ButtonText = "Đặt Máy";
+            this.bDatMay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bDatMay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDatMay.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bDatMay.IdleBorderThickness = 1;
+            this.bDatMay.IdleCornerRadius = 20;
+            this.bDatMay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bDatMay.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDatMay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDatMay.Location = new System.Drawing.Point(8, 263);
+            this.bDatMay.Margin = new System.Windows.Forms.Padding(5);
+            this.bDatMay.Name = "bDatMay";
+            this.bDatMay.Size = new System.Drawing.Size(112, 42);
+            this.bDatMay.TabIndex = 0;
+            this.bDatMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bDatMay.Click += new System.EventHandler(this.bDatMay_Click);
             // 
             // label6
             // 
@@ -509,28 +497,28 @@ namespace BaiTapLon2
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài Khoản";
             // 
-            // textBox5
+            // tbSoGioChoi
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(19, 217);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(234, 27);
-            this.textBox5.TabIndex = 0;
+            this.tbSoGioChoi.Enabled = false;
+            this.tbSoGioChoi.Location = new System.Drawing.Point(19, 217);
+            this.tbSoGioChoi.Name = "tbSoGioChoi";
+            this.tbSoGioChoi.Size = new System.Drawing.Size(234, 27);
+            this.tbSoGioChoi.TabIndex = 0;
             // 
-            // textBox4
+            // tbNapTien
             // 
-            this.textBox4.Location = new System.Drawing.Point(19, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 27);
-            this.textBox4.TabIndex = 0;
+            this.tbNapTien.Location = new System.Drawing.Point(19, 159);
+            this.tbNapTien.Name = "tbNapTien";
+            this.tbNapTien.Size = new System.Drawing.Size(234, 27);
+            this.tbNapTien.TabIndex = 0;
             // 
-            // txbTaiKhoan1
+            // tbTKSuDung
             // 
-            this.txbTaiKhoan1.Enabled = false;
-            this.txbTaiKhoan1.Location = new System.Drawing.Point(19, 100);
-            this.txbTaiKhoan1.Name = "txbTaiKhoan1";
-            this.txbTaiKhoan1.Size = new System.Drawing.Size(234, 27);
-            this.txbTaiKhoan1.TabIndex = 0;
+            this.tbTKSuDung.Enabled = false;
+            this.tbTKSuDung.Location = new System.Drawing.Point(19, 100);
+            this.tbTKSuDung.Name = "tbTKSuDung";
+            this.tbTKSuDung.Size = new System.Drawing.Size(234, 27);
+            this.tbTKSuDung.TabIndex = 0;
             // 
             // splitContainer4
             // 
@@ -552,7 +540,7 @@ namespace BaiTapLon2
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Controls.Add(this.tlpTang1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
@@ -571,50 +559,50 @@ namespace BaiTapLon2
             this.label4.TabIndex = 1;
             this.label4.Text = "Phòng máy Thường 5k/giờ";
             // 
-            // tableLayoutPanel1
+            // tlpTang1
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton228, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton227, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton226, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton225, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton224, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton223, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton222, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton221, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton220, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton219, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton218, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton217, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton216, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton215, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton214, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton213, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton212, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton211, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton210, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton29, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton28, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton27, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton26, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton25, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuThinButton24, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 23);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(337, 316);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpTang1.ColumnCount = 5;
+            this.tlpTang1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.Controls.Add(this.bunifuThinButton228, 4, 4);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton227, 3, 4);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton226, 2, 4);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton225, 1, 4);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton224, 0, 4);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton223, 4, 3);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton222, 3, 3);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton221, 2, 3);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton220, 1, 3);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton219, 0, 3);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton218, 4, 2);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton217, 3, 2);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton216, 2, 2);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton215, 1, 2);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton214, 0, 2);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton213, 4, 1);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton212, 3, 1);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton211, 2, 1);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton210, 1, 1);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton29, 0, 1);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton28, 4, 0);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton27, 3, 0);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton26, 2, 0);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton25, 1, 0);
+            this.tlpTang1.Controls.Add(this.bunifuThinButton24, 0, 0);
+            this.tlpTang1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpTang1.Location = new System.Drawing.Point(3, 23);
+            this.tlpTang1.Name = "tlpTang1";
+            this.tlpTang1.RowCount = 5;
+            this.tlpTang1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang1.Size = new System.Drawing.Size(337, 316);
+            this.tlpTang1.TabIndex = 0;
             // 
             // bunifuThinButton228
             // 
@@ -641,6 +629,7 @@ namespace BaiTapLon2
             this.bunifuThinButton228.Size = new System.Drawing.Size(59, 54);
             this.bunifuThinButton228.TabIndex = 24;
             this.bunifuThinButton228.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton228.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton227
             // 
@@ -667,6 +656,7 @@ namespace BaiTapLon2
             this.bunifuThinButton227.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton227.TabIndex = 23;
             this.bunifuThinButton227.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton227.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton226
             // 
@@ -693,6 +683,7 @@ namespace BaiTapLon2
             this.bunifuThinButton226.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton226.TabIndex = 22;
             this.bunifuThinButton226.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton226.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton225
             // 
@@ -719,6 +710,7 @@ namespace BaiTapLon2
             this.bunifuThinButton225.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton225.TabIndex = 21;
             this.bunifuThinButton225.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton225.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton224
             // 
@@ -745,6 +737,7 @@ namespace BaiTapLon2
             this.bunifuThinButton224.Size = new System.Drawing.Size(57, 54);
             this.bunifuThinButton224.TabIndex = 20;
             this.bunifuThinButton224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton224.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton223
             // 
@@ -771,6 +764,7 @@ namespace BaiTapLon2
             this.bunifuThinButton223.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton223.TabIndex = 19;
             this.bunifuThinButton223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton223.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton222
             // 
@@ -797,6 +791,7 @@ namespace BaiTapLon2
             this.bunifuThinButton222.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton222.TabIndex = 18;
             this.bunifuThinButton222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton222.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton221
             // 
@@ -823,6 +818,7 @@ namespace BaiTapLon2
             this.bunifuThinButton221.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton221.TabIndex = 17;
             this.bunifuThinButton221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton221.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton220
             // 
@@ -849,6 +845,7 @@ namespace BaiTapLon2
             this.bunifuThinButton220.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton220.TabIndex = 16;
             this.bunifuThinButton220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton220.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton219
             // 
@@ -875,6 +872,7 @@ namespace BaiTapLon2
             this.bunifuThinButton219.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton219.TabIndex = 15;
             this.bunifuThinButton219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton219.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton218
             // 
@@ -901,6 +899,7 @@ namespace BaiTapLon2
             this.bunifuThinButton218.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton218.TabIndex = 14;
             this.bunifuThinButton218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton218.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton217
             // 
@@ -927,6 +926,7 @@ namespace BaiTapLon2
             this.bunifuThinButton217.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton217.TabIndex = 13;
             this.bunifuThinButton217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton217.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton216
             // 
@@ -953,6 +953,7 @@ namespace BaiTapLon2
             this.bunifuThinButton216.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton216.TabIndex = 12;
             this.bunifuThinButton216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton216.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton215
             // 
@@ -979,6 +980,7 @@ namespace BaiTapLon2
             this.bunifuThinButton215.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton215.TabIndex = 11;
             this.bunifuThinButton215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton215.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton214
             // 
@@ -1005,6 +1007,7 @@ namespace BaiTapLon2
             this.bunifuThinButton214.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton214.TabIndex = 10;
             this.bunifuThinButton214.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton214.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton213
             // 
@@ -1031,6 +1034,7 @@ namespace BaiTapLon2
             this.bunifuThinButton213.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton213.TabIndex = 9;
             this.bunifuThinButton213.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton213.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton212
             // 
@@ -1057,6 +1061,7 @@ namespace BaiTapLon2
             this.bunifuThinButton212.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton212.TabIndex = 8;
             this.bunifuThinButton212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton212.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton211
             // 
@@ -1083,6 +1088,7 @@ namespace BaiTapLon2
             this.bunifuThinButton211.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton211.TabIndex = 7;
             this.bunifuThinButton211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton211.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton210
             // 
@@ -1109,6 +1115,7 @@ namespace BaiTapLon2
             this.bunifuThinButton210.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton210.TabIndex = 6;
             this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton210.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton29
             // 
@@ -1135,6 +1142,7 @@ namespace BaiTapLon2
             this.bunifuThinButton29.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton29.TabIndex = 5;
             this.bunifuThinButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton29.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton28
             // 
@@ -1161,6 +1169,7 @@ namespace BaiTapLon2
             this.bunifuThinButton28.Size = new System.Drawing.Size(59, 53);
             this.bunifuThinButton28.TabIndex = 4;
             this.bunifuThinButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton28.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton27
             // 
@@ -1187,6 +1196,7 @@ namespace BaiTapLon2
             this.bunifuThinButton27.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton27.TabIndex = 3;
             this.bunifuThinButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton27.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton26
             // 
@@ -1213,6 +1223,7 @@ namespace BaiTapLon2
             this.bunifuThinButton26.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton26.TabIndex = 2;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton26.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton25
             // 
@@ -1239,6 +1250,7 @@ namespace BaiTapLon2
             this.bunifuThinButton25.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton25.TabIndex = 1;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton24
             // 
@@ -1265,11 +1277,12 @@ namespace BaiTapLon2
             this.bunifuThinButton24.Size = new System.Drawing.Size(57, 53);
             this.bunifuThinButton24.TabIndex = 0;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.buttons_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox3.Controls.Add(this.tlpPhong2);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
@@ -1288,50 +1301,50 @@ namespace BaiTapLon2
             this.label5.TabIndex = 1;
             this.label5.Text = "Phòng máy VIP 10k/giờ";
             // 
-            // tableLayoutPanel2
+            // tlpPhong2
             // 
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton253, 4, 4);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton252, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton251, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton250, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton249, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton248, 4, 3);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton247, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton246, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton245, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton244, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton243, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton242, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton241, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton240, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton239, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton238, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton237, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton236, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton235, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton234, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton233, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton232, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton231, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton230, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuThinButton229, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(320, 316);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tlpPhong2.ColumnCount = 5;
+            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton253, 4, 4);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton252, 3, 4);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton251, 2, 4);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton250, 1, 4);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton249, 0, 4);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton248, 4, 3);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton247, 3, 3);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton246, 2, 3);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton245, 1, 3);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton244, 0, 3);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton243, 4, 2);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton242, 3, 2);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton241, 2, 2);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton240, 1, 2);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton239, 0, 2);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton238, 4, 1);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton237, 3, 1);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton236, 2, 1);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton235, 1, 1);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton234, 0, 1);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton233, 4, 0);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton232, 3, 0);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton231, 2, 0);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton230, 1, 0);
+            this.tlpPhong2.Controls.Add(this.bunifuThinButton229, 0, 0);
+            this.tlpPhong2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpPhong2.Location = new System.Drawing.Point(3, 23);
+            this.tlpPhong2.Name = "tlpPhong2";
+            this.tlpPhong2.RowCount = 5;
+            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPhong2.Size = new System.Drawing.Size(320, 316);
+            this.tlpPhong2.TabIndex = 0;
             // 
             // bunifuThinButton253
             // 
@@ -1358,6 +1371,7 @@ namespace BaiTapLon2
             this.bunifuThinButton253.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton253.TabIndex = 24;
             this.bunifuThinButton253.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton253.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton252
             // 
@@ -1384,6 +1398,7 @@ namespace BaiTapLon2
             this.bunifuThinButton252.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton252.TabIndex = 23;
             this.bunifuThinButton252.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton252.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton251
             // 
@@ -1410,6 +1425,7 @@ namespace BaiTapLon2
             this.bunifuThinButton251.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton251.TabIndex = 22;
             this.bunifuThinButton251.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton251.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton250
             // 
@@ -1436,6 +1452,7 @@ namespace BaiTapLon2
             this.bunifuThinButton250.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton250.TabIndex = 21;
             this.bunifuThinButton250.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton250.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton249
             // 
@@ -1462,6 +1479,7 @@ namespace BaiTapLon2
             this.bunifuThinButton249.Size = new System.Drawing.Size(54, 54);
             this.bunifuThinButton249.TabIndex = 20;
             this.bunifuThinButton249.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton249.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton248
             // 
@@ -1488,6 +1506,7 @@ namespace BaiTapLon2
             this.bunifuThinButton248.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton248.TabIndex = 19;
             this.bunifuThinButton248.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton248.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton247
             // 
@@ -1514,6 +1533,7 @@ namespace BaiTapLon2
             this.bunifuThinButton247.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton247.TabIndex = 18;
             this.bunifuThinButton247.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton247.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton246
             // 
@@ -1540,6 +1560,7 @@ namespace BaiTapLon2
             this.bunifuThinButton246.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton246.TabIndex = 17;
             this.bunifuThinButton246.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton246.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton245
             // 
@@ -1566,6 +1587,7 @@ namespace BaiTapLon2
             this.bunifuThinButton245.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton245.TabIndex = 16;
             this.bunifuThinButton245.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton245.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton244
             // 
@@ -1592,6 +1614,7 @@ namespace BaiTapLon2
             this.bunifuThinButton244.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton244.TabIndex = 15;
             this.bunifuThinButton244.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton244.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton243
             // 
@@ -1618,6 +1641,7 @@ namespace BaiTapLon2
             this.bunifuThinButton243.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton243.TabIndex = 14;
             this.bunifuThinButton243.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton243.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton242
             // 
@@ -1644,6 +1668,7 @@ namespace BaiTapLon2
             this.bunifuThinButton242.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton242.TabIndex = 13;
             this.bunifuThinButton242.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton242.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton241
             // 
@@ -1670,6 +1695,7 @@ namespace BaiTapLon2
             this.bunifuThinButton241.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton241.TabIndex = 12;
             this.bunifuThinButton241.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton241.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton240
             // 
@@ -1696,6 +1722,7 @@ namespace BaiTapLon2
             this.bunifuThinButton240.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton240.TabIndex = 11;
             this.bunifuThinButton240.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton240.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton239
             // 
@@ -1722,6 +1749,7 @@ namespace BaiTapLon2
             this.bunifuThinButton239.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton239.TabIndex = 10;
             this.bunifuThinButton239.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton239.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton238
             // 
@@ -1748,6 +1776,7 @@ namespace BaiTapLon2
             this.bunifuThinButton238.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton238.TabIndex = 9;
             this.bunifuThinButton238.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton238.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton237
             // 
@@ -1774,6 +1803,7 @@ namespace BaiTapLon2
             this.bunifuThinButton237.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton237.TabIndex = 8;
             this.bunifuThinButton237.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton237.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton236
             // 
@@ -1800,6 +1830,7 @@ namespace BaiTapLon2
             this.bunifuThinButton236.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton236.TabIndex = 7;
             this.bunifuThinButton236.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton236.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton235
             // 
@@ -1826,6 +1857,7 @@ namespace BaiTapLon2
             this.bunifuThinButton235.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton235.TabIndex = 6;
             this.bunifuThinButton235.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton235.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton234
             // 
@@ -1852,6 +1884,7 @@ namespace BaiTapLon2
             this.bunifuThinButton234.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton234.TabIndex = 5;
             this.bunifuThinButton234.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton234.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton233
             // 
@@ -1878,6 +1911,7 @@ namespace BaiTapLon2
             this.bunifuThinButton233.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton233.TabIndex = 4;
             this.bunifuThinButton233.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton233.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton232
             // 
@@ -1904,6 +1938,7 @@ namespace BaiTapLon2
             this.bunifuThinButton232.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton232.TabIndex = 3;
             this.bunifuThinButton232.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton232.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton231
             // 
@@ -1930,6 +1965,7 @@ namespace BaiTapLon2
             this.bunifuThinButton231.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton231.TabIndex = 2;
             this.bunifuThinButton231.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton231.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton230
             // 
@@ -1956,6 +1992,7 @@ namespace BaiTapLon2
             this.bunifuThinButton230.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton230.TabIndex = 1;
             this.bunifuThinButton230.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton230.Click += new System.EventHandler(this.buttons_Click);
             // 
             // bunifuThinButton229
             // 
@@ -1982,6 +2019,7 @@ namespace BaiTapLon2
             this.bunifuThinButton229.Size = new System.Drawing.Size(54, 53);
             this.bunifuThinButton229.TabIndex = 0;
             this.bunifuThinButton229.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton229.Click += new System.EventHandler(this.buttons_Click);
             // 
             // tabPage3
             // 
@@ -1996,27 +2034,29 @@ namespace BaiTapLon2
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView2);
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(970, 522);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Quản Lý ";
+            this.groupBox5.Text = "Quản Lý máy đang chơi";
             // 
-            // dataGridView2
+            // dgvDSTaiKhoanDangChoi
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 23);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(964, 496);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvDSTaiKhoanDangChoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSTaiKhoanDangChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSTaiKhoanDangChoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(3, 23);
+            this.dgvDSTaiKhoanDangChoi.Name = "dgvDSTaiKhoanDangChoi";
+            this.dgvDSTaiKhoanDangChoi.ReadOnly = true;
+            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(964, 496);
+            this.dgvDSTaiKhoanDangChoi.TabIndex = 1;
             // 
-            // Form1
+            // QlyQuanNet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2025,11 +2065,12 @@ namespace BaiTapLon2
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "Form1";
+            this.Name = "QlyQuanNet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Quản lý quán Net (Lê Thanh Sơn, Phan Tiến Dũng)";
+            this.Load += new System.EventHandler(this.QlyQuanNet_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2045,7 +2086,7 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoan)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -2058,13 +2099,13 @@ namespace BaiTapLon2
             this.splitContainer4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpTang1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tlpPhong2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2076,23 +2117,23 @@ namespace BaiTapLon2
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDSTaiKhoan;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txbTimKiem;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox tbTimKiem;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txbTaiKhoan1;
+        private System.Windows.Forms.TextBox tbNapTien;
+        private System.Windows.Forms.TextBox tbTKSuDung;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Bunifu.Framework.UI.BunifuThinButton2 bDatMay;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpTang1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton228;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton227;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton226;
@@ -2119,7 +2160,7 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tlpPhong2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton253;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton252;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton251;
@@ -2147,17 +2188,17 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton229;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnDangKi;
-        private System.Windows.Forms.TextBox txbMatKhau;
-        private System.Windows.Forms.TextBox txbTaiKhoan;
+        private Bunifu.Framework.UI.BunifuThinButton2 bDangKi;
+        private System.Windows.Forms.TextBox tbMatKhau;
+        private System.Windows.Forms.TextBox tbTaiKhoan;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton254;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnSuDung;
+        private System.Windows.Forms.DataGridView dgvDSTaiKhoanDangChoi;
+        private Bunifu.Framework.UI.BunifuThinButton2 bTraMay;
+        private Bunifu.Framework.UI.BunifuThinButton2 bSuDung;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbSoGioChoi;
     }
 }
 

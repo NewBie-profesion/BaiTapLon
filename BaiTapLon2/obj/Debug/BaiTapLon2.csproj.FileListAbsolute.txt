@@ -10,3 +10,14 @@ E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CoreCompileInpu
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CopyComplete
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.exe
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.pdb
+D:\cs\projects\BaiTapLon\BaiTapLon2\bin\Debug\BaiTapLon2.exe.config
+D:\cs\projects\BaiTapLon\BaiTapLon2\bin\Debug\BaiTapLon2.exe
+D:\cs\projects\BaiTapLon\BaiTapLon2\bin\Debug\BaiTapLon2.pdb
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csprojAssemblyReference.cache
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.QlyQuanNet.resources
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.Properties.Resources.resources
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.GenerateResource.cache
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CoreCompileInputs.cache
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CopyComplete
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.exe
+D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.pdb

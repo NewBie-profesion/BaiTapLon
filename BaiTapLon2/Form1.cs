@@ -8,215 +8,169 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Bunifu.Framework.UI;
+
 namespace BaiTapLon2
 {
-    public partial class Form1 : Form
+    public partial class QlyQuanNet : Form
     {
-        public Form1()
+        public QlyQuanNet()
         {
             InitializeComponent();
         }
-        // load form
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            KetNoiDataGridView1();
-            KetNoiDataGridView2();
 
+            /****  Phần khai báo biến toàn cục ****/
+        /* Phần biến thay đổi */
+        const string dataSourse = @"DESKTOP-EL0TRUD\SQLEXPRESS";
+        const string initalCatalog = "QLySach";
+
+        /* Phần biến cố định */
+        const string duongDan =
+            @"Data Source=" + dataSourse +
+            ";Initial Catalog=" + initalCatalog +
+            ";Integrated Security=True";
+
+        SqlConnection ketnoi;
+
+        BunifuThinButton2 nutTruocKhiAn = null;
+        BunifuThinButton2 nutHienTai = null;
+        Color idleFillColor = Color.LightSeaGreen;
+        Color idleForceColor = Color.White;
+        Color idleLineColor = Color.White;
+        Color activeFillColor = Color.SeaGreen;
+        Color activeForceColor = Color.White;
+        Color activeLineColor = Color.SeaGreen;
+
+        const double soGioChoiPhongThuong = 3600 / (5000 * 1.0);
+        const double soGioChoiPhongVip = 3600 / (10000 * 1.0);
+        TimeSpan soGioCoTheChoi;
+
+
+        /**** Phần code các hàm tự xây dựng ****/
+        void KetNoiCSDL(string path)
+        {
+            ketnoi = new SqlConnection(path);
+            ketnoi.Open();
+
+            XoaTextBoxTabQlyMay();
         }
 
-
-        //gọi hàm đăng kí tài khoản khi click vào button
-        private void btnDangKi_Click(object sender, EventArgs e)
+        /* Các hàm load */
+        void TaiDanhSachTaiKhoan()
         {
-            DangKi();
+            const string truyvan = "SELECT * FROM TAIKHOAN;";
+
+            SqlCommand cmd = new SqlCommand();
         }
 
-        // tìm kiếm trên datagridview
-        private void txbTimKiem_TextChanged(object sender, EventArgs e)
+        /* Các hàm riêng */
+        string dinhDangGio(int seconds)
         {
-            TimKiem();
+            int gio = seconds/3600;
+            int phut = (seconds % 3600) / 60;
+            int giay = ((seconds % 3600) % 60);
+
+            return $"{gio}h:{phut}m:{giay}s";
         }
 
+        void XoaTextBoxTabQlyMay()
+        {
+            tbNapTien.Text = "5000";
+            tbTaiKhoan.Text = "";
+            tbSoGioChoi.Text = dinhDangGio(3600);
+        }
+        
+            /**** Xử lý ngoại lệ ****/
+        void HienThiThongBao(string msg, int type = -1)
+        {
+            /*
+             * Type 0: Information
+             * Type 1: Question
+             * Type 2: Warning
+             * Type 3: Error
+            */
+            List<MessageBoxIcon> iconsList = new List<MessageBoxIcon>() {
+                MessageBoxIcon.Information,
+                MessageBoxIcon.Question,
+                MessageBoxIcon.Warning,
+                MessageBoxIcon.Error
+            };
 
-        // hàm đăng kí tài khoản
-        private void DangKi()
+            if (type > 3 || type < 0)
+            {
+                MessageBox.Show(msg, "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                return;
+            }
+
+            MessageBox.Show(msg, "Thông báo!", MessageBoxButtons.OK, iconsList[type]);
+        }
+
+           /**** Phần code Chức năng sự kiện của winform ****/
+
+        /* Quản lý máy */
+        private void QlyQuanNet_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-7EH6AD3\SQLEXPRESS;Initial Catalog=QLQuanNet;Integrated Security=True");
-                con.Open();
-                string query = "Insert into TaiKhoan values('" + txbTaiKhoan.Text + "','" + txbMatKhau.Text + "')";
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                cmd.ExecuteNonQuery();
-                KetNoiDataGridView1();
+                KetNoiCSDL(duongDan);
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("Vui Lòng Kiểm Tra Lại Thông Tin", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                HienThiThongBao(err.Message, -1);
             }
-            finally
+        }
+
+        private void buttons_Click(object sender, EventArgs e)
+        {
+            try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-7EH6AD3\SQLEXPRESS;Initial Catalog=QLQuanNet;Integrated Security=True");
-                con.Close();
-            }
-        }
+                BunifuThinButton2 btn = (BunifuThinButton2)sender;
 
-        // hàm tìm kiếm 
-        public void TimKiem()
-        {
-            if (txbTimKiem.Text == "" || txbTimKiem.Text == "Tìm Kiếm") { KetNoiDataGridView1(); }
-
-            else
-            {
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-7EH6AD3\SQLEXPRESS;Initial Catalog=QLQuanNet;Integrated Security=True");
-                con.Open();
-                string query = "SELECT * FROM TaiKhoan WHERE Ten_tk like '%" + txbTimKiem.Text + "%'";
-
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable table = new DataTable();
-                sda.Fill(table);
-                dataGridView1.DataSource = table;
-            }
-        }
-
-        //kết nối sql datagridview1
-        private void KetNoiDataGridView1()
-        {
-
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-7EH6AD3\SQLEXPRESS;Initial Catalog=QLQuanNet;Integrated Security=True");
-            string query = "SELECT Ten_tk as 'Tên Tài Khoản',MatKhau as 'Mật Khẩu' FROM TaiKhoan";
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            sda.Fill(table);
-            dataGridView1.DataSource = table;
-        }
-        //kết nối sql datagridview 2
-        private void KetNoiDataGridView2()
-        {
-
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-7EH6AD3\SQLEXPRESS;Initial Catalog=QLQuanNet;Integrated Security=True");
-            string query = "SELECT * From May";
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            sda.Fill(table);
-            dataGridView2.DataSource = table;
-        }
-
-
-        // giữ lại text ban đầu
-        private void txbTaiKhoan_Leave(object sender, EventArgs e)
-        {
-            if (txbTaiKhoan.Text == "")
-            {
-                txbTaiKhoan.Text = "Tài Khoản";
-            }
-        }
-
-        private void txbMatKhau_Leave(object sender, EventArgs e)
-        {
-            if (txbMatKhau.Text == "")
-            {
-                txbMatKhau.Text = "Mật Khẩu";
-            }
-        }
-        private void txbTimKiem_Leave(object sender, EventArgs e)
-        {
-            if (txbTimKiem.Text == "")
-            {
-                txbTimKiem.Text = "Tìm Kiếm";
-            }
-        }
-        // click để ghi lên textbox
-        private void txbTaiKhoan_Click(object sender, EventArgs e)
-        {
-            TextBox txb = (TextBox)sender;
-            if (txb.Text == "Mật Khẩu")
-            {
-                txb.PasswordChar = '*';
-                txb.Clear();
-            }
-            if (txb.Text == "" || txb.Text == "Tài Khoản" || txb.Text == "Tìm Kiếm") {
-                txb.Clear();
-            }
-
-        }
-
-
-
-
-        //chỉ cho nhập số và chữ
-        private void txbTaiKhoan_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsLetterOrDigit(e.KeyChar) && (e.KeyChar != 8 || e.KeyChar != 13))
-                e.Handled = true;
-            if (e.KeyChar == 8)
-                e.Handled = false;
-            if (e.KeyChar >= 'a' && e.KeyChar <= 'z') e.KeyChar = char.ToUpper(e.KeyChar);
-
-        }
-
-
-
-        // hàm sử dụng
-        bool flag = false;
-        private void SuDung()
-        {
-
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-7EH6AD3\SQLEXPRESS;Initial Catalog=QLQuanNet;Integrated Security=True");
-            con.Open();
-            string query = "SELECT Ten_tk FROM TaiKhoan";
-            
-            SqlCommand cmd = new SqlCommand(query, con);
-            using (SqlDataReader sdr = cmd.ExecuteReader())
-                while (sdr.Read())
+                if (nutTruocKhiAn == null)
                 {
-                    
-                    foreach (TextBox d in dataGridView1.Controls)
-                    {
-                        if (d.Text == sdr[0].ToString())
-                        {
-                            flag = true;
-
-                        }
-                    }
+                    nutTruocKhiAn = btn;
                 }
-            if (flag == true)
+                else
+                {
+                    nutTruocKhiAn.IdleFillColor = idleFillColor;
+                    nutTruocKhiAn.IdleForecolor = idleForceColor;
+                    nutTruocKhiAn.IdleLineColor = idleLineColor;
+
+                }
+
+                nutTruocKhiAn = btn;
+                btn.IdleFillColor = activeFillColor;
+                btn.IdleForecolor = activeForceColor;
+                btn.IdleLineColor = activeLineColor;
+
+                int soTienNap = Convert.ToInt32(tbNapTien.Text);
+
+                if (Convert.ToInt32(btn.ButtonText) <= 25)
+                    tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * soTienNap));
+                else
+                    tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongVip * soTienNap));
+
+            } catch(Exception err)
             {
-                MessageBox.Show("Tài Khoản Đang Được Sử Dụng.Vui Lòng Chọn Tài Khoản Khác", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                flag = false;
-            }
-            else
-            {
-                  txbTaiKhoan1.Text = txbTimKiem.Text;
+                HienThiThongBao(err.Message, 3);
             }
         }
-        // gọi hàm sử dụng trong button sử dụng
-        private void btnSuDung_Click(object sender, EventArgs e)
+
+        private void bDatMay_Click(object sender, EventArgs e)
         {
-            if(txbTimKiem.Text == ""||txbTimKiem.Text == "Tìm Kiếm") { return; }
-            SuDung();
-            txbTaiKhoan1.Text = txbTimKiem.Text;
-            //SuDung();
-/*            if(flag == true)
+            try 
             {
-                MessageBox.Show("Tài Khoản Đang Được Sử Dụng.Vui Lòng Chọn Tài Khoản Khác", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                flag = false;
+                int soTienNap = Convert.ToInt32(tbNapTien.Text);
+                if (soTienNap < 5000)
+                {
+                    HienThiThongBao("Số tiền nạp quá ít!", 0);
+                    return;
+                }
+                HienThiThongBao(soGioCoTheChoi.ToString());
+            } catch (Exception err)
+            {
+                HienThiThongBao(err.Message, 3);
             }
-            else
-            {
-                txbTaiKhoan1.Text =txbTimKiem.Text;
-            }*/
-        }
-        // bắt sự kiện cellclick
-        int index;
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            index = dataGridView1.CurrentRow.Index;
-            txbTimKiem.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
         }
     }
 }
