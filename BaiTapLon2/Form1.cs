@@ -21,7 +21,7 @@ namespace BaiTapLon2
 
             /****  Phần khai báo biến toàn cục ****/
         /* Phần biến thay đổi */
-        const string dataSourse = @"DESKTOP-7EH6AD3\SQLEXPRESS";
+        const string dataSourse = @"DESKTOP-EL0TRUD\SQLEXPRESS";
         const string initalCatalog = "QlQuanNet";
 
         /* Phần biến cố định */
@@ -34,19 +34,62 @@ namespace BaiTapLon2
 
         BunifuThinButton2 nutTruocKhiAn = null;
         BunifuThinButton2 nutHienTai = null;
-        Color idleFillColor = Color.LightSeaGreen;
-        Color idleForceColor = Color.White;
-        Color idleLineColor = Color.White;
-        Color activeFillColor = Color.SeaGreen;
-        Color activeForceColor = Color.White;
-        Color activeLineColor = Color.SeaGreen;
+        Color mauNenMacDinh = Color.LightSeaGreen;
+        Color mauChuMacDinh = Color.White;
+        Color mauVienMacDinh = Color.White;
+        Color mauNenKhiDiChuot = Color.SeaGreen;
+        Color mauChuKhiDiChuot = Color.White;
+        Color mauVienKhiDiChuot = Color.SeaGreen;
+        Color mauNenKhiHoatDong = Color.Red;
+        Color mauChuKhiHoatDong = Color.Black;
+        Color mauVienKhiHoatDong = Color.Red;
 
         const double soGioChoiPhongThuong = 3600 / (5000 * 1.0);
         const double soGioChoiPhongVip = 3600 / (10000 * 1.0);
-        TimeSpan soGioCoTheChoi;
         int index;
         bool flag = true;
-        List<string> TaiKhoanDangChoi = new List<string>();
+        bool check = false; 
+
+        List<string> TaiKhoanDangChoi = Enumerable.Repeat("",51).ToList();
+        List<BunifuThinButton2> DSMayDangChoi = new List<BunifuThinButton2>();
+
+        /* Các hàm load */
+
+        void KiemTraCacMayDangChoi()
+        {
+            SqlCommand cmd = ketnoi.CreateCommand();
+            cmd.CommandText = "SELECT SoMay AS \"Số máy\", Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\" FROM May;";
+
+            using(SqlDataReader reader = cmd.ExecuteReader())
+            while (reader.Read())
+            {
+                TaiKhoanDangChoi[Convert.ToInt32(reader[0].ToString())] = reader[1].ToString();
+                foreach (BunifuThinButton2 b1 in tlpTang1.Controls)
+                    if (b1.ButtonText == reader[0].ToString()) HienThiCacMayDangChoi(b1);
+
+                foreach (BunifuThinButton2 b2 in tlpTang2.Controls)
+                    if (b2.ButtonText == reader[0].ToString()) HienThiCacMayDangChoi(b2);
+            }
+
+            SqlDataAdapter SDA = new SqlDataAdapter();
+            SDA.SelectCommand = cmd;
+
+            DataTable table = new DataTable();
+            SDA.Fill(table);
+            dgvDSTaiKhoanDangChoi.DataSource = table;
+        }
+
+        private void ketnoiDSTaiKhoan()
+        {
+            SqlCommand cmd = ketnoi.CreateCommand();
+            cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản',MatKhau as 'Mật khẩu' From TaiKhoan";
+            SqlDataAdapter SDA = new SqlDataAdapter();
+            SDA.SelectCommand = cmd;
+            DataTable table = new DataTable();
+            SDA.Fill(table);
+            dgvDSTaiKhoan.DataSource = table;
+        }
+
         /**** Phần code các hàm tự xây dựng ****/
         void KetNoiCSDL(string path)
         {
@@ -90,22 +133,14 @@ namespace BaiTapLon2
             SqlCommand cmd = ketnoi.CreateCommand();
             cmd.CommandText = "SELECT Ten_tk FROM TaiKhoan";
             using (SqlDataReader sdr = cmd.ExecuteReader())
-                while (sdr.Read())
-                {
+            while (sdr.Read())
+                QuanLyTaiKhoan.Add(sdr[0].ToString());
 
-                    QuanLyTaiKhoan.Add(sdr[0].ToString());
-                }
             return QuanLyTaiKhoan;
         }
-        /* Các hàm load */
-        void TaiDanhSachTaiKhoan()
-        {
-            const string truyvan = "SELECT * FROM TAIKHOAN;";
 
-            SqlCommand cmd = new SqlCommand();
-        }
+        /* Tab quản lý máy */
 
-        /* Các hàm riêng */
         string dinhDangGio(int seconds)
         {
             int gio = seconds/3600;
@@ -120,6 +155,45 @@ namespace BaiTapLon2
             tbNapTien.Text = "5000";
             tbTKSuDung.Text = "";
             tbSoGioChoi.Text = dinhDangGio(3600);
+        }
+
+        void hienThiThongTinMayDangChoi(BunifuThinButton2 btn)
+        {
+            try
+            {
+                string taiKhoan = "";
+                string gioChoi = "";
+                string tienNap = "";
+
+                SqlCommand cmd = ketnoi.CreateCommand();
+                cmd.CommandText = "SELECT Taikhoan.Ten_tk, SoTien, SoGioChoi FROM May, Taikhoan WHERE Taikhoan.Ten_tk = May.Ten_tk and SoMay = @SoMay;";
+                cmd.Parameters.Add("@SoMay", SqlDbType.Int);
+                cmd.Parameters["@SoMay"].Value = btn.ButtonText;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                    while (reader.Read())
+                    {
+                        taiKhoan = reader[0].ToString();
+                        tienNap = reader[1].ToString();
+                        gioChoi = reader[2].ToString();
+                    }
+
+                tbTKSuDung.Text = taiKhoan;
+                tbNapTien.Text = tienNap;
+                tbSoGioChoi.Text = gioChoi;
+                check = true;
+            } catch (Exception err)
+            {
+                HienThiThongBao(err.Message, 3);
+            }
+        }
+
+        void HienThiCacMayDangChoi(BunifuThinButton2 btn)
+        {
+            btn.IdleFillColor = mauNenKhiHoatDong;
+            btn.IdleForecolor = mauChuKhiHoatDong;
+            btn.IdleLineColor = mauVienKhiHoatDong;
+            DSMayDangChoi.Add(btn);
         }
         
             /**** Xử lý ngoại lệ ****/
@@ -156,8 +230,8 @@ namespace BaiTapLon2
             {
                 KetNoiCSDL(duongDan);
                 XoaTextBoxTabQlyMay();
-                //ketnoiDSTaiKhoan();
-                KetnoiDSTaiKhoanDangChoi();
+                KiemTraCacMayDangChoi();
+                KiemTraCacMayDangChoi();
             }
             catch (Exception err)
             {
@@ -170,23 +244,42 @@ namespace BaiTapLon2
             try
             {
                 BunifuThinButton2 btn = (BunifuThinButton2)sender;
+                foreach (BunifuThinButton2 b in DSMayDangChoi)
+                    if (b.ButtonText == btn.ButtonText)
+                    {
+                        if (nutTruocKhiAn != null)
+                        {
+                            nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
+                            nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
+                            nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
+                        }
+                        nutHienTai = btn;
+                        hienThiThongTinMayDangChoi(btn);
+                        return;
+                    }
 
+                if (check)
+                {
+                    XoaTextBoxTabQlyMay();
+                    check = false;
+                }
                 if (nutTruocKhiAn == null)
                 {
                     nutTruocKhiAn = btn;
                 }
                 else
                 {
-                    nutTruocKhiAn.IdleFillColor = idleFillColor;
-                    nutTruocKhiAn.IdleForecolor = idleForceColor;
-                    nutTruocKhiAn.IdleLineColor = idleLineColor;
+                    nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
+                    nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
+                    nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
 
                 }
 
                 nutTruocKhiAn = btn;
-                btn.IdleFillColor = activeFillColor;
-                btn.IdleForecolor = activeForceColor;
-                btn.IdleLineColor = activeLineColor;
+                btn.IdleFillColor = mauNenKhiDiChuot;
+                btn.IdleForecolor = mauChuKhiDiChuot;
+                btn.IdleLineColor = mauVienKhiDiChuot;
+                nutHienTai = btn;
 
                 int soTienNap = Convert.ToInt32(tbNapTien.Text);
 
@@ -205,22 +298,90 @@ namespace BaiTapLon2
         {
             try 
             {
+                if (check)
+                {
+                    HienThiThongBao("Đang có người chơi máy này!", 0);
+                    return;
+                }
                 int soTienNap = Convert.ToInt32(tbNapTien.Text);
+                string taiKhoan = tbTKSuDung.Text;
+                string gioChoi = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * soTienNap));
+
                 if (soTienNap < 5000)
                 {
                     HienThiThongBao("Số tiền nạp quá ít!", 0);
                     return;
                 }
-                HienThiThongBao(soGioCoTheChoi.ToString());
+                if (taiKhoan == "")
+                {
+                    HienThiThongBao("Chưa có tài khoản nào được sử dụng!", 0);
+                    return;
+                }
+                if (nutHienTai == null)
+                {
+                    HienThiThongBao("Chưa chọn máy chơi!", 0);
+                    return;
+                }
+
+                string soMay = nutHienTai.ButtonText;
+                SqlCommand cmd = ketnoi.CreateCommand();
+                cmd.CommandText = "INSERT INTO MAY (SoMay, Ten_tk, SoTien, SoGioChoi) VALUES (@Somay, @TenTK, @Sotien, @SoGioChoi)";
+
+                cmd.Parameters.Add("@Somay", SqlDbType.Int);
+                cmd.Parameters.Add("@TenTK", SqlDbType.VarChar);
+                cmd.Parameters.Add("@Sotien", SqlDbType.Float);
+                cmd.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
+
+                cmd.Parameters["@Somay"].Value = soMay;
+                cmd.Parameters["@TenTK"].Value = taiKhoan;
+                cmd.Parameters["@SoTien"].Value = soTienNap;
+                cmd.Parameters["@SoGioChoi"].Value = gioChoi;
+
+                TaiKhoanDangChoi[Convert.ToInt32(soMay)] = taiKhoan;
+                nutTruocKhiAn = null;
+
+                cmd.ExecuteNonQuery();
+                KiemTraCacMayDangChoi();
+                XoaTextBoxTabQlyMay();
+                HienThiCacMayDangChoi(nutHienTai);
             } catch (Exception err)
             {
                 HienThiThongBao(err.Message, 3);
             }
         }
 
+        private void bTraMay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!check) return;
+                string soMay = nutHienTai.ButtonText;
+
+                SqlCommand cmd = ketnoi.CreateCommand();
+                cmd.CommandText = "DELETE FROM May WHERE SoMay = @SoMay;";
+                cmd.Parameters.Add("@SoMay", SqlDbType.Int);
+                cmd.Parameters["@SoMay"].Value = soMay;
+
+                cmd.ExecuteNonQuery();
+
+                nutHienTai.IdleFillColor = mauNenMacDinh;
+                nutHienTai.IdleForecolor = mauChuMacDinh;
+                nutHienTai.IdleLineColor = mauVienMacDinh;
+                
+                DSMayDangChoi = DSMayDangChoi.Where(el => el.ButtonText != nutHienTai.ButtonText).ToList();
+                TaiKhoanDangChoi[Convert.ToInt32(nutHienTai.ButtonText)] = "";
+
+                KiemTraCacMayDangChoi();
+                XoaTextBoxTabQlyMay();
+            }
+            catch (Exception err)
+            {
+                HienThiThongBao(err.Message, 3);
+            }
+        }
 
         /* tab quản lý tài khoản  */
-        
+
         private void bDangKi_Click(object sender, EventArgs e)
         {
             if(tbTaiKhoan.Text == "Tài Khoản" && tbMatKhau.Text == "Mật Khẩu")
@@ -236,33 +397,7 @@ namespace BaiTapLon2
         {
             TimKiem();
         }
-        private void ketnoiDSTaiKhoan()
-        {
-            SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản',MatKhau as 'Mật khẩu' From TaiKhoan";
-            SqlDataAdapter SDA = new SqlDataAdapter();
-            SDA.SelectCommand = cmd;
-            DataTable table = new DataTable();
-            SDA.Fill(table);
-            dgvDSTaiKhoan.DataSource = table;
-        }
 
-        private void KetnoiDSTaiKhoanDangChoi()
-        {
-
-            SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT * FROM May";
-            SqlDataAdapter SDA = new SqlDataAdapter(cmd);
-            using (SqlDataReader sdr = cmd.ExecuteReader())
-                while (sdr.Read())
-                {
-                    TaiKhoanDangChoi.Add(sdr[0].ToString());
-                }
-            DataTable table = new DataTable();
-            SDA.Fill(table);
-            dgvDSTaiKhoanDangChoi.DataSource = table;
-        }
-        /****** thiết lập các chức năng của textbox *****/
         private void tbTaiKhoan_Leave(object sender, EventArgs e)
         {
             if(tbTaiKhoan.Text == "")
@@ -322,14 +457,12 @@ namespace BaiTapLon2
         }
         private void bSuDung_Click(object sender, EventArgs e)
         {
-
             List<string> TaiKhoan = SuDung();
             if (TaiKhoan.Contains(tbTimKiem.Text) && TaiKhoanDangChoi.Contains(tbTimKiem.Text) == false)
             {
                 tbTKSuDung.Text = tbTimKiem.Text;
                 tbTimKiem.Text = "";
             }
-
         }
     }
 }

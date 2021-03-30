@@ -1,13 +1,10 @@
 CREATE DATABASE QLQuanNet
-GO
 USE QLQuanNet
-GO
 CREATE TABLE TaiKhoan
 (
 	Ten_tk varchar(50) not null  Primary key , 
 	MatKhau varchar(50),
 )
-GO
 CREATE TABLE May
 (
 	May int not null primary key,
@@ -18,4 +15,8 @@ CREATE TABLE May
 	Foreign key(Ten_tk) references TaiKhoan(Ten_tk),
 	Check (SoTien>=5000)
 )
-GO
+
+DELETE FROM May
+
+ALTER TABLE May
+ALTER COLUMN SoGioChoi varchar(20);

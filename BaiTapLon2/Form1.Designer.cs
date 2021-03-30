@@ -92,7 +92,7 @@ namespace BaiTapLon2
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tlpPhong2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpTang2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuThinButton253 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton252 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton251 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -149,7 +149,7 @@ namespace BaiTapLon2
             this.groupBox2.SuspendLayout();
             this.tlpTang1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.tlpPhong2.SuspendLayout();
+            this.tlpTang2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -517,7 +517,7 @@ namespace BaiTapLon2
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(5, 310);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 16);
+            this.label3.Size = new System.Drawing.Size(258, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "*Lưu Ý: Tài Khoản Chỉ có Thể đặt 1 máy";
             // 
@@ -545,6 +545,7 @@ namespace BaiTapLon2
             this.bTraMay.Size = new System.Drawing.Size(112, 42);
             this.bTraMay.TabIndex = 0;
             this.bTraMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bTraMay.Click += new System.EventHandler(this.bTraMay_Click);
             // 
             // bDatMay
             // 
@@ -1384,7 +1385,7 @@ namespace BaiTapLon2
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.tlpPhong2);
+            this.groupBox3.Controls.Add(this.tlpTang2);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
@@ -1403,50 +1404,50 @@ namespace BaiTapLon2
             this.label5.TabIndex = 1;
             this.label5.Text = "Phòng máy VIP 10k/giờ";
             // 
-            // tlpPhong2
+            // tlpTang2
             // 
-            this.tlpPhong2.ColumnCount = 5;
-            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton253, 4, 4);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton252, 3, 4);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton251, 2, 4);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton250, 1, 4);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton249, 0, 4);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton248, 4, 3);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton247, 3, 3);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton246, 2, 3);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton245, 1, 3);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton244, 0, 3);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton243, 4, 2);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton242, 3, 2);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton241, 2, 2);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton240, 1, 2);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton239, 0, 2);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton238, 4, 1);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton237, 3, 1);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton236, 2, 1);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton235, 1, 1);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton234, 0, 1);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton233, 4, 0);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton232, 3, 0);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton231, 2, 0);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton230, 1, 0);
-            this.tlpPhong2.Controls.Add(this.bunifuThinButton229, 0, 0);
-            this.tlpPhong2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpPhong2.Location = new System.Drawing.Point(3, 23);
-            this.tlpPhong2.Name = "tlpPhong2";
-            this.tlpPhong2.RowCount = 5;
-            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpPhong2.Size = new System.Drawing.Size(356, 316);
-            this.tlpPhong2.TabIndex = 0;
+            this.tlpTang2.ColumnCount = 5;
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.Controls.Add(this.bunifuThinButton253, 4, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton252, 3, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton251, 2, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton250, 1, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton249, 0, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton248, 4, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton247, 3, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton246, 2, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton245, 1, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton244, 0, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton243, 4, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton242, 3, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton241, 2, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton240, 1, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton239, 0, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton238, 4, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton237, 3, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton236, 2, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton235, 1, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton234, 0, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton233, 4, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton232, 3, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton231, 2, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton230, 1, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton229, 0, 0);
+            this.tlpTang2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpTang2.Location = new System.Drawing.Point(3, 23);
+            this.tlpTang2.Name = "tlpTang2";
+            this.tlpTang2.RowCount = 5;
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.Size = new System.Drawing.Size(356, 316);
+            this.tlpTang2.TabIndex = 0;
             // 
             // bunifuThinButton253
             // 
@@ -2223,7 +2224,7 @@ namespace BaiTapLon2
             this.tlpTang1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.tlpPhong2.ResumeLayout(false);
+            this.tlpTang2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -2279,7 +2280,7 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TableLayoutPanel tlpPhong2;
+        private System.Windows.Forms.TableLayoutPanel tlpTang2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton253;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton252;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton251;
