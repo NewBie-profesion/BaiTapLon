@@ -3,7 +3,6 @@ E:\ltnc\winform\BaiTapLon\BaiTapLon2\bin\Debug\BaiTapLon2.exe
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\bin\Debug\BaiTapLon2.pdb
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\bin\Debug\Bunifu_UI_v1.52.dll
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csprojAssemblyReference.cache
-E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.Form1.resources
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.Properties.Resources.resources
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.GenerateResource.cache
 E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CoreCompileInputs.cache
@@ -21,3 +20,4 @@ D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CoreCompileInput
 D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.csproj.CopyComplete
 D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.exe
 D:\cs\projects\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.pdb
+E:\ltnc\winform\BaiTapLon\BaiTapLon2\obj\Debug\BaiTapLon2.QlyQuanNet.resources
