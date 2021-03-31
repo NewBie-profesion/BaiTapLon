@@ -122,6 +122,7 @@ namespace BaiTapLon2
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
+            this.bNapThemTien = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -494,6 +495,7 @@ namespace BaiTapLon2
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.label3);
+            this.splitContainer3.Panel1.Controls.Add(this.bNapThemTien);
             this.splitContainer3.Panel1.Controls.Add(this.bTraMay);
             this.splitContainer3.Panel1.Controls.Add(this.bDatMay);
             this.splitContainer3.Panel1.Controls.Add(this.label6);
@@ -515,7 +517,7 @@ namespace BaiTapLon2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(5, 310);
+            this.label3.Location = new System.Drawing.Point(16, 466);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(258, 16);
             this.label3.TabIndex = 2;
@@ -539,10 +541,10 @@ namespace BaiTapLon2
             this.bTraMay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bTraMay.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTraMay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bTraMay.Location = new System.Drawing.Point(150, 263);
+            this.bTraMay.Location = new System.Drawing.Point(40, 326);
             this.bTraMay.Margin = new System.Windows.Forms.Padding(5);
             this.bTraMay.Name = "bTraMay";
-            this.bTraMay.Size = new System.Drawing.Size(112, 42);
+            this.bTraMay.Size = new System.Drawing.Size(182, 42);
             this.bTraMay.TabIndex = 0;
             this.bTraMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bTraMay.Click += new System.EventHandler(this.bTraMay_Click);
@@ -565,10 +567,10 @@ namespace BaiTapLon2
             this.bDatMay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bDatMay.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDatMay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDatMay.Location = new System.Drawing.Point(8, 263);
+            this.bDatMay.Location = new System.Drawing.Point(40, 265);
             this.bDatMay.Margin = new System.Windows.Forms.Padding(5);
             this.bDatMay.Name = "bDatMay";
-            this.bDatMay.Size = new System.Drawing.Size(112, 42);
+            this.bDatMay.Size = new System.Drawing.Size(182, 42);
             this.bDatMay.TabIndex = 0;
             this.bDatMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bDatMay.Click += new System.EventHandler(this.bDatMay_Click);
@@ -614,6 +616,7 @@ namespace BaiTapLon2
             this.tbNapTien.Name = "tbNapTien";
             this.tbNapTien.Size = new System.Drawing.Size(234, 27);
             this.tbNapTien.TabIndex = 0;
+            this.tbNapTien.TextChanged += new System.EventHandler(this.tbNapTien_TextChanged);
             // 
             // tbTKSuDung
             // 
@@ -2177,6 +2180,32 @@ namespace BaiTapLon2
             this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1061, 490);
             this.dgvDSTaiKhoanDangChoi.TabIndex = 2;
             // 
+            // bNapThemTien
+            // 
+            this.bNapThemTien.ActiveBorderThickness = 1;
+            this.bNapThemTien.ActiveCornerRadius = 20;
+            this.bNapThemTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.ActiveForecolor = System.Drawing.Color.White;
+            this.bNapThemTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bNapThemTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNapThemTien.BackgroundImage")));
+            this.bNapThemTien.ButtonText = "Nạp thêm tiền";
+            this.bNapThemTien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bNapThemTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNapThemTien.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bNapThemTien.IdleBorderThickness = 1;
+            this.bNapThemTien.IdleCornerRadius = 20;
+            this.bNapThemTien.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bNapThemTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.Location = new System.Drawing.Point(40, 383);
+            this.bNapThemTien.Margin = new System.Windows.Forms.Padding(5);
+            this.bNapThemTien.Name = "bNapThemTien";
+            this.bNapThemTien.Size = new System.Drawing.Size(182, 42);
+            this.bNapThemTien.TabIndex = 0;
+            this.bNapThemTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bNapThemTien.Click += new System.EventHandler(this.bNapThemTien_Click);
+            // 
             // QlyQuanNet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -2191,6 +2220,7 @@ namespace BaiTapLon2
             this.Name = "QlyQuanNet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý quán Net (Lê Thanh Sơn, Phan Tiến Dũng)";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QlyQuanNet_FormClosed);
             this.Load += new System.EventHandler(this.QlyQuanNet_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -2327,6 +2357,7 @@ namespace BaiTapLon2
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dgvDSTaiKhoanDangChoi;
         private Bunifu.Framework.UI.BunifuThinButton2 btTim;
+        private Bunifu.Framework.UI.BunifuThinButton2 bNapThemTien;
     }
 }
 

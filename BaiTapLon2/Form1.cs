@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Bunifu.Framework.UI;
+using System.Threading;
 
 namespace BaiTapLon2
 {
@@ -19,7 +20,7 @@ namespace BaiTapLon2
             InitializeComponent();
         }
 
-            /****  Phần khai báo biến toàn cục ****/
+        /****  Phần khai báo biến toàn cục ****/
         /* Phần biến thay đổi */
         const string dataSourse = @"DESKTOP-EL0TRUD\SQLEXPRESS";
         const string initalCatalog = "QlQuanNet";
@@ -34,6 +35,8 @@ namespace BaiTapLon2
 
         BunifuThinButton2 nutTruocKhiAn = null;
         BunifuThinButton2 nutHienTai = null;
+        BunifuThinButton2 nutDangHoatDong = null;
+        BunifuThinButton2 nutTruocKhiHoatDong = null;
         Color mauNenMacDinh = Color.LightSeaGreen;
         Color mauChuMacDinh = Color.White;
         Color mauVienMacDinh = Color.White;
@@ -44,26 +47,70 @@ namespace BaiTapLon2
         Color mauChuKhiHoatDong = Color.Black;
         Color mauVienKhiHoatDong = Color.Red;
 
+        ThreadStart start;
+        Thread childThread;
+        List<string> TaiKhoanDangChoi = Enumerable.Repeat("", 51).ToList();
+        List<BunifuThinButton2> DSMayDangChoi = new List<BunifuThinButton2>();
+        List<Dictionary<string, List<string>>> DSThongTinCacMayDangChoi = Enumerable.Repeat(new Dictionary<string, List<string>>() { }, 51).ToList();
+        DataTable bangThongKe = new DataTable();
+
         const double soGioChoiPhongThuong = 3600 / (5000 * 1.0);
         const double soGioChoiPhongVip = 3600 / (10000 * 1.0);
+        int phutTrongNhieuGio = 0;
         int index;
         bool flag = true;
-        bool check = false; 
-
-        List<string> TaiKhoanDangChoi = Enumerable.Repeat("",51).ToList();
-        List<BunifuThinButton2> DSMayDangChoi = new List<BunifuThinButton2>();
+        bool check = false;
+        
 
         /* Các hàm load */
-
+        void CallThread()
+        {
+            while (true)
+            {
+                for (int i = 0; i < bangThongKe.Rows.Count; ++i)
+                {
+                    foreach (var info in DSThongTinCacMayDangChoi)
+                    {
+                        string soMay = bangThongKe.Rows[i]["Số máy"].ToString();
+                        if (info.ContainsKey(soMay))
+                        {
+                            var thoiGianChoi = info[soMay][1];
+                            int giay = Convert.ToInt32(thoiGianChoi.ToString().Split(':')[2]);
+                            int phut = Convert.ToInt32(thoiGianChoi.ToString().Split(':')[1]);
+                            int gio = Convert.ToInt32(thoiGianChoi.ToString().Split(':')[0]);
+                            int gioChoiHienTai = 60 * phut + gio * 3600 + giay;
+                            int soGioChoiConLai = gioChoiHienTai - 1000;
+                            bangThongKe.Rows[i]["Số giờ chơi"] = dinhDangGio(soGioChoiConLai);
+                            phutTrongNhieuGio = soGioChoiConLai;
+                            info[soMay][1] = dinhDangGio(soGioChoiConLai);
+                        }
+                    }
+                }
+                Thread.Sleep(10);
+            }
+        }
         void KiemTraCacMayDangChoi()
         {
+            DSThongTinCacMayDangChoi.Clear();
+            DSThongTinCacMayDangChoi = Enumerable.Repeat(new Dictionary<string, List<string>>() { }, 51).ToList();
             SqlCommand cmd = ketnoi.CreateCommand();
             cmd.CommandText = "SELECT SoMay AS \"Số máy\", Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\" FROM May;";
 
             using(SqlDataReader reader = cmd.ExecuteReader())
             while (reader.Read())
             {
+                DSThongTinCacMayDangChoi[Convert.ToInt32(reader[0].ToString())]
+                    .Add(
+                        reader[0].ToString(), 
+                        new List<string>() 
+                        {
+                            reader[1].ToString(), 
+                            reader[3].ToString() 
+                        }
+                    );
+
                 TaiKhoanDangChoi[Convert.ToInt32(reader[0].ToString())] = reader[1].ToString();
+
                 foreach (BunifuThinButton2 b1 in tlpTang1.Controls)
                     if (b1.ButtonText == reader[0].ToString()) HienThiCacMayDangChoi(b1);
 
@@ -76,6 +123,8 @@ namespace BaiTapLon2
 
             DataTable table = new DataTable();
             SDA.Fill(table);
+            bangThongKe = table;
+
             dgvDSTaiKhoanDangChoi.DataSource = table;
         }
 
@@ -147,7 +196,7 @@ namespace BaiTapLon2
             int phut = (seconds % 3600) / 60;
             int giay = ((seconds % 3600) % 60);
 
-            return $"{gio}h:{phut}m:{giay}s";
+            return $"{gio}:{phut}:{giay}";
         }
 
         void XoaTextBoxTabQlyMay()
@@ -181,7 +230,43 @@ namespace BaiTapLon2
                 tbTKSuDung.Text = taiKhoan;
                 tbNapTien.Text = tienNap;
                 tbSoGioChoi.Text = gioChoi;
-                check = true;
+                if (nutDangHoatDong == null)
+                {
+                    nutTruocKhiHoatDong = btn;
+                    btn.IdleFillColor = Color.Orange;
+                    btn.IdleForecolor = Color.Black;
+                    check = true;
+                    nutDangHoatDong = btn;
+                    nutHienTai = btn;
+                } else
+                {
+                    if (nutTruocKhiHoatDong.ButtonText.ToString() != btn.ButtonText.ToString())
+                    {
+                        nutTruocKhiHoatDong.IdleFillColor = mauNenKhiHoatDong;
+                        nutTruocKhiHoatDong.IdleForecolor = mauChuKhiHoatDong;
+                        nutTruocKhiHoatDong.IdleLineColor = mauVienKhiHoatDong;
+
+                        nutTruocKhiHoatDong = btn;
+
+                        btn.IdleFillColor = Color.Orange;
+                        btn.IdleForecolor = Color.Black;
+
+                        nutDangHoatDong = btn;
+                        nutHienTai = btn;
+                    } else
+                    {
+                        nutDangHoatDong.IdleFillColor = mauNenKhiHoatDong;
+                        nutDangHoatDong.IdleForecolor = mauChuKhiHoatDong;
+                        nutDangHoatDong.IdleLineColor = mauVienKhiHoatDong;
+                        XoaTextBoxTabQlyMay();
+                        nutDangHoatDong = null;
+                        check = false;
+                        nutHienTai = null;
+                        nutTruocKhiHoatDong = null;
+                    }
+                }
+
+                nutTruocKhiAn = null;
             } catch (Exception err)
             {
                 HienThiThongBao(err.Message, 3);
@@ -231,12 +316,21 @@ namespace BaiTapLon2
                 KetNoiCSDL(duongDan);
                 XoaTextBoxTabQlyMay();
                 KiemTraCacMayDangChoi();
-                KiemTraCacMayDangChoi();
+
+                start = new ThreadStart(CallThread);
+                childThread = new Thread(start);
+                childThread.Start();
             }
             catch (Exception err)
             {
                 HienThiThongBao(err.Message, -1);
             }
+        }
+
+        private void QlyQuanNet_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+            childThread.Abort();
         }
 
         private void buttons_Click(object sender, EventArgs e)
@@ -253,32 +347,52 @@ namespace BaiTapLon2
                             nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
                             nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
                         }
-                        nutHienTai = btn;
+                        
                         hienThiThongTinMayDangChoi(btn);
                         return;
                     }
-
-                if (check)
+                if (nutDangHoatDong != null)
                 {
-                    XoaTextBoxTabQlyMay();
+                    nutDangHoatDong.IdleFillColor = mauNenKhiHoatDong;
+                    nutDangHoatDong.IdleForecolor = mauChuKhiHoatDong;
+                    nutDangHoatDong.IdleLineColor = mauVienKhiHoatDong;
+                    nutDangHoatDong = null;
+                    nutTruocKhiAn = null;
                     check = false;
+                    XoaTextBoxTabQlyMay();
                 }
-                if (nutTruocKhiAn == null)
-                {
-                    nutTruocKhiAn = btn;
-                }
-                else
+                if (nutTruocKhiAn != null)
                 {
                     nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
                     nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
                     nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
 
+                } else
+                {
+                    nutTruocKhiAn = btn;
+                    btn.IdleFillColor = mauNenKhiDiChuot;
+                    btn.IdleForecolor = mauChuKhiDiChuot;
+                    btn.IdleLineColor = mauVienKhiDiChuot;
+                    nutHienTai = btn;
+                    return;
                 }
+                
+                if (nutTruocKhiAn.ButtonText.ToString() != btn.ButtonText.ToString())
+                {
+                    nutTruocKhiAn = btn;
+                    btn.IdleFillColor = mauNenKhiDiChuot;
+                    btn.IdleForecolor = mauChuKhiDiChuot;
+                    btn.IdleLineColor = mauVienKhiDiChuot;
 
-                nutTruocKhiAn = btn;
-                btn.IdleFillColor = mauNenKhiDiChuot;
-                btn.IdleForecolor = mauChuKhiDiChuot;
-                btn.IdleLineColor = mauVienKhiDiChuot;
+                } else
+                {
+                    nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
+                    nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
+                    nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
+                    nutTruocKhiAn = null;
+                    nutHienTai = null;
+                    return;
+                }
                 nutHienTai = btn;
 
                 int soTienNap = Convert.ToInt32(tbNapTien.Text);
@@ -292,6 +406,11 @@ namespace BaiTapLon2
             {
                 HienThiThongBao(err.Message, 3);
             }
+        }
+
+        private void tbNapTien_TextChanged(object sender, EventArgs e)
+        {
+            tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * Convert.ToInt32(tbNapTien.Text)));
         }
 
         private void bDatMay_Click(object sender, EventArgs e)
@@ -370,6 +489,12 @@ namespace BaiTapLon2
                 
                 DSMayDangChoi = DSMayDangChoi.Where(el => el.ButtonText != nutHienTai.ButtonText).ToList();
                 TaiKhoanDangChoi[Convert.ToInt32(nutHienTai.ButtonText)] = "";
+
+                nutHienTai = null;
+                nutTruocKhiAn = null;
+                nutDangHoatDong = null;
+                nutTruocKhiHoatDong = null;
+                check = false;
 
                 KiemTraCacMayDangChoi();
                 XoaTextBoxTabQlyMay();
@@ -463,6 +588,11 @@ namespace BaiTapLon2
                 tbTKSuDung.Text = tbTimKiem.Text;
                 tbTimKiem.Text = "";
             }
+        }
+
+        private void bNapThemTien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
