@@ -23,6 +23,11 @@ namespace BaiTapLon2
             public string gioBatDauChoi { get; set; }
             public BunifuThinButton2 mayDangChoi { get; set; }
         }
+        class ThongTinTaiKhoan
+        {
+            public string gioChoi { get; set; }
+            public int tienNap { get; set; }
+        }
         public QlyQuanNet()
         {
             InitializeComponent();
@@ -58,6 +63,7 @@ namespace BaiTapLon2
         ThreadStart start;
         Thread childThread;
         Dictionary<string, ThongTinNguoiChoi> DSThongTinNguoiChoi = new Dictionary<string, ThongTinNguoiChoi>();
+        Dictionary<string, ThongTinTaiKhoan> DSThongTinTaiKhoan = new Dictionary<string, ThongTinTaiKhoan>();
         DataTable bangThongKe = new DataTable();
 
         const double soGioChoiPhongThuong = 3600 / (5000 * 1.0);
@@ -99,11 +105,28 @@ namespace BaiTapLon2
             }
         }
 
+        void KetNoiDanhSachTaiKhoanHienCo()
+        {
+            DSThongTinTaiKhoan.Clear();
+            SqlCommand cmd = ketnoi.CreateCommand();
+            cmd.CommandText = "SELECT Ten_tk, SoTien, SoGioChoi FROM Taikhoan;";
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            while (reader.Read())
+                {
+                    ThongTinTaiKhoan taikhoan = new ThongTinTaiKhoan() {
+                        tienNap = Convert.ToInt32(reader[1]),
+                        gioChoi = reader[2].ToString()
+                    };
+                    DSThongTinTaiKhoan[reader[0].ToString()] = taikhoan;
+                }
+        }
+
         void KiemTraCacMayDangChoi()
         {
             DSThongTinNguoiChoi.Clear();
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT SoMay AS \"Số máy\", Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\", GioBatDauChoi AS \"Giờ bắt đầu chơi\"FROM May;";
+            cmd.CommandText = "SELECT May.SoMay AS \"Số máy\", Taikhoan.Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\", GioBatDauChoi AS \"Giờ bắt đầu chơi\"FROM Taikhoan INNER JOIN MAY ON May.ten_tk = Taikhoan.Ten_tk;";
 
             using(SqlDataReader reader = cmd.ExecuteReader())
             while (reader.Read())
@@ -151,19 +174,19 @@ namespace BaiTapLon2
             dgvDSTaiKhoanDangChoi.DataSource = table;
         }
         
-        void capNhatThoiGian(string soMay, string gioChoi, int soTien)
+        void capNhatThoiGian(string taiKhoan, string gioChoi, int soTien)
         {
             try
             {
                 SqlCommand capNhat = ketnoi.CreateCommand();
-                capNhat.CommandText = "UPDATE May SET SoGioChoi = @SoGioChoi, SoTien = @SoTien WHERE SoMay = @SoMay";
+                capNhat.CommandText = "UPDATE taikhoan SET SoGioChoi = @SoGioChoi, SoTien = @SoTien WHERE Ten_tk = @Ten_tk";
                 capNhat.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
                 capNhat.Parameters.Add("@SoTien", SqlDbType.Float);
-                capNhat.Parameters.Add("@SoMay", SqlDbType.Int);
+                capNhat.Parameters.Add("@Ten_tk", SqlDbType.VarChar);
 
                 capNhat.Parameters["@SoGioChoi"].Value = gioChoi;
                 capNhat.Parameters["@SoTien"].Value = soTien;
-                capNhat.Parameters["@SoMay"].Value = soMay;
+                capNhat.Parameters["@Ten_tk"].Value = taiKhoan;
 
                 capNhat.ExecuteNonQuery();
                 KiemTraCacMayDangChoi();
@@ -176,7 +199,7 @@ namespace BaiTapLon2
         private void ketnoiDSTaiKhoan()
         {
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản',MatKhau as 'Mật khẩu' From TaiKhoan";
+            cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản', SoGioChoi AS 'So gio choi' From TaiKhoan";
             SqlDataAdapter SDA = new SqlDataAdapter();
             SDA.SelectCommand = cmd;
             DataTable table = new DataTable();
@@ -195,8 +218,30 @@ namespace BaiTapLon2
         {
             try
             {
+                string ten_tk = tbTaiKhoan.Text;
+                string matKhau = tbMatKhau.Text;
+                int tienNap = 0;
+                string soGioChoi = "00:00:00";
+
                 SqlCommand cmd = ketnoi.CreateCommand();
-                cmd.CommandText = "Insert into TaiKhoan values('" + tbTaiKhoan.Text + "','" + tbMatKhau.Text + "')";
+                cmd.CommandText = "INSERT INTO Taikhoan (Ten_tk, MatKhau, SoTien, SoGioChoi) VALUES (@Ten_tk, @MatKhau, @SoTien, @SoGioChoi);";
+                cmd.Parameters.Add("@Ten_tk", SqlDbType.VarChar);
+                cmd.Parameters.Add("@MatKhau", SqlDbType.VarChar);
+                cmd.Parameters.Add("@SoTien", SqlDbType.Float);
+                cmd.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
+
+                cmd.Parameters["@Ten_tk"].Value = ten_tk;
+                cmd.Parameters["@MatKhau"].Value = matKhau;
+                cmd.Parameters["@SoTien"].Value = tienNap;
+                cmd.Parameters["@SoGioChoi"].Value = soGioChoi;
+
+                ThongTinTaiKhoan tk = new ThongTinTaiKhoan()
+                {
+                    gioChoi = soGioChoi,
+                    tienNap = tienNap
+                };
+                DSThongTinTaiKhoan[ten_tk] = tk;
+
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 ketnoiDSTaiKhoan();
@@ -225,10 +270,14 @@ namespace BaiTapLon2
         {
             List<String> QuanLyTaiKhoan = new List<String>();
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT Ten_tk FROM TaiKhoan";
+            cmd.CommandText = "SELECT Ten_tk, SoTien, SoGioChoi FROM TaiKhoan";
             using (SqlDataReader sdr = cmd.ExecuteReader())
             while (sdr.Read())
+            {
                 QuanLyTaiKhoan.Add(sdr[0].ToString());
+                QuanLyTaiKhoan.Add(sdr[1].ToString());
+                QuanLyTaiKhoan.Add(sdr[2].ToString());
+            }
 
             return QuanLyTaiKhoan;
         }
@@ -386,6 +435,7 @@ namespace BaiTapLon2
             {
                 KetNoiCSDL(duongDan);
                 XoaTextBoxTabQlyMay();
+                KetNoiDanhSachTaiKhoanHienCo();
                 KiemTraCacMayDangChoi();
 
                start = new ThreadStart(CallThread);
@@ -491,7 +541,11 @@ namespace BaiTapLon2
 
         private void tbNapTien_TextChanged(object sender, EventArgs e)
         {
-            tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * Convert.ToInt32(tbNapTien.Text)));
+            try
+            {
+                if (tbNapTien.Text == "") return;
+                tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * Convert.ToInt32(tbNapTien.Text)));
+            }catch(Exception) { }
         }
 
         private void bDatMay_Click(object sender, EventArgs e)
@@ -507,7 +561,10 @@ namespace BaiTapLon2
                 string taiKhoan = tbTKSuDung.Text;
                 string gioChoi = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * soTienNap));
 
-                if (soTienNap < 5000)
+                bool c = true;
+                foreach (var tk in DSThongTinTaiKhoan)
+                    if (tk.Key == taiKhoan && Convert.ToInt32(tk.Value.tienNap) != 0) c = false;
+                if (c && soTienNap < 5000)
                 {
                     HienThiThongBao("Số tiền nạp quá ít!", 0);
                     return;
@@ -524,20 +581,26 @@ namespace BaiTapLon2
                 }
 
                 string soMay = nutHienTai.ButtonText;
-                SqlCommand cmd = ketnoi.CreateCommand();
-                cmd.CommandText = "INSERT INTO MAY (SoMay, Ten_tk, SoTien, SoGioChoi, GioBatDauChoi) VALUES (@Somay, @TenTK, @Sotien, @SoGioChoi, @GioBatDauChoi)";
+                SqlCommand cmdMay = ketnoi.CreateCommand();
+                SqlCommand cmdTK = ketnoi.CreateCommand();
+                
+                cmdMay.CommandText = "INSERT INTO May (SoMay, Ten_tk, GioBatDauChoi) VALUES (@Somay, @TenTK, @GioBatDauChoi)";
+                cmdTK.CommandText = "UPDATE Taikhoan SET  SoTien = @Sotien, SoGioChoi = @SoGioChoi WHERE Ten_tk = @TenTK;";
 
-                cmd.Parameters.Add("@Somay", SqlDbType.Int);
-                cmd.Parameters.Add("@TenTK", SqlDbType.VarChar);
-                cmd.Parameters.Add("@Sotien", SqlDbType.Float);
-                cmd.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
-                cmd.Parameters.Add("GioBatDauChoi", SqlDbType.Time);
+                cmdMay.Parameters.Add("@Somay", SqlDbType.Int);
+                cmdMay.Parameters.Add("GioBatDauChoi", SqlDbType.Time);
+                cmdMay.Parameters.Add("@TenTK", SqlDbType.VarChar);
+                cmdTK.Parameters.Add("@TenTK", SqlDbType.VarChar);
+                cmdTK.Parameters.Add("@Sotien", SqlDbType.Float);
+                cmdTK.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
 
-                cmd.Parameters["@Somay"].Value = soMay;
-                cmd.Parameters["@TenTK"].Value = taiKhoan;
-                cmd.Parameters["@SoTien"].Value = soTienNap;
-                cmd.Parameters["@SoGioChoi"].Value = gioChoi;
-                cmd.Parameters["GioBatDauChoi"].Value = DateTime.Now.ToString("HH:mm:ss");
+                cmdMay.Parameters["@Somay"].Value = soMay;
+                cmdMay.Parameters["GioBatDauChoi"].Value = DateTime.Now.ToString("HH:mm:ss");
+                cmdMay.Parameters["@TenTK"].Value = taiKhoan;
+                cmdTK.Parameters["@TenTK"].Value = taiKhoan;
+                cmdTK.Parameters["@SoTien"].Value = soTienNap;
+                cmdTK.Parameters["@SoGioChoi"].Value = gioChoi;
+
                 ThongTinNguoiChoi thongTin = new ThongTinNguoiChoi()
                 {
                     taiKhoan = taiKhoan,
@@ -550,10 +613,11 @@ namespace BaiTapLon2
                 DSThongTinNguoiChoi[soMay] = thongTin;
 
                 nutTruocKhiAn = null;
-                cmd.ExecuteNonQuery();
+                cmdMay.ExecuteNonQuery();
+                cmdTK.ExecuteNonQuery();
+
                 KiemTraCacMayDangChoi();
                 XoaTextBoxTabQlyMay();
-
                 HienThiCacMayDangChoi(nutHienTai);
             } catch (Exception err)
             {
@@ -583,7 +647,7 @@ namespace BaiTapLon2
                 if (Convert.ToInt32(nutHienTai.ButtonText) > 25)
                     soTienTrenThoiGian = tienTrenGiayPhongVip;
 
-
+                string taiKhoan = DSThongTinNguoiChoi[soMay].taiKhoan;
                 string gioChoi = DSThongTinNguoiChoi[soMay].gioChoi;
                 int giayGioChoi = Convert.ToInt32(gioChoi.Split(':')[2]);
                 int phutGioChoi = Convert.ToInt32(gioChoi.Split(':')[1]);
@@ -591,7 +655,7 @@ namespace BaiTapLon2
 
                 int soTien = Convert.ToInt32(soTienTrenThoiGian * ((giayGioChoi + phutGioChoi * 50 + gioDaChoi * 3600) * 1.0));
 
-                capNhatThoiGian(soMay, dinhDangGio(gioChoiConLai(soMay, gioChoi)), soTien);
+                capNhatThoiGian(taiKhoan, dinhDangGio(gioChoiConLai(soMay, gioChoi)), soTien);
 
                 DSThongTinNguoiChoi.Remove(soMay);
                 nutHienTai = null;
@@ -602,6 +666,8 @@ namespace BaiTapLon2
 
                 KiemTraCacMayDangChoi();
                 XoaTextBoxTabQlyMay();
+                KetNoiDanhSachTaiKhoanHienCo();
+                ketnoiDSTaiKhoan();
             }
             catch (Exception err)
             {
@@ -686,14 +752,14 @@ namespace BaiTapLon2
         }
         private void bSuDung_Click(object sender, EventArgs e)
         {
-            List<string> TaiKhoan = SuDung();
-
             foreach (var thongTin in DSThongTinNguoiChoi)
                     if (tbTimKiem.Text == thongTin.Value.taiKhoan) return;
 
-            if (TaiKhoan.Contains(tbTimKiem.Text))
+            if (DSThongTinTaiKhoan.ContainsKey(tbTimKiem.Text))
             {
                 tbTKSuDung.Text = tbTimKiem.Text;
+                tbNapTien.Text = DSThongTinTaiKhoan[tbTimKiem.Text].tienNap.ToString();
+                tbSoGioChoi.Text = DSThongTinTaiKhoan[tbTimKiem.Text].gioChoi;
                 tbTimKiem.Text = "";
             }
         }
