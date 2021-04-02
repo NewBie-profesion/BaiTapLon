@@ -1,15 +1,12 @@
-﻿using System;
+﻿using Bunifu.Framework.UI;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using Bunifu.Framework.UI;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace BaiTapLon2
 {
@@ -361,6 +358,7 @@ namespace BaiTapLon2
         {
             try
             {
+
                 KetNoiCSDL(duongDan);
                 XoaTextBoxTabQlyMay();
                 KiemTraCacMayDangChoi();
@@ -813,6 +811,19 @@ namespace BaiTapLon2
         private void splitContainer3_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton21_Click_1(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void btDangNhap_Click(object sender, EventArgs e)
+        {
+            panel8.Visible = true;
+            panel9.Visible = true;
+            panel10.Visible = false;
         }
     }
 }

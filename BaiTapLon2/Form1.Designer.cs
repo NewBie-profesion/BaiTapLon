@@ -129,6 +129,7 @@ namespace BaiTapLon2
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nạpTiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -136,7 +137,26 @@ namespace BaiTapLon2
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton11 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton12 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btDangNhap = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -170,7 +190,17 @@ namespace BaiTapLon2
             this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2331,6 +2361,17 @@ namespace BaiTapLon2
             this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1067, 495);
             this.dgvDSTaiKhoanDangChoi.TabIndex = 4;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel9);
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1079, 527);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Người Dùng";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2381,15 +2422,279 @@ namespace BaiTapLon2
             this.toolStripMenuItem6.Size = new System.Drawing.Size(126, 24);
             this.toolStripMenuItem6.Text = "200000";
             // 
-            // tabPage4
+            // panel8
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1079, 527);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.bunifuImageButton12);
+            this.panel8.Controls.Add(this.bunifuImageButton11);
+            this.panel8.Location = new System.Drawing.Point(0, 476);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1073, 45);
+            this.panel8.TabIndex = 1;
+            this.panel8.Visible = false;
+            // 
+            // bunifuImageButton11
+            // 
+            this.bunifuImageButton11.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton11.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton11.Image")));
+            this.bunifuImageButton11.ImageActive = null;
+            this.bunifuImageButton11.Location = new System.Drawing.Point(0, 2);
+            this.bunifuImageButton11.Name = "bunifuImageButton11";
+            this.bunifuImageButton11.Size = new System.Drawing.Size(60, 45);
+            this.bunifuImageButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton11.TabIndex = 2;
+            this.bunifuImageButton11.TabStop = false;
+            this.bunifuImageButton11.Zoom = 10;
+            // 
+            // bunifuImageButton12
+            // 
+            this.bunifuImageButton12.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton12.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton12.Image")));
+            this.bunifuImageButton12.ImageActive = null;
+            this.bunifuImageButton12.Location = new System.Drawing.Point(325, 2);
+            this.bunifuImageButton12.Name = "bunifuImageButton12";
+            this.bunifuImageButton12.Size = new System.Drawing.Size(60, 40);
+            this.bunifuImageButton12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton12.TabIndex = 2;
+            this.bunifuImageButton12.TabStop = false;
+            this.bunifuImageButton12.Zoom = 10;
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.panel13);
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.bunifuImageButton3);
+            this.panel9.Controls.Add(this.panel8);
+            this.panel9.Controls.Add(this.bunifuImageButton5);
+            this.panel9.Controls.Add(this.bunifuImageButton2);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1073, 521);
+            this.panel9.TabIndex = 2;
+            this.panel9.Visible = false;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.BackgroundImage")));
+            this.bunifuImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(0, 77);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(60, 60);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 0;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(0, 163);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(60, 60);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 0;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.BackgroundImage")));
+            this.bunifuImageButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(0, 260);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(66, 51);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 0;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel10.Controls.Add(this.btDangNhap);
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Controls.Add(this.label2);
+            this.panel10.Controls.Add(this.textBox2);
+            this.panel10.Controls.Add(this.textBox3);
+            this.panel10.Location = new System.Drawing.Point(308, 204);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(566, 238);
+            this.panel10.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
+            this.textBox1.Location = new System.Drawing.Point(60, 4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(265, 40);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Type here to search";
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Enabled = false;
+            this.panel11.Location = new System.Drawing.Point(410, 185);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(0, 1);
+            this.panel11.TabIndex = 36;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(410, 227);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(0, 1);
+            this.panel12.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(410, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.TabIndex = 40;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.ForeColor = System.Drawing.Color.Gray;
+            this.textBox2.Location = new System.Drawing.Point(409, 159);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(0, 20);
+            this.textBox2.TabIndex = 39;
+            this.textBox2.Text = "Tài Khoản";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.ForeColor = System.Drawing.Color.Gray;
+            this.textBox3.Location = new System.Drawing.Point(410, 205);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(0, 20);
+            this.textBox3.TabIndex = 38;
+            this.textBox3.Text = "Mật Khẩu";
+            // 
+            // btDangNhap
+            // 
+            this.btDangNhap.ActiveBorderThickness = 1;
+            this.btDangNhap.ActiveCornerRadius = 20;
+            this.btDangNhap.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btDangNhap.ActiveForecolor = System.Drawing.Color.White;
+            this.btDangNhap.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btDangNhap.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btDangNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDangNhap.BackgroundImage")));
+            this.btDangNhap.ButtonText = "ThinButton";
+            this.btDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDangNhap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDangNhap.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btDangNhap.IdleBorderThickness = 1;
+            this.btDangNhap.IdleCornerRadius = 20;
+            this.btDangNhap.IdleFillColor = System.Drawing.Color.White;
+            this.btDangNhap.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btDangNhap.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btDangNhap.Location = new System.Drawing.Point(415, 272);
+            this.btDangNhap.Margin = new System.Windows.Forms.Padding(5);
+            this.btDangNhap.Name = "btDangNhap";
+            this.btDangNhap.Size = new System.Drawing.Size(225, 41);
+            this.btDangNhap.TabIndex = 41;
+            this.btDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Transparent;
+            this.panel13.Controls.Add(this.bunifuThinButton21);
+            this.panel13.Controls.Add(this.label8);
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Controls.Add(this.label7);
+            this.panel13.Location = new System.Drawing.Point(880, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(193, 223);
+            this.panel13.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(64, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(64, 102);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 18);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "label8";
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "ThinButton";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(20, 163);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(157, 41);
+            this.bunifuThinButton21.TabIndex = 2;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(132, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 18);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "label7";
             // 
             // QlyQuanNet
             // 
@@ -2447,7 +2752,20 @@ namespace BaiTapLon2
             this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2562,6 +2880,26 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuThinButton2 btDangXuat;
         private System.Windows.Forms.Label lbThongbaoNapTien;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Panel panel8;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton12;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton11;
+        private System.Windows.Forms.Panel panel9;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btDangNhap;
+        private System.Windows.Forms.Panel panel13;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
     }
 }
 
