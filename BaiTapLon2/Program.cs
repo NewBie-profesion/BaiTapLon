@@ -14,8 +14,9 @@ namespace BaiTapLon2
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+           Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new QlyQuanNet());
             Application.Run(new QlyQuanNet());
         }
     }

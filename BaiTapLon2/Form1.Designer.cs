@@ -29,24 +29,34 @@ namespace BaiTapLon2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QlyQuanNet));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbKiemTraTK = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.tbMatKhau = new System.Windows.Forms.TextBox();
-            this.tbTaiKhoan = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lbThongbaoNapTien = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lbNapTien = new System.Windows.Forms.Label();
+            this.btDangXuat = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btNapTien = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tbNapTien = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbKiemTraTK = new System.Windows.Forms.Label();
+            this.tbTaiKhoan = new System.Windows.Forms.TextBox();
+            this.tbMatKhau = new System.Windows.Forms.TextBox();
+            this.bDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDSTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.btTim = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lbKtraTimKiem = new System.Windows.Forms.Label();
             this.btXem = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btXoa = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bSuDung = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -56,10 +66,8 @@ namespace BaiTapLon2
             this.bTraMay = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bDatMay = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbSoGioChoi = new System.Windows.Forms.TextBox();
-            this.tbNapTien = new System.Windows.Forms.TextBox();
             this.tbTKSuDung = new System.Windows.Forms.TextBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -120,9 +128,15 @@ namespace BaiTapLon2
             this.bunifuThinButton229 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
-            this.bNapThemTien = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.nạpTiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -130,7 +144,9 @@ namespace BaiTapLon2
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -153,17 +169,21 @@ namespace BaiTapLon2
             this.tlpTang2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1087, 561);
@@ -173,10 +193,11 @@ namespace BaiTapLon2
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.tabPage1.Controls.Add(this.splitContainer1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1079, 528);
+            this.tabPage1.Size = new System.Drawing.Size(1079, 527);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản Lý Tài Khoản";
             // 
@@ -194,47 +215,224 @@ namespace BaiTapLon2
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1073, 522);
-            this.splitContainer1.SplitterDistance = 336;
+            this.splitContainer1.Size = new System.Drawing.Size(1073, 521);
+            this.splitContainer1.SplitterDistance = 304;
             this.splitContainer1.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lbKiemTraTK);
-            this.groupBox4.Controls.Add(this.pictureBox3);
-            this.groupBox4.Controls.Add(this.bDangKi);
-            this.groupBox4.Controls.Add(this.tbMatKhau);
-            this.groupBox4.Controls.Add(this.tbTaiKhoan);
-            this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.panel1);
+            this.groupBox4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.groupBox4.Controls.Add(this.panel6);
+            this.groupBox4.Controls.Add(this.panel5);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(336, 522);
+            this.groupBox4.Size = new System.Drawing.Size(304, 521);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Đăng Kí Tài Khoản";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.groupBox6);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(3, 260);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(298, 258);
+            this.panel6.TabIndex = 1;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.lbThongbaoNapTien);
+            this.groupBox6.Controls.Add(this.panel7);
+            this.groupBox6.Controls.Add(this.lbNapTien);
+            this.groupBox6.Controls.Add(this.btDangXuat);
+            this.groupBox6.Controls.Add(this.btNapTien);
+            this.groupBox6.Controls.Add(this.tbNapTien);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(0, 0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(298, 258);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Nạp Tiền ";
+            // 
+            // lbThongbaoNapTien
+            // 
+            this.lbThongbaoNapTien.AutoSize = true;
+            this.lbThongbaoNapTien.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThongbaoNapTien.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lbThongbaoNapTien.Location = new System.Drawing.Point(25, 148);
+            this.lbThongbaoNapTien.Name = "lbThongbaoNapTien";
+            this.lbThongbaoNapTien.Size = new System.Drawing.Size(0, 16);
+            this.lbThongbaoNapTien.TabIndex = 21;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(22, 143);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(245, 1);
+            this.panel7.TabIndex = 21;
+            // 
+            // lbNapTien
+            // 
+            this.lbNapTien.AutoSize = true;
+            this.lbNapTien.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNapTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbNapTien.Location = new System.Drawing.Point(33, 61);
+            this.lbNapTien.Name = "lbNapTien";
+            this.lbNapTien.Size = new System.Drawing.Size(250, 25);
+            this.lbNapTien.TabIndex = 41;
+            this.lbNapTien.Text = "Hãy Đăng Kí Tài Khoản";
+            // 
+            // btDangXuat
+            // 
+            this.btDangXuat.ActiveBorderThickness = 1;
+            this.btDangXuat.ActiveCornerRadius = 20;
+            this.btDangXuat.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btDangXuat.ActiveForecolor = System.Drawing.Color.White;
+            this.btDangXuat.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btDangXuat.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btDangXuat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDangXuat.BackgroundImage")));
+            this.btDangXuat.ButtonText = "Đăng Xuất";
+            this.btDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDangXuat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDangXuat.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btDangXuat.IdleBorderThickness = 1;
+            this.btDangXuat.IdleCornerRadius = 20;
+            this.btDangXuat.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btDangXuat.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btDangXuat.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btDangXuat.Location = new System.Drawing.Point(22, 209);
+            this.btDangXuat.Margin = new System.Windows.Forms.Padding(5);
+            this.btDangXuat.Name = "btDangXuat";
+            this.btDangXuat.Size = new System.Drawing.Size(245, 41);
+            this.btDangXuat.TabIndex = 18;
+            this.btDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btDangXuat.Visible = false;
+            this.btDangXuat.Click += new System.EventHandler(this.btDangXuat_Click);
+            // 
+            // btNapTien
+            // 
+            this.btNapTien.ActiveBorderThickness = 1;
+            this.btNapTien.ActiveCornerRadius = 20;
+            this.btNapTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.ActiveForecolor = System.Drawing.Color.White;
+            this.btNapTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btNapTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNapTien.BackgroundImage")));
+            this.btNapTien.ButtonText = "Nạp Tiền";
+            this.btNapTien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btNapTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNapTien.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btNapTien.IdleBorderThickness = 1;
+            this.btNapTien.IdleCornerRadius = 20;
+            this.btNapTien.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btNapTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.Location = new System.Drawing.Point(22, 170);
+            this.btNapTien.Margin = new System.Windows.Forms.Padding(5);
+            this.btNapTien.Name = "btNapTien";
+            this.btNapTien.Size = new System.Drawing.Size(245, 41);
+            this.btNapTien.TabIndex = 18;
+            this.btNapTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btNapTien.Click += new System.EventHandler(this.btNapTien_Click);
+            // 
+            // tbNapTien
+            // 
+            this.tbNapTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNapTien.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbNapTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNapTien.Enabled = false;
+            this.tbNapTien.ForeColor = System.Drawing.Color.Gray;
+            this.tbNapTien.Location = new System.Drawing.Point(22, 117);
+            this.tbNapTien.Name = "tbNapTien";
+            this.tbNapTien.Size = new System.Drawing.Size(246, 20);
+            this.tbNapTien.TabIndex = 39;
+            this.tbNapTien.Text = "Số Tiền Nạp ......";
+            this.tbNapTien.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbNapTien.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.lbKiemTraTK);
+            this.panel5.Controls.Add(this.tbTaiKhoan);
+            this.panel5.Controls.Add(this.tbMatKhau);
+            this.panel5.Controls.Add(this.bDangKi);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 23);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(298, 218);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Enabled = false;
+            this.panel3.Location = new System.Drawing.Point(38, 70);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(230, 1);
+            this.panel3.TabIndex = 30;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(38, 112);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(230, 1);
+            this.panel4.TabIndex = 31;
+            // 
             // lbKiemTraTK
             // 
+            this.lbKiemTraTK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbKiemTraTK.AutoSize = true;
             this.lbKiemTraTK.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKiemTraTK.ForeColor = System.Drawing.Color.Red;
-            this.lbKiemTraTK.Location = new System.Drawing.Point(39, 364);
+            this.lbKiemTraTK.Location = new System.Drawing.Point(38, 120);
             this.lbKiemTraTK.Name = "lbKiemTraTK";
             this.lbKiemTraTK.Size = new System.Drawing.Size(0, 16);
-            this.lbKiemTraTK.TabIndex = 21;
+            this.lbKiemTraTK.TabIndex = 34;
             // 
-            // pictureBox3
+            // tbTaiKhoan
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(72, 97);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 140);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
+            this.tbTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTaiKhoan.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTaiKhoan.ForeColor = System.Drawing.Color.Gray;
+            this.tbTaiKhoan.Location = new System.Drawing.Point(37, 44);
+            this.tbTaiKhoan.Name = "tbTaiKhoan";
+            this.tbTaiKhoan.Size = new System.Drawing.Size(230, 20);
+            this.tbTaiKhoan.TabIndex = 33;
+            this.tbTaiKhoan.Text = "Tài Khoản";
+            this.tbTaiKhoan.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbTaiKhoan.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
+            // 
+            // tbMatKhau
+            // 
+            this.tbMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMatKhau.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMatKhau.ForeColor = System.Drawing.Color.Gray;
+            this.tbMatKhau.Location = new System.Drawing.Point(38, 90);
+            this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Size = new System.Drawing.Size(230, 20);
+            this.tbMatKhau.TabIndex = 32;
+            this.tbMatKhau.Text = "Mật Khẩu";
+            this.tbMatKhau.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbMatKhau.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
             // 
             // bDangKi
             // 
@@ -243,8 +441,10 @@ namespace BaiTapLon2
             this.bDangKi.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDangKi.ActiveForecolor = System.Drawing.Color.White;
             this.bDangKi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bDangKi.AutoSize = true;
-            this.bDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bDangKi.BackColor = System.Drawing.Color.DarkSlateGray;
             this.bDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDangKi.BackgroundImage")));
             this.bDangKi.ButtonText = "Đăng kí ";
             this.bDangKi.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -252,59 +452,16 @@ namespace BaiTapLon2
             this.bDangKi.ForeColor = System.Drawing.Color.SeaGreen;
             this.bDangKi.IdleBorderThickness = 1;
             this.bDangKi.IdleCornerRadius = 20;
-            this.bDangKi.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bDangKi.IdleFillColor = System.Drawing.Color.DarkSlateGray;
             this.bDangKi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDangKi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDangKi.Location = new System.Drawing.Point(39, 409);
+            this.bDangKi.Location = new System.Drawing.Point(37, 141);
             this.bDangKi.Margin = new System.Windows.Forms.Padding(5);
             this.bDangKi.Name = "bDangKi";
             this.bDangKi.Size = new System.Drawing.Size(230, 41);
-            this.bDangKi.TabIndex = 14;
+            this.bDangKi.TabIndex = 29;
             this.bDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bDangKi.Click += new System.EventHandler(this.bDangKi_Click);
-            // 
-            // tbMatKhau
-            // 
-            this.tbMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMatKhau.ForeColor = System.Drawing.Color.Silver;
-            this.tbMatKhau.Location = new System.Drawing.Point(39, 334);
-            this.tbMatKhau.Name = "tbMatKhau";
-            this.tbMatKhau.Size = new System.Drawing.Size(230, 20);
-            this.tbMatKhau.TabIndex = 19;
-            this.tbMatKhau.Text = "Mật Khẩu";
-            this.tbMatKhau.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbMatKhau.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
-            // 
-            // tbTaiKhoan
-            // 
-            this.tbTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTaiKhoan.ForeColor = System.Drawing.Color.Silver;
-            this.tbTaiKhoan.Location = new System.Drawing.Point(38, 288);
-            this.tbTaiKhoan.Name = "tbTaiKhoan";
-            this.tbTaiKhoan.Size = new System.Drawing.Size(230, 20);
-            this.tbTaiKhoan.TabIndex = 20;
-            this.tbTaiKhoan.Text = "Tài Khoản";
-            this.tbTaiKhoan.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbTaiKhoan.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(39, 314);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(230, 1);
-            this.panel3.TabIndex = 15;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(39, 356);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 1);
-            this.panel1.TabIndex = 16;
             // 
             // splitContainer2
             // 
@@ -320,13 +477,14 @@ namespace BaiTapLon2
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.splitContainer2.Panel2.Controls.Add(this.btTim);
+            this.splitContainer2.Panel2.Controls.Add(this.lbKtraTimKiem);
             this.splitContainer2.Panel2.Controls.Add(this.btXem);
+            this.splitContainer2.Panel2.Controls.Add(this.btXoa);
             this.splitContainer2.Panel2.Controls.Add(this.bSuDung);
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
             this.splitContainer2.Panel2.Controls.Add(this.tbTimKiem);
-            this.splitContainer2.Size = new System.Drawing.Size(733, 522);
-            this.splitContainer2.SplitterDistance = 333;
+            this.splitContainer2.Size = new System.Drawing.Size(765, 521);
+            this.splitContainer2.SplitterDistance = 332;
             this.splitContainer2.TabIndex = 0;
             // 
             // groupBox1
@@ -337,7 +495,7 @@ namespace BaiTapLon2
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(733, 333);
+            this.groupBox1.Size = new System.Drawing.Size(765, 332);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Tài Khoản";
@@ -354,8 +512,8 @@ namespace BaiTapLon2
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 314F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(727, 307);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 306F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(759, 306);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvDSTaiKhoan
@@ -369,35 +527,19 @@ namespace BaiTapLon2
             this.dgvDSTaiKhoan.Location = new System.Drawing.Point(3, 3);
             this.dgvDSTaiKhoan.Name = "dgvDSTaiKhoan";
             this.dgvDSTaiKhoan.ReadOnly = true;
-            this.dgvDSTaiKhoan.Size = new System.Drawing.Size(721, 301);
+            this.dgvDSTaiKhoan.Size = new System.Drawing.Size(753, 300);
             this.dgvDSTaiKhoan.TabIndex = 1;
             this.dgvDSTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTaiKhoan_CellClick);
             // 
-            // btTim
+            // lbKtraTimKiem
             // 
-            this.btTim.ActiveBorderThickness = 1;
-            this.btTim.ActiveCornerRadius = 20;
-            this.btTim.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btTim.ActiveForecolor = System.Drawing.Color.White;
-            this.btTim.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btTim.AutoSize = true;
-            this.btTim.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btTim.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btTim.BackgroundImage")));
-            this.btTim.ButtonText = "Tìm";
-            this.btTim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTim.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btTim.IdleBorderThickness = 1;
-            this.btTim.IdleCornerRadius = 20;
-            this.btTim.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.btTim.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btTim.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btTim.Location = new System.Drawing.Point(382, 29);
-            this.btTim.Margin = new System.Windows.Forms.Padding(5);
-            this.btTim.Name = "btTim";
-            this.btTim.Size = new System.Drawing.Size(45, 41);
-            this.btTim.TabIndex = 19;
-            this.btTim.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbKtraTimKiem.AutoSize = true;
+            this.lbKtraTimKiem.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKtraTimKiem.ForeColor = System.Drawing.Color.Red;
+            this.lbKtraTimKiem.Location = new System.Drawing.Point(113, 77);
+            this.lbKtraTimKiem.Name = "lbKtraTimKiem";
+            this.lbKtraTimKiem.Size = new System.Drawing.Size(0, 16);
+            this.lbKtraTimKiem.TabIndex = 20;
             // 
             // btXem
             // 
@@ -406,6 +548,7 @@ namespace BaiTapLon2
             this.btXem.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btXem.ActiveForecolor = System.Drawing.Color.White;
             this.btXem.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btXem.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btXem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXem.BackgroundImage")));
             this.btXem.ButtonText = "Hiện Danh Sách";
@@ -417,13 +560,39 @@ namespace BaiTapLon2
             this.btXem.IdleFillColor = System.Drawing.Color.DarkSlateGray;
             this.btXem.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btXem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXem.Location = new System.Drawing.Point(522, 98);
+            this.btXem.Location = new System.Drawing.Point(553, 98);
             this.btXem.Margin = new System.Windows.Forms.Padding(5);
             this.btXem.Name = "btXem";
             this.btXem.Size = new System.Drawing.Size(171, 41);
             this.btXem.TabIndex = 0;
             this.btXem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btXem.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.ActiveBorderThickness = 1;
+            this.btXoa.ActiveCornerRadius = 20;
+            this.btXoa.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.ActiveForecolor = System.Drawing.Color.White;
+            this.btXoa.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXoa.BackgroundImage")));
+            this.btXoa.ButtonText = "Xóa";
+            this.btXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btXoa.IdleBorderThickness = 1;
+            this.btXoa.IdleCornerRadius = 20;
+            this.btXoa.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btXoa.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.Location = new System.Drawing.Point(320, 98);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(5);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(110, 41);
+            this.btXoa.TabIndex = 18;
+            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // bSuDung
             // 
@@ -443,10 +612,10 @@ namespace BaiTapLon2
             this.bSuDung.IdleFillColor = System.Drawing.Color.DarkSlateGray;
             this.bSuDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bSuDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bSuDung.Location = new System.Drawing.Point(107, 98);
+            this.bSuDung.Location = new System.Drawing.Point(117, 98);
             this.bSuDung.Margin = new System.Windows.Forms.Padding(5);
             this.bSuDung.Name = "bSuDung";
-            this.bSuDung.Size = new System.Drawing.Size(206, 41);
+            this.bSuDung.Size = new System.Drawing.Size(110, 41);
             this.bSuDung.TabIndex = 18;
             this.bSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bSuDung.Click += new System.EventHandler(this.bSuDung_Click);
@@ -461,13 +630,15 @@ namespace BaiTapLon2
             // 
             // tbTimKiem
             // 
+            this.tbTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbTimKiem.BackColor = System.Drawing.Color.DarkSlateGray;
             this.tbTimKiem.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.tbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTimKiem.ForeColor = System.Drawing.Color.Silver;
+            this.tbTimKiem.ForeColor = System.Drawing.Color.Gray;
             this.tbTimKiem.Location = new System.Drawing.Point(107, 50);
             this.tbTimKiem.Name = "tbTimKiem";
-            this.tbTimKiem.Size = new System.Drawing.Size(259, 20);
+            this.tbTimKiem.Size = new System.Drawing.Size(320, 20);
             this.tbTimKiem.TabIndex = 16;
             this.tbTimKiem.Text = "Tìm Kiếm";
             this.tbTimKiem.Click += new System.EventHandler(this.tbTaiKhoan_Click);
@@ -479,10 +650,10 @@ namespace BaiTapLon2
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.tabPage2.Controls.Add(this.splitContainer3);
             this.tabPage2.ForeColor = System.Drawing.Color.Chocolate;
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1079, 528);
+            this.tabPage2.Size = new System.Drawing.Size(1079, 527);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản Lý Máy";
             // 
@@ -495,29 +666,30 @@ namespace BaiTapLon2
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.label3);
-            this.splitContainer3.Panel1.Controls.Add(this.bNapThemTien);
             this.splitContainer3.Panel1.Controls.Add(this.bTraMay);
             this.splitContainer3.Panel1.Controls.Add(this.bDatMay);
             this.splitContainer3.Panel1.Controls.Add(this.label6);
-            this.splitContainer3.Panel1.Controls.Add(this.label2);
             this.splitContainer3.Panel1.Controls.Add(this.label1);
             this.splitContainer3.Panel1.Controls.Add(this.tbSoGioChoi);
-            this.splitContainer3.Panel1.Controls.Add(this.tbNapTien);
             this.splitContainer3.Panel1.Controls.Add(this.tbTKSuDung);
+            this.splitContainer3.Panel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitContainer3.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel1_Paint);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1073, 522);
+            this.splitContainer3.Size = new System.Drawing.Size(1073, 521);
             this.splitContainer3.SplitterDistance = 324;
             this.splitContainer3.TabIndex = 0;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(16, 466);
+            this.label3.Location = new System.Drawing.Point(21, 461);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(258, 16);
             this.label3.TabIndex = 2;
@@ -530,6 +702,8 @@ namespace BaiTapLon2
             this.bTraMay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTraMay.ActiveForecolor = System.Drawing.Color.White;
             this.bTraMay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bTraMay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bTraMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bTraMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bTraMay.BackgroundImage")));
             this.bTraMay.ButtonText = "Trả Máy";
@@ -541,10 +715,10 @@ namespace BaiTapLon2
             this.bTraMay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bTraMay.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bTraMay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bTraMay.Location = new System.Drawing.Point(40, 326);
+            this.bTraMay.Location = new System.Drawing.Point(24, 250);
             this.bTraMay.Margin = new System.Windows.Forms.Padding(5);
             this.bTraMay.Name = "bTraMay";
-            this.bTraMay.Size = new System.Drawing.Size(182, 42);
+            this.bTraMay.Size = new System.Drawing.Size(268, 42);
             this.bTraMay.TabIndex = 0;
             this.bTraMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bTraMay.Click += new System.EventHandler(this.bTraMay_Click);
@@ -556,6 +730,8 @@ namespace BaiTapLon2
             this.bDatMay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDatMay.ActiveForecolor = System.Drawing.Color.White;
             this.bDatMay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDatMay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bDatMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bDatMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDatMay.BackgroundImage")));
             this.bDatMay.ButtonText = "Đặt Máy";
@@ -567,63 +743,54 @@ namespace BaiTapLon2
             this.bDatMay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bDatMay.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bDatMay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDatMay.Location = new System.Drawing.Point(40, 265);
+            this.bDatMay.Location = new System.Drawing.Point(24, 211);
             this.bDatMay.Margin = new System.Windows.Forms.Padding(5);
             this.bDatMay.Name = "bDatMay";
-            this.bDatMay.Size = new System.Drawing.Size(182, 42);
+            this.bDatMay.Size = new System.Drawing.Size(268, 42);
             this.bDatMay.TabIndex = 0;
             this.bDatMay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bDatMay.Click += new System.EventHandler(this.bDatMay_Click);
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 194);
+            this.label6.Location = new System.Drawing.Point(22, 154);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 20);
+            this.label6.Size = new System.Drawing.Size(103, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số Giờ Chơi";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nạp Tiền";
-            // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 77);
+            this.label1.Location = new System.Drawing.Point(23, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài Khoản";
             // 
             // tbSoGioChoi
             // 
+            this.tbSoGioChoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSoGioChoi.Enabled = false;
-            this.tbSoGioChoi.Location = new System.Drawing.Point(19, 217);
+            this.tbSoGioChoi.Location = new System.Drawing.Point(24, 177);
             this.tbSoGioChoi.Name = "tbSoGioChoi";
-            this.tbSoGioChoi.Size = new System.Drawing.Size(234, 27);
+            this.tbSoGioChoi.Size = new System.Drawing.Size(268, 27);
             this.tbSoGioChoi.TabIndex = 0;
-            // 
-            // tbNapTien
-            // 
-            this.tbNapTien.Location = new System.Drawing.Point(19, 159);
-            this.tbNapTien.Name = "tbNapTien";
-            this.tbNapTien.Size = new System.Drawing.Size(234, 27);
-            this.tbNapTien.TabIndex = 0;
-            this.tbNapTien.TextChanged += new System.EventHandler(this.tbNapTien_TextChanged);
             // 
             // tbTKSuDung
             // 
+            this.tbTKSuDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbTKSuDung.Enabled = false;
-            this.tbTKSuDung.Location = new System.Drawing.Point(19, 100);
+            this.tbTKSuDung.Location = new System.Drawing.Point(24, 118);
             this.tbTKSuDung.Name = "tbTKSuDung";
-            this.tbTKSuDung.Size = new System.Drawing.Size(234, 27);
+            this.tbTKSuDung.Size = new System.Drawing.Size(268, 27);
             this.tbTKSuDung.TabIndex = 0;
             // 
             // splitContainer4
@@ -639,7 +806,7 @@ namespace BaiTapLon2
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer4.Size = new System.Drawing.Size(745, 522);
+            this.splitContainer4.Size = new System.Drawing.Size(745, 521);
             this.splitContainer4.SplitterDistance = 379;
             this.splitContainer4.TabIndex = 1;
             // 
@@ -651,7 +818,7 @@ namespace BaiTapLon2
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(379, 522);
+            this.groupBox2.Size = new System.Drawing.Size(379, 521);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tầng 1";
@@ -659,9 +826,9 @@ namespace BaiTapLon2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 382);
+            this.label4.Location = new System.Drawing.Point(78, 420);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(204, 20);
+            this.label4.Size = new System.Drawing.Size(222, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Phòng máy Thường 5k/giờ";
             // 
@@ -1393,7 +1560,7 @@ namespace BaiTapLon2
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(362, 522);
+            this.groupBox3.Size = new System.Drawing.Size(362, 521);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tầng 2(Phòng VIP)";
@@ -1401,9 +1568,9 @@ namespace BaiTapLon2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 383);
+            this.label5.Location = new System.Drawing.Point(75, 420);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 20);
+            this.label5.Size = new System.Drawing.Size(199, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "Phòng máy VIP 10k/giờ";
             // 
@@ -2129,43 +2296,27 @@ namespace BaiTapLon2
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1079, 528);
+            this.tabPage3.Size = new System.Drawing.Size(1079, 527);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Thống Kê";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.groupBox5.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1073, 522);
+            this.groupBox5.Size = new System.Drawing.Size(1073, 521);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Quản Lý máy đang chơi";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.dgvDSTaiKhoanDangChoi, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1067, 496);
-            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dgvDSTaiKhoanDangChoi
             // 
@@ -2174,40 +2325,75 @@ namespace BaiTapLon2
             this.dgvDSTaiKhoanDangChoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDSTaiKhoanDangChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSTaiKhoanDangChoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(3, 3);
+            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(3, 23);
             this.dgvDSTaiKhoanDangChoi.Name = "dgvDSTaiKhoanDangChoi";
             this.dgvDSTaiKhoanDangChoi.ReadOnly = true;
-            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1061, 490);
-            this.dgvDSTaiKhoanDangChoi.TabIndex = 2;
+            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1067, 495);
+            this.dgvDSTaiKhoanDangChoi.TabIndex = 4;
             // 
-            // bNapThemTien
+            // contextMenuStrip1
             // 
-            this.bNapThemTien.ActiveBorderThickness = 1;
-            this.bNapThemTien.ActiveCornerRadius = 20;
-            this.bNapThemTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.ActiveForecolor = System.Drawing.Color.White;
-            this.bNapThemTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bNapThemTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNapThemTien.BackgroundImage")));
-            this.bNapThemTien.ButtonText = "Nạp thêm tiền";
-            this.bNapThemTien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bNapThemTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNapThemTien.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bNapThemTien.IdleBorderThickness = 1;
-            this.bNapThemTien.IdleCornerRadius = 20;
-            this.bNapThemTien.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bNapThemTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.Location = new System.Drawing.Point(40, 383);
-            this.bNapThemTien.Margin = new System.Windows.Forms.Padding(5);
-            this.bNapThemTien.Name = "bNapThemTien";
-            this.bNapThemTien.Size = new System.Drawing.Size(182, 42);
-            this.bNapThemTien.TabIndex = 0;
-            this.bNapThemTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bNapThemTien.Click += new System.EventHandler(this.bNapThemTien_Click);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nạpTiềnToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 28);
+            // 
+            // nạpTiềnToolStripMenuItem
+            // 
+            this.nạpTiềnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6});
+            this.nạpTiềnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nạpTiềnToolStripMenuItem.Name = "nạpTiềnToolStripMenuItem";
+            this.nạpTiềnToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.nạpTiềnToolStripMenuItem.Text = "Nạp Tiền";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(126, 24);
+            this.toolStripMenuItem2.Text = "10000";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(126, 24);
+            this.toolStripMenuItem3.Text = "20000";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(126, 24);
+            this.toolStripMenuItem4.Text = "50000";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(126, 24);
+            this.toolStripMenuItem5.Text = "100000";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(126, 24);
+            this.toolStripMenuItem6.Text = "200000";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1079, 527);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // QlyQuanNet
             // 
+            this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -2229,8 +2415,11 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
@@ -2257,8 +2446,8 @@ namespace BaiTapLon2
             this.tlpTang2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2272,9 +2461,7 @@ namespace BaiTapLon2
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbNapTien;
         private System.Windows.Forms.TextBox tbTKSuDung;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -2336,28 +2523,45 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton231;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton230;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton229;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bDangKi;
-        private System.Windows.Forms.TextBox tbMatKhau;
-        private System.Windows.Forms.TextBox tbTaiKhoan;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox5;
         private Bunifu.Framework.UI.BunifuThinButton2 bTraMay;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSoGioChoi;
-        private System.Windows.Forms.Label lbKiemTraTK;
         private Bunifu.Framework.UI.BunifuThinButton2 btXem;
         private Bunifu.Framework.UI.BunifuThinButton2 bSuDung;
         private System.Windows.Forms.Panel panel2;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbTimKiem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dgvDSTaiKhoan;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lbKtraTimKiem;
+        private Bunifu.Framework.UI.BunifuThinButton2 btXoa;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nạpTiềnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.DataGridView dgvDSTaiKhoanDangChoi;
-        private Bunifu.Framework.UI.BunifuThinButton2 btTim;
-        private Bunifu.Framework.UI.BunifuThinButton2 bNapThemTien;
+        private System.Windows.Forms.Panel panel1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lbKiemTraTK;
+        private System.Windows.Forms.TextBox tbTaiKhoan;
+        private System.Windows.Forms.TextBox tbMatKhau;
+        private Bunifu.Framework.UI.BunifuThinButton2 bDangKi;
+        private System.Windows.Forms.TextBox tbNapTien;
+        private System.Windows.Forms.Label lbNapTien;
+        private System.Windows.Forms.Panel panel7;
+        private Bunifu.Framework.UI.BunifuThinButton2 btNapTien;
+        private Bunifu.Framework.UI.BunifuThinButton2 btDangXuat;
+        private System.Windows.Forms.Label lbThongbaoNapTien;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 
