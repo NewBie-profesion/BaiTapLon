@@ -15,6 +15,14 @@ namespace BaiTapLon2
 {
     public partial class QlyQuanNet : Form
     {
+        class ResponseError: Exception
+        {
+            ResponseError(string message): base(message)
+            {
+                if (GetType().ToString() == "SqlException")
+                    message = "Error database!";
+            }
+        }
         class ThongTinNguoiChoi
         {
             public string taiKhoan { get; set; }
@@ -266,21 +274,7 @@ namespace BaiTapLon2
                 dgvDSTaiKhoan.DataSource = table;
             }
         }
-        List<string> SuDung()
-        {
-            List<String> QuanLyTaiKhoan = new List<String>();
-            SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT Ten_tk, SoTien, SoGioChoi FROM TaiKhoan";
-            using (SqlDataReader sdr = cmd.ExecuteReader())
-            while (sdr.Read())
-            {
-                QuanLyTaiKhoan.Add(sdr[0].ToString());
-                QuanLyTaiKhoan.Add(sdr[1].ToString());
-                QuanLyTaiKhoan.Add(sdr[2].ToString());
-            }
 
-            return QuanLyTaiKhoan;
-        }
 
         /* Tab quản lý máy */
 
@@ -391,6 +385,14 @@ namespace BaiTapLon2
             }
         }
 
+        void KiemTraThoiGianCacMayDangChoi()
+        {
+            foreach (var info in DSThongTinNguoiChoi)
+            {
+                string a = info.Value.gioBatDauChoi;
+            }
+        }
+
         void HienThiCacMayDangChoi(BunifuThinButton2 btn)
         {
             foreach (var thongTin in DSThongTinNguoiChoi)
@@ -437,6 +439,7 @@ namespace BaiTapLon2
                 XoaTextBoxTabQlyMay();
                 KetNoiDanhSachTaiKhoanHienCo();
                 KiemTraCacMayDangChoi();
+                KiemTraThoiGianCacMayDangChoi();
 
                start = new ThreadStart(CallThread);
                 childThread = new Thread(start);
@@ -450,14 +453,7 @@ namespace BaiTapLon2
 
         private void QlyQuanNet_FormClosed(object sender, FormClosedEventArgs e)
         {
-            /*foreach(var thongTin in DSThongTinNguoiChoi)
-            {
-                string gioChoi = thongTin.Value.gioChoi;
-                string soMay = thongTin.Key;
-                int soTien = thongTin.Value.tienNap;
-
-                capNhatThoiGian(soMay, dinhDangGio(gioChoiConLai(soMay, gioChoi)), soTien);
-            }*/
+            KiemTraThoiGianCacMayDangChoi();
             Application.Exit();
             childThread.Abort();
         }
@@ -582,24 +578,16 @@ namespace BaiTapLon2
 
                 string soMay = nutHienTai.ButtonText;
                 SqlCommand cmdMay = ketnoi.CreateCommand();
-                SqlCommand cmdTK = ketnoi.CreateCommand();
                 
                 cmdMay.CommandText = "INSERT INTO May (SoMay, Ten_tk, GioBatDauChoi) VALUES (@Somay, @TenTK, @GioBatDauChoi)";
-                cmdTK.CommandText = "UPDATE Taikhoan SET  SoTien = @Sotien, SoGioChoi = @SoGioChoi WHERE Ten_tk = @TenTK;";
 
                 cmdMay.Parameters.Add("@Somay", SqlDbType.Int);
                 cmdMay.Parameters.Add("GioBatDauChoi", SqlDbType.Time);
                 cmdMay.Parameters.Add("@TenTK", SqlDbType.VarChar);
-                cmdTK.Parameters.Add("@TenTK", SqlDbType.VarChar);
-                cmdTK.Parameters.Add("@Sotien", SqlDbType.Float);
-                cmdTK.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
 
                 cmdMay.Parameters["@Somay"].Value = soMay;
                 cmdMay.Parameters["GioBatDauChoi"].Value = DateTime.Now.ToString("HH:mm:ss");
                 cmdMay.Parameters["@TenTK"].Value = taiKhoan;
-                cmdTK.Parameters["@TenTK"].Value = taiKhoan;
-                cmdTK.Parameters["@SoTien"].Value = soTienNap;
-                cmdTK.Parameters["@SoGioChoi"].Value = gioChoi;
 
                 ThongTinNguoiChoi thongTin = new ThongTinNguoiChoi()
                 {
@@ -614,7 +602,6 @@ namespace BaiTapLon2
 
                 nutTruocKhiAn = null;
                 cmdMay.ExecuteNonQuery();
-                cmdTK.ExecuteNonQuery();
 
                 KiemTraCacMayDangChoi();
                 XoaTextBoxTabQlyMay();
