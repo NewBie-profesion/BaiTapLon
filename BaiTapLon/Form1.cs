@@ -19,7 +19,7 @@ namespace BaiTapLon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            panel4.Visible = false;
         }
 
         private void txbMatKhau_TextChanged(object sender, EventArgs e)
