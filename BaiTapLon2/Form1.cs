@@ -19,7 +19,7 @@ namespace BaiTapLon2
 
         /****  Phần khai báo biến toàn cục ****/
         /* Phần biến thay đổi */
-        const string dataSourse = @"DESKTOP-7EH6AD3\SQLEXPRESS";
+        const string dataSourse = @"DESKTOP-EL0TRUD\SQLEXPRESS";
         const string initalCatalog = "QlQuanNet";
 
         /* Phần biến cố định */
@@ -95,7 +95,7 @@ namespace BaiTapLon2
             DSThongTinCacMayDangChoi.Clear();
             DSThongTinCacMayDangChoi = Enumerable.Repeat(new Dictionary<string, List<string>>() { }, 51).ToList();
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT SoMay AS \"Số máy\", Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\" FROM May;";
+            cmd.CommandText = "SELECT SoMay AS \"Số máy\", Ten_tk AS \"Tên tài khoản\", GioBD \"Giờ bắt đầu\" FROM May;";
 
             using (SqlDataReader reader = cmd.ExecuteReader())
                 while (reader.Read())
@@ -350,17 +350,18 @@ namespace BaiTapLon2
         {
             try
             {
-               // tbRomdomSoMay.Text = random.Next(1,50).ToString();
                 KetNoiCSDL(duongDan);
                 XoaTextBoxTabQlyMay();
                 KiemTraCacMayDangChoi();
+
                 start = new ThreadStart(CallThread);
                 childThread = new Thread(start);
                 childThread.Start();
+
                 if(flag == false)
-                {
                     ketnoiDSTaiKhoan();
-                }
+
+                tbRomdomSoMay.Text = random.Next(1, 50).ToString();
             }
             catch (Exception err)
             {
@@ -663,7 +664,6 @@ namespace BaiTapLon2
         {
             try
             {
-                //tbRomdomSoMay.Text = random.Next(1, 50).ToString();
                 giuTenDeThaoTac = tbTaiKhoanNgDung.Text;
                 LaySoTien();              
 
@@ -749,16 +749,14 @@ namespace BaiTapLon2
             SqlCommand cmd = ketnoi.CreateCommand();
             cmd.CommandText = "Select SoTien From TaiKhoan Where Ten_tk = '" + giuTenDeThaoTac + "'";
             using(SqlDataReader reader = cmd.ExecuteReader())
-                if (reader.Read())
-                {
-                    SoTienTrongTK = double.Parse(reader[0].ToString());                   
-                }
+                while(reader.Read())
+                    SoTienTrongTK = double.Parse(reader[0].ToString());
+
             gioND = Convert.ToInt32(SoTienTrongTK * soGioChoiPhongThuong / 3600);
             phutND = Convert.ToInt32((SoTienTrongTK * soGioChoiPhongThuong % 3600)/60);
             giayND = Convert.ToInt32((SoTienTrongTK * soGioChoiPhongThuong % 3600) % 60);
-            lbGioChoiND.Text = gioND.ToString();
-            lbPhutChoiND.Text = phutND.ToString();
-            lbGiayChoiND.Text = giayND.ToString();
+
+            lbGioChoiND.Text = dinhDangGio(gioND * 3600 + phutND * 60 + giayND);
         }
         private void timer1_Tick(object sender, EventArgs e)
         {

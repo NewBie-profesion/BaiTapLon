@@ -41,15 +41,31 @@ namespace BaiTapLon2
             this.lbThongbaoNapTien = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbNapTien = new System.Windows.Forms.Label();
+            this.btHuy = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btNapTien = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tbNapTien = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.tbNapTienLucDk = new System.Windows.Forms.TextBox();
+            this.tbMatKhau = new System.Windows.Forms.TextBox();
+            this.tbTaiKhoan = new System.Windows.Forms.TextBox();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDSTaiKhoan = new System.Windows.Forms.DataGridView();
             this.lbKtraTimKiem = new System.Windows.Forms.Label();
+            this.btXem = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btXoa = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bSuDung = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -57,26 +73,6 @@ namespace BaiTapLon2
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tlpTang1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tlpTang2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.pnDangNhapNgDung = new System.Windows.Forms.Panel();
-            this.tbRomdomSoMay = new System.Windows.Forms.TextBox();
-            this.lbSoMayNgDung = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.lbKiemTraDnNgDung = new System.Windows.Forms.Label();
-            this.tbTaiKhoanNgDung = new System.Windows.Forms.TextBox();
-            this.tbMatKhauNgDung = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btNapTien = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bDangKi = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btXem = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btXoa = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bSuDung = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton228 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton227 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton226 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -102,6 +98,9 @@ namespace BaiTapLon2
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tlpTang2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuThinButton253 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton252 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton251 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -127,6 +126,10 @@ namespace BaiTapLon2
             this.bunifuThinButton231 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton230 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton229 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pnGiaoDienNgDung = new System.Windows.Forms.Panel();
             this.pnHienThiNgDung = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -154,19 +157,16 @@ namespace BaiTapLon2
             this.bunifuImageButton11 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnDangNhapNgDung = new System.Windows.Forms.Panel();
+            this.tbRomdomSoMay = new System.Windows.Forms.TextBox();
+            this.lbSoMayNgDung = new System.Windows.Forms.Label();
             this.btDangNhapNgDung = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
-            this.btHuy = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.tbTaiKhoan = new System.Windows.Forms.TextBox();
-            this.tbMatKhau = new System.Windows.Forms.TextBox();
-            this.tbNapTienLucDk = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lbKiemTraDnNgDung = new System.Windows.Forms.Label();
+            this.tbTaiKhoanNgDung = new System.Windows.Forms.TextBox();
+            this.tbMatKhauNgDung = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -178,6 +178,7 @@ namespace BaiTapLon2
             this.groupBox6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -195,9 +196,9 @@ namespace BaiTapLon2
             this.groupBox3.SuspendLayout();
             this.tlpTang2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.pnDangNhapNgDung.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.pnGiaoDienNgDung.SuspendLayout();
             this.pnHienThiNgDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -207,8 +208,7 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.pnDangNhapNgDung.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -340,6 +340,61 @@ namespace BaiTapLon2
             this.lbNapTien.TabIndex = 47;
             this.lbNapTien.Text = "Hãy Đăng Kí Tài Khoản";
             // 
+            // btHuy
+            // 
+            this.btHuy.ActiveBorderThickness = 1;
+            this.btHuy.ActiveCornerRadius = 20;
+            this.btHuy.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btHuy.ActiveForecolor = System.Drawing.Color.White;
+            this.btHuy.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btHuy.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHuy.BackgroundImage")));
+            this.btHuy.ButtonText = "Hủy";
+            this.btHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btHuy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHuy.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btHuy.IdleBorderThickness = 1;
+            this.btHuy.IdleCornerRadius = 20;
+            this.btHuy.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btHuy.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btHuy.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btHuy.Location = new System.Drawing.Point(23, 199);
+            this.btHuy.Margin = new System.Windows.Forms.Padding(5);
+            this.btHuy.Name = "btHuy";
+            this.btHuy.Size = new System.Drawing.Size(245, 41);
+            this.btHuy.TabIndex = 43;
+            this.btHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btHuy.Visible = false;
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
+            // 
+            // btNapTien
+            // 
+            this.btNapTien.ActiveBorderThickness = 1;
+            this.btNapTien.ActiveCornerRadius = 20;
+            this.btNapTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.ActiveForecolor = System.Drawing.Color.White;
+            this.btNapTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btNapTien.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btNapTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNapTien.BackgroundImage")));
+            this.btNapTien.ButtonText = "Nạp Tiền";
+            this.btNapTien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btNapTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNapTien.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btNapTien.IdleBorderThickness = 1;
+            this.btNapTien.IdleCornerRadius = 20;
+            this.btNapTien.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btNapTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btNapTien.Location = new System.Drawing.Point(23, 148);
+            this.btNapTien.Margin = new System.Windows.Forms.Padding(5);
+            this.btNapTien.Name = "btNapTien";
+            this.btNapTien.Size = new System.Drawing.Size(245, 41);
+            this.btNapTien.TabIndex = 43;
+            this.btNapTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btNapTien.Click += new System.EventHandler(this.btNapTien_Click);
+            // 
             // tbNapTien
             // 
             this.tbNapTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -372,6 +427,55 @@ namespace BaiTapLon2
             this.panel5.Size = new System.Drawing.Size(322, 495);
             this.panel5.TabIndex = 0;
             // 
+            // tbNapTienLucDk
+            // 
+            this.tbNapTienLucDk.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbNapTienLucDk.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNapTienLucDk.ForeColor = System.Drawing.Color.Gray;
+            this.tbNapTienLucDk.Location = new System.Drawing.Point(35, 124);
+            this.tbNapTienLucDk.Name = "tbNapTienLucDk";
+            this.tbNapTienLucDk.Size = new System.Drawing.Size(256, 20);
+            this.tbNapTienLucDk.TabIndex = 36;
+            this.tbNapTienLucDk.Text = "Nạp Tiền";
+            this.tbNapTienLucDk.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbNapTienLucDk.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
+            // 
+            // tbMatKhau
+            // 
+            this.tbMatKhau.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMatKhau.ForeColor = System.Drawing.Color.Gray;
+            this.tbMatKhau.Location = new System.Drawing.Point(37, 75);
+            this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Size = new System.Drawing.Size(254, 20);
+            this.tbMatKhau.TabIndex = 36;
+            this.tbMatKhau.Text = "Mật Khẩu";
+            this.tbMatKhau.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbMatKhau.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
+            // 
+            // tbTaiKhoan
+            // 
+            this.tbTaiKhoan.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTaiKhoan.ForeColor = System.Drawing.Color.Gray;
+            this.tbTaiKhoan.Location = new System.Drawing.Point(35, 30);
+            this.tbTaiKhoan.Name = "tbTaiKhoan";
+            this.tbTaiKhoan.Size = new System.Drawing.Size(256, 20);
+            this.tbTaiKhoan.TabIndex = 36;
+            this.tbTaiKhoan.Text = "Tài Khoản";
+            this.tbTaiKhoan.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbTaiKhoan.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
+            // 
+            // panel16
+            // 
+            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Location = new System.Drawing.Point(37, 152);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(254, 1);
+            this.panel16.TabIndex = 35;
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -392,6 +496,122 @@ namespace BaiTapLon2
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(254, 1);
             this.panel4.TabIndex = 31;
+            // 
+            // bDangKi
+            // 
+            this.bDangKi.ActiveBorderThickness = 1;
+            this.bDangKi.ActiveCornerRadius = 20;
+            this.bDangKi.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.ActiveForecolor = System.Drawing.Color.White;
+            this.bDangKi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bDangKi.AutoSize = true;
+            this.bDangKi.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDangKi.BackgroundImage")));
+            this.bDangKi.ButtonText = "Đăng kí ";
+            this.bDangKi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bDangKi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDangKi.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bDangKi.IdleBorderThickness = 1;
+            this.bDangKi.IdleCornerRadius = 20;
+            this.bDangKi.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.bDangKi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bDangKi.Location = new System.Drawing.Point(35, 161);
+            this.bDangKi.Margin = new System.Windows.Forms.Padding(5);
+            this.bDangKi.Name = "bDangKi";
+            this.bDangKi.Size = new System.Drawing.Size(254, 41);
+            this.bDangKi.TabIndex = 29;
+            this.bDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bDangKi.Click += new System.EventHandler(this.bDangKi_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.Controls.Add(this.panel13);
+            this.panel10.Controls.Add(this.panel15);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Controls.Add(this.bunifuThinButton22);
+            this.panel10.Location = new System.Drawing.Point(4, 23);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(322, 495);
+            this.panel10.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Enabled = false;
+            this.panel13.Location = new System.Drawing.Point(38, 43);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(254, 1);
+            this.panel13.TabIndex = 30;
+            // 
+            // panel15
+            // 
+            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Location = new System.Drawing.Point(36, 124);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(254, 1);
+            this.panel15.TabIndex = 31;
+            // 
+            // panel14
+            // 
+            this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Location = new System.Drawing.Point(38, 85);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(254, 1);
+            this.panel14.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(40, 138);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 18);
+            this.label8.TabIndex = 34;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuThinButton22.AutoSize = true;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Đăng kí ";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton22.Location = new System.Drawing.Point(32, 175);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(254, 41);
+            this.bunifuThinButton22.TabIndex = 29;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bDangKi_Click);
             // 
             // splitContainer2
             // 
@@ -470,6 +690,85 @@ namespace BaiTapLon2
             this.lbKtraTimKiem.Name = "lbKtraTimKiem";
             this.lbKtraTimKiem.Size = new System.Drawing.Size(0, 16);
             this.lbKtraTimKiem.TabIndex = 20;
+            // 
+            // btXem
+            // 
+            this.btXem.ActiveBorderThickness = 1;
+            this.btXem.ActiveCornerRadius = 20;
+            this.btXem.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXem.ActiveForecolor = System.Drawing.Color.White;
+            this.btXem.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btXem.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btXem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXem.BackgroundImage")));
+            this.btXem.ButtonText = "Hiện Danh Sách";
+            this.btXem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btXem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXem.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btXem.IdleBorderThickness = 1;
+            this.btXem.IdleCornerRadius = 20;
+            this.btXem.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btXem.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXem.Location = new System.Drawing.Point(529, 98);
+            this.btXem.Margin = new System.Windows.Forms.Padding(5);
+            this.btXem.Name = "btXem";
+            this.btXem.Size = new System.Drawing.Size(171, 41);
+            this.btXem.TabIndex = 0;
+            this.btXem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btXem.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.ActiveBorderThickness = 1;
+            this.btXoa.ActiveCornerRadius = 20;
+            this.btXoa.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.ActiveForecolor = System.Drawing.Color.White;
+            this.btXoa.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXoa.BackgroundImage")));
+            this.btXoa.ButtonText = "Xóa";
+            this.btXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btXoa.IdleBorderThickness = 1;
+            this.btXoa.IdleCornerRadius = 20;
+            this.btXoa.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btXoa.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoa.Location = new System.Drawing.Point(320, 98);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(5);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(110, 41);
+            this.btXoa.TabIndex = 18;
+            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // bSuDung
+            // 
+            this.bSuDung.ActiveBorderThickness = 1;
+            this.bSuDung.ActiveCornerRadius = 20;
+            this.bSuDung.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.ActiveForecolor = System.Drawing.Color.White;
+            this.bSuDung.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bSuDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bSuDung.BackgroundImage")));
+            this.bSuDung.ButtonText = "Sử Dụng";
+            this.bSuDung.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bSuDung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSuDung.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bSuDung.IdleBorderThickness = 1;
+            this.bSuDung.IdleCornerRadius = 20;
+            this.bSuDung.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.bSuDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bSuDung.Location = new System.Drawing.Point(117, 98);
+            this.bSuDung.Margin = new System.Windows.Forms.Padding(5);
+            this.bSuDung.Name = "bSuDung";
+            this.bSuDung.Size = new System.Drawing.Size(110, 41);
+            this.bSuDung.TabIndex = 18;
+            this.bSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bSuDung.Click += new System.EventHandler(this.bSuDung_Click);
             // 
             // panel2
             // 
@@ -591,351 +890,6 @@ namespace BaiTapLon2
             this.tlpTang1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpTang1.Size = new System.Drawing.Size(539, 316);
             this.tlpTang1.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.tlpTang2);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(524, 521);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tầng 2(Phòng VIP)";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 420);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(199, 18);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Phòng máy VIP 10k/giờ";
-            // 
-            // tlpTang2
-            // 
-            this.tlpTang2.ColumnCount = 5;
-            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.Controls.Add(this.bunifuThinButton253, 4, 4);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton252, 3, 4);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton251, 2, 4);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton250, 1, 4);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton249, 0, 4);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton248, 4, 3);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton247, 3, 3);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton246, 2, 3);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton245, 1, 3);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton244, 0, 3);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton243, 4, 2);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton242, 3, 2);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton241, 2, 2);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton240, 1, 2);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton239, 0, 2);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton238, 4, 1);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton237, 3, 1);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton236, 2, 1);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton235, 1, 1);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton234, 0, 1);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton233, 4, 0);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton232, 3, 0);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton231, 2, 0);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton230, 1, 0);
-            this.tlpTang2.Controls.Add(this.bunifuThinButton229, 0, 0);
-            this.tlpTang2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpTang2.Location = new System.Drawing.Point(3, 23);
-            this.tlpTang2.Name = "tlpTang2";
-            this.tlpTang2.RowCount = 5;
-            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpTang2.Size = new System.Drawing.Size(518, 316);
-            this.tlpTang2.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1079, 527);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Thống Kê";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.pnGiaoDienNgDung);
-            this.tabPage4.Controls.Add(this.pnDangNhapNgDung);
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1079, 527);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Người Dùng Sử Dụng Tài Khoản";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // pnDangNhapNgDung
-            // 
-            this.pnDangNhapNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pnDangNhapNgDung.Controls.Add(this.tbRomdomSoMay);
-            this.pnDangNhapNgDung.Controls.Add(this.lbSoMayNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.btDangNhapNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.panel11);
-            this.pnDangNhapNgDung.Controls.Add(this.panel12);
-            this.pnDangNhapNgDung.Controls.Add(this.lbKiemTraDnNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.tbTaiKhoanNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.tbMatKhauNgDung);
-            this.pnDangNhapNgDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDangNhapNgDung.Location = new System.Drawing.Point(3, 3);
-            this.pnDangNhapNgDung.Name = "pnDangNhapNgDung";
-            this.pnDangNhapNgDung.Size = new System.Drawing.Size(1073, 521);
-            this.pnDangNhapNgDung.TabIndex = 0;
-            // 
-            // tbRomdomSoMay
-            // 
-            this.tbRomdomSoMay.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbRomdomSoMay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRomdomSoMay.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRomdomSoMay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbRomdomSoMay.Location = new System.Drawing.Point(179, 24);
-            this.tbRomdomSoMay.Name = "tbRomdomSoMay";
-            this.tbRomdomSoMay.Size = new System.Drawing.Size(100, 33);
-            this.tbRomdomSoMay.TabIndex = 43;
-            // 
-            // lbSoMayNgDung
-            // 
-            this.lbSoMayNgDung.AutoSize = true;
-            this.lbSoMayNgDung.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoMayNgDung.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbSoMayNgDung.Location = new System.Drawing.Point(17, 20);
-            this.lbSoMayNgDung.Name = "lbSoMayNgDung";
-            this.lbSoMayNgDung.Size = new System.Drawing.Size(154, 35);
-            this.lbSoMayNgDung.TabIndex = 42;
-            this.lbSoMayNgDung.Text = "Máy Số : ";
-            // 
-            // panel11
-            // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Enabled = false;
-            this.panel11.Location = new System.Drawing.Point(410, 185);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(230, 1);
-            this.panel11.TabIndex = 36;
-            // 
-            // panel12
-            // 
-            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(410, 227);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(230, 1);
-            this.panel12.TabIndex = 37;
-            // 
-            // lbKiemTraDnNgDung
-            // 
-            this.lbKiemTraDnNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbKiemTraDnNgDung.AutoSize = true;
-            this.lbKiemTraDnNgDung.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbKiemTraDnNgDung.ForeColor = System.Drawing.Color.Red;
-            this.lbKiemTraDnNgDung.Location = new System.Drawing.Point(410, 235);
-            this.lbKiemTraDnNgDung.Name = "lbKiemTraDnNgDung";
-            this.lbKiemTraDnNgDung.Size = new System.Drawing.Size(0, 16);
-            this.lbKiemTraDnNgDung.TabIndex = 40;
-            // 
-            // tbTaiKhoanNgDung
-            // 
-            this.tbTaiKhoanNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbTaiKhoanNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbTaiKhoanNgDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTaiKhoanNgDung.ForeColor = System.Drawing.Color.Gray;
-            this.tbTaiKhoanNgDung.Location = new System.Drawing.Point(409, 159);
-            this.tbTaiKhoanNgDung.Name = "tbTaiKhoanNgDung";
-            this.tbTaiKhoanNgDung.Size = new System.Drawing.Size(230, 20);
-            this.tbTaiKhoanNgDung.TabIndex = 39;
-            this.tbTaiKhoanNgDung.Text = "Tài Khoản";
-            this.tbTaiKhoanNgDung.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbTaiKhoanNgDung.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
-            // 
-            // tbMatKhauNgDung
-            // 
-            this.tbMatKhauNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMatKhauNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbMatKhauNgDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMatKhauNgDung.ForeColor = System.Drawing.Color.Gray;
-            this.tbMatKhauNgDung.Location = new System.Drawing.Point(410, 205);
-            this.tbMatKhauNgDung.Name = "tbMatKhauNgDung";
-            this.tbMatKhauNgDung.Size = new System.Drawing.Size(230, 20);
-            this.tbMatKhauNgDung.TabIndex = 38;
-            this.tbMatKhauNgDung.Text = "Mật Khẩu";
-            this.tbMatKhauNgDung.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbMatKhauNgDung.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(3, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1073, 521);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Quản Lý máy đang chơi";
-            // 
-            // btNapTien
-            // 
-            this.btNapTien.ActiveBorderThickness = 1;
-            this.btNapTien.ActiveCornerRadius = 20;
-            this.btNapTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btNapTien.ActiveForecolor = System.Drawing.Color.White;
-            this.btNapTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btNapTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btNapTien.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btNapTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNapTien.BackgroundImage")));
-            this.btNapTien.ButtonText = "Nạp Tiền";
-            this.btNapTien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btNapTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNapTien.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btNapTien.IdleBorderThickness = 1;
-            this.btNapTien.IdleCornerRadius = 20;
-            this.btNapTien.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.btNapTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btNapTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btNapTien.Location = new System.Drawing.Point(23, 148);
-            this.btNapTien.Margin = new System.Windows.Forms.Padding(5);
-            this.btNapTien.Name = "btNapTien";
-            this.btNapTien.Size = new System.Drawing.Size(245, 41);
-            this.btNapTien.TabIndex = 43;
-            this.btNapTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btNapTien.Click += new System.EventHandler(this.btNapTien_Click);
-            // 
-            // bDangKi
-            // 
-            this.bDangKi.ActiveBorderThickness = 1;
-            this.bDangKi.ActiveCornerRadius = 20;
-            this.bDangKi.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDangKi.ActiveForecolor = System.Drawing.Color.White;
-            this.bDangKi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDangKi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bDangKi.AutoSize = true;
-            this.bDangKi.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bDangKi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bDangKi.BackgroundImage")));
-            this.bDangKi.ButtonText = "Đăng kí ";
-            this.bDangKi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bDangKi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDangKi.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bDangKi.IdleBorderThickness = 1;
-            this.bDangKi.IdleCornerRadius = 20;
-            this.bDangKi.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.bDangKi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDangKi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bDangKi.Location = new System.Drawing.Point(35, 161);
-            this.bDangKi.Margin = new System.Windows.Forms.Padding(5);
-            this.bDangKi.Name = "bDangKi";
-            this.bDangKi.Size = new System.Drawing.Size(254, 41);
-            this.bDangKi.TabIndex = 29;
-            this.bDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bDangKi.Click += new System.EventHandler(this.bDangKi_Click);
-            // 
-            // btXem
-            // 
-            this.btXem.ActiveBorderThickness = 1;
-            this.btXem.ActiveCornerRadius = 20;
-            this.btXem.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXem.ActiveForecolor = System.Drawing.Color.White;
-            this.btXem.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btXem.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btXem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXem.BackgroundImage")));
-            this.btXem.ButtonText = "Hiện Danh Sách";
-            this.btXem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btXem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXem.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btXem.IdleBorderThickness = 1;
-            this.btXem.IdleCornerRadius = 20;
-            this.btXem.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.btXem.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXem.Location = new System.Drawing.Point(529, 98);
-            this.btXem.Margin = new System.Windows.Forms.Padding(5);
-            this.btXem.Name = "btXem";
-            this.btXem.Size = new System.Drawing.Size(171, 41);
-            this.btXem.TabIndex = 0;
-            this.btXem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btXem.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.ActiveBorderThickness = 1;
-            this.btXoa.ActiveCornerRadius = 20;
-            this.btXoa.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXoa.ActiveForecolor = System.Drawing.Color.White;
-            this.btXoa.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXoa.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXoa.BackgroundImage")));
-            this.btXoa.ButtonText = "Xóa";
-            this.btXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btXoa.IdleBorderThickness = 1;
-            this.btXoa.IdleCornerRadius = 20;
-            this.btXoa.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.btXoa.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXoa.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btXoa.Location = new System.Drawing.Point(320, 98);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(5);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(110, 41);
-            this.btXoa.TabIndex = 18;
-            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // bSuDung
-            // 
-            this.bSuDung.ActiveBorderThickness = 1;
-            this.bSuDung.ActiveCornerRadius = 20;
-            this.bSuDung.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bSuDung.ActiveForecolor = System.Drawing.Color.White;
-            this.bSuDung.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bSuDung.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bSuDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bSuDung.BackgroundImage")));
-            this.bSuDung.ButtonText = "Sử Dụng";
-            this.bSuDung.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bSuDung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSuDung.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bSuDung.IdleBorderThickness = 1;
-            this.bSuDung.IdleCornerRadius = 20;
-            this.bSuDung.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.bSuDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bSuDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bSuDung.Location = new System.Drawing.Point(117, 98);
-            this.bSuDung.Margin = new System.Windows.Forms.Padding(5);
-            this.bSuDung.Name = "bSuDung";
-            this.bSuDung.Size = new System.Drawing.Size(110, 41);
-            this.bSuDung.TabIndex = 18;
-            this.bSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bSuDung.Click += new System.EventHandler(this.bSuDung_Click);
             // 
             // bunifuThinButton228
             // 
@@ -1612,6 +1566,73 @@ namespace BaiTapLon2
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton24.Click += new System.EventHandler(this.buttons_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.tlpTang2);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(524, 521);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tầng 2(Phòng VIP)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(75, 420);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(199, 18);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Phòng máy VIP 10k/giờ";
+            // 
+            // tlpTang2
+            // 
+            this.tlpTang2.ColumnCount = 5;
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.Controls.Add(this.bunifuThinButton253, 4, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton252, 3, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton251, 2, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton250, 1, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton249, 0, 4);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton248, 4, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton247, 3, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton246, 2, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton245, 1, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton244, 0, 3);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton243, 4, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton242, 3, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton241, 2, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton240, 1, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton239, 0, 2);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton238, 4, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton237, 3, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton236, 2, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton235, 1, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton234, 0, 1);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton233, 4, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton232, 3, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton231, 2, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton230, 1, 0);
+            this.tlpTang2.Controls.Add(this.bunifuThinButton229, 0, 0);
+            this.tlpTang2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpTang2.Location = new System.Drawing.Point(3, 23);
+            this.tlpTang2.Name = "tlpTang2";
+            this.tlpTang2.RowCount = 5;
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpTang2.Size = new System.Drawing.Size(518, 316);
+            this.tlpTang2.TabIndex = 0;
+            // 
             // bunifuThinButton253
             // 
             this.bunifuThinButton253.ActiveBorderThickness = 1;
@@ -2287,6 +2308,51 @@ namespace BaiTapLon2
             this.bunifuThinButton229.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton229.Click += new System.EventHandler(this.buttons_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1079, 527);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Thống Kê";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(3, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1073, 521);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Quản Lý máy đang chơi";
+            // 
+            // dgvDSTaiKhoanDangChoi
+            // 
+            this.dgvDSTaiKhoanDangChoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSTaiKhoanDangChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSTaiKhoanDangChoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(3, 23);
+            this.dgvDSTaiKhoanDangChoi.Name = "dgvDSTaiKhoanDangChoi";
+            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1067, 495);
+            this.dgvDSTaiKhoanDangChoi.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.pnDangNhapNgDung);
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1079, 527);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Người Dùng Sử Dụng Tài Khoản";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // pnGiaoDienNgDung
             // 
             this.pnGiaoDienNgDung.BackgroundImage = global::BaiTapLon2.Properties.Resources.background;
@@ -2296,9 +2362,8 @@ namespace BaiTapLon2
             this.pnGiaoDienNgDung.Controls.Add(this.panel8);
             this.pnGiaoDienNgDung.Controls.Add(this.bunifuImageButton5);
             this.pnGiaoDienNgDung.Controls.Add(this.bunifuImageButton2);
-            this.pnGiaoDienNgDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnGiaoDienNgDung.ForeColor = System.Drawing.Color.Black;
-            this.pnGiaoDienNgDung.Location = new System.Drawing.Point(3, 3);
+            this.pnGiaoDienNgDung.Location = new System.Drawing.Point(49, 58);
             this.pnGiaoDienNgDung.Name = "pnGiaoDienNgDung";
             this.pnGiaoDienNgDung.Size = new System.Drawing.Size(1073, 521);
             this.pnGiaoDienNgDung.TabIndex = 2;
@@ -2635,6 +2700,46 @@ namespace BaiTapLon2
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             // 
+            // pnDangNhapNgDung
+            // 
+            this.pnDangNhapNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pnDangNhapNgDung.Controls.Add(this.pnGiaoDienNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.tbRomdomSoMay);
+            this.pnDangNhapNgDung.Controls.Add(this.lbSoMayNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.btDangNhapNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.panel11);
+            this.pnDangNhapNgDung.Controls.Add(this.panel12);
+            this.pnDangNhapNgDung.Controls.Add(this.lbKiemTraDnNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.tbTaiKhoanNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.tbMatKhauNgDung);
+            this.pnDangNhapNgDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnDangNhapNgDung.Location = new System.Drawing.Point(3, 3);
+            this.pnDangNhapNgDung.Name = "pnDangNhapNgDung";
+            this.pnDangNhapNgDung.Size = new System.Drawing.Size(1073, 521);
+            this.pnDangNhapNgDung.TabIndex = 0;
+            // 
+            // tbRomdomSoMay
+            // 
+            this.tbRomdomSoMay.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbRomdomSoMay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRomdomSoMay.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRomdomSoMay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.tbRomdomSoMay.Location = new System.Drawing.Point(179, 24);
+            this.tbRomdomSoMay.Name = "tbRomdomSoMay";
+            this.tbRomdomSoMay.Size = new System.Drawing.Size(100, 33);
+            this.tbRomdomSoMay.TabIndex = 43;
+            // 
+            // lbSoMayNgDung
+            // 
+            this.lbSoMayNgDung.AutoSize = true;
+            this.lbSoMayNgDung.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoMayNgDung.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbSoMayNgDung.Location = new System.Drawing.Point(17, 20);
+            this.lbSoMayNgDung.Name = "lbSoMayNgDung";
+            this.lbSoMayNgDung.Size = new System.Drawing.Size(154, 35);
+            this.lbSoMayNgDung.TabIndex = 42;
+            this.lbSoMayNgDung.Text = "Máy Số : ";
+            // 
             // btDangNhapNgDung
             // 
             this.btDangNhapNgDung.ActiveBorderThickness = 1;
@@ -2661,179 +2766,73 @@ namespace BaiTapLon2
             this.btDangNhapNgDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btDangNhapNgDung.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
-            // dgvDSTaiKhoanDangChoi
+            // panel11
             // 
-            this.dgvDSTaiKhoanDangChoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDSTaiKhoanDangChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSTaiKhoanDangChoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(3, 23);
-            this.dgvDSTaiKhoanDangChoi.Name = "dgvDSTaiKhoanDangChoi";
-            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1067, 495);
-            this.dgvDSTaiKhoanDangChoi.TabIndex = 0;
-            // 
-            // btHuy
-            // 
-            this.btHuy.ActiveBorderThickness = 1;
-            this.btHuy.ActiveCornerRadius = 20;
-            this.btHuy.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btHuy.ActiveForecolor = System.Drawing.Color.White;
-            this.btHuy.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btHuy.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHuy.BackgroundImage")));
-            this.btHuy.ButtonText = "Hủy";
-            this.btHuy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btHuy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHuy.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btHuy.IdleBorderThickness = 1;
-            this.btHuy.IdleCornerRadius = 20;
-            this.btHuy.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.btHuy.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btHuy.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btHuy.Location = new System.Drawing.Point(23, 199);
-            this.btHuy.Margin = new System.Windows.Forms.Padding(5);
-            this.btHuy.Name = "btHuy";
-            this.btHuy.Size = new System.Drawing.Size(245, 41);
-            this.btHuy.TabIndex = 43;
-            this.btHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btHuy.Visible = false;
-            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.Controls.Add(this.panel13);
-            this.panel10.Controls.Add(this.panel15);
-            this.panel10.Controls.Add(this.panel14);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Controls.Add(this.bunifuThinButton22);
-            this.panel10.Location = new System.Drawing.Point(4, 23);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(322, 495);
-            this.panel10.TabIndex = 0;
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Enabled = false;
+            this.panel11.Location = new System.Drawing.Point(410, 185);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(230, 1);
+            this.panel11.TabIndex = 36;
             // 
-            // panel13
+            // panel12
             // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Enabled = false;
-            this.panel13.Location = new System.Drawing.Point(38, 43);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(254, 1);
-            this.panel13.TabIndex = 30;
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(410, 227);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(230, 1);
+            this.panel12.TabIndex = 37;
             // 
-            // panel14
+            // lbKiemTraDnNgDung
             // 
-            this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbKiemTraDnNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(38, 85);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(254, 1);
-            this.panel14.TabIndex = 31;
+            this.lbKiemTraDnNgDung.AutoSize = true;
+            this.lbKiemTraDnNgDung.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKiemTraDnNgDung.ForeColor = System.Drawing.Color.Red;
+            this.lbKiemTraDnNgDung.Location = new System.Drawing.Point(410, 235);
+            this.lbKiemTraDnNgDung.Name = "lbKiemTraDnNgDung";
+            this.lbKiemTraDnNgDung.Size = new System.Drawing.Size(0, 16);
+            this.lbKiemTraDnNgDung.TabIndex = 40;
             // 
-            // label8
+            // tbTaiKhoanNgDung
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbTaiKhoanNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(40, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 18);
-            this.label8.TabIndex = 34;
+            this.tbTaiKhoanNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbTaiKhoanNgDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTaiKhoanNgDung.ForeColor = System.Drawing.Color.Gray;
+            this.tbTaiKhoanNgDung.Location = new System.Drawing.Point(409, 159);
+            this.tbTaiKhoanNgDung.Name = "tbTaiKhoanNgDung";
+            this.tbTaiKhoanNgDung.Size = new System.Drawing.Size(230, 20);
+            this.tbTaiKhoanNgDung.TabIndex = 39;
+            this.tbTaiKhoanNgDung.Text = "Tài Khoản";
+            this.tbTaiKhoanNgDung.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbTaiKhoanNgDung.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
             // 
-            // bunifuThinButton22
+            // tbMatKhauNgDung
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbMatKhauNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuThinButton22.AutoSize = true;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Đăng kí ";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(32, 175);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(254, 41);
-            this.bunifuThinButton22.TabIndex = 29;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bDangKi_Click);
+            this.tbMatKhauNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbMatKhauNgDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMatKhauNgDung.ForeColor = System.Drawing.Color.Gray;
+            this.tbMatKhauNgDung.Location = new System.Drawing.Point(410, 205);
+            this.tbMatKhauNgDung.Name = "tbMatKhauNgDung";
+            this.tbMatKhauNgDung.Size = new System.Drawing.Size(230, 20);
+            this.tbMatKhauNgDung.TabIndex = 38;
+            this.tbMatKhauNgDung.Text = "Mật Khẩu";
+            this.tbMatKhauNgDung.Click += new System.EventHandler(this.tbTaiKhoan_Click);
+            this.tbMatKhauNgDung.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
             // 
-            // panel15
+            // timer1
             // 
-            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Location = new System.Drawing.Point(36, 124);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(254, 1);
-            this.panel15.TabIndex = 31;
-            // 
-            // panel16
-            // 
-            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Location = new System.Drawing.Point(37, 152);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(254, 1);
-            this.panel16.TabIndex = 35;
-            // 
-            // tbTaiKhoan
-            // 
-            this.tbTaiKhoan.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTaiKhoan.ForeColor = System.Drawing.Color.Gray;
-            this.tbTaiKhoan.Location = new System.Drawing.Point(35, 30);
-            this.tbTaiKhoan.Name = "tbTaiKhoan";
-            this.tbTaiKhoan.Size = new System.Drawing.Size(256, 20);
-            this.tbTaiKhoan.TabIndex = 36;
-            this.tbTaiKhoan.Text = "Tài Khoản";
-            this.tbTaiKhoan.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbTaiKhoan.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
-            // 
-            // tbMatKhau
-            // 
-            this.tbMatKhau.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMatKhau.ForeColor = System.Drawing.Color.Gray;
-            this.tbMatKhau.Location = new System.Drawing.Point(37, 75);
-            this.tbMatKhau.Name = "tbMatKhau";
-            this.tbMatKhau.Size = new System.Drawing.Size(254, 20);
-            this.tbMatKhau.TabIndex = 36;
-            this.tbMatKhau.Text = "Mật Khẩu";
-            this.tbMatKhau.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbMatKhau.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
-            // 
-            // tbNapTienLucDk
-            // 
-            this.tbNapTienLucDk.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbNapTienLucDk.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNapTienLucDk.ForeColor = System.Drawing.Color.Gray;
-            this.tbNapTienLucDk.Location = new System.Drawing.Point(35, 124);
-            this.tbNapTienLucDk.Name = "tbNapTienLucDk";
-            this.tbNapTienLucDk.Size = new System.Drawing.Size(256, 20);
-            this.tbNapTienLucDk.TabIndex = 36;
-            this.tbNapTienLucDk.Text = "Nạp Tiền";
-            this.tbNapTienLucDk.Click += new System.EventHandler(this.tbTaiKhoan_Click);
-            this.tbNapTienLucDk.Leave += new System.EventHandler(this.tbTaiKhoan_Leave);
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // QlyQuanNet
             // 
@@ -2865,6 +2864,8 @@ namespace BaiTapLon2
             this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
@@ -2885,10 +2886,9 @@ namespace BaiTapLon2
             this.groupBox3.PerformLayout();
             this.tlpTang2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.pnDangNhapNgDung.ResumeLayout(false);
-            this.pnDangNhapNgDung.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.pnGiaoDienNgDung.ResumeLayout(false);
             this.pnHienThiNgDung.ResumeLayout(false);
             this.pnHienThiNgDung.PerformLayout();
@@ -2900,9 +2900,8 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.pnDangNhapNgDung.ResumeLayout(false);
+            this.pnDangNhapNgDung.PerformLayout();
             this.ResumeLayout(false);
 
         }
