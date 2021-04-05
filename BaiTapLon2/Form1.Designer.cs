@@ -53,6 +53,7 @@ namespace BaiTapLon2
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
+            this.bNapThemTien = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bTraMay = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bDatMay = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label6 = new System.Windows.Forms.Label();
@@ -122,7 +123,6 @@ namespace BaiTapLon2
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
-            this.bNapThemTien = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -522,6 +522,32 @@ namespace BaiTapLon2
             this.label3.Size = new System.Drawing.Size(258, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "*Lưu Ý: Tài Khoản Chỉ có Thể đặt 1 máy";
+            // 
+            // bNapThemTien
+            // 
+            this.bNapThemTien.ActiveBorderThickness = 1;
+            this.bNapThemTien.ActiveCornerRadius = 20;
+            this.bNapThemTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.ActiveForecolor = System.Drawing.Color.White;
+            this.bNapThemTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bNapThemTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNapThemTien.BackgroundImage")));
+            this.bNapThemTien.ButtonText = "Nạp thêm tiền";
+            this.bNapThemTien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bNapThemTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNapThemTien.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bNapThemTien.IdleBorderThickness = 1;
+            this.bNapThemTien.IdleCornerRadius = 20;
+            this.bNapThemTien.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bNapThemTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bNapThemTien.Location = new System.Drawing.Point(40, 383);
+            this.bNapThemTien.Margin = new System.Windows.Forms.Padding(5);
+            this.bNapThemTien.Name = "bNapThemTien";
+            this.bNapThemTien.Size = new System.Drawing.Size(182, 42);
+            this.bNapThemTien.TabIndex = 0;
+            this.bNapThemTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bNapThemTien.Click += new System.EventHandler(this.bNapThemTien_Click);
             // 
             // bTraMay
             // 
@@ -2179,32 +2205,6 @@ namespace BaiTapLon2
             this.dgvDSTaiKhoanDangChoi.ReadOnly = true;
             this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1061, 490);
             this.dgvDSTaiKhoanDangChoi.TabIndex = 2;
-            // 
-            // bNapThemTien
-            // 
-            this.bNapThemTien.ActiveBorderThickness = 1;
-            this.bNapThemTien.ActiveCornerRadius = 20;
-            this.bNapThemTien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.ActiveForecolor = System.Drawing.Color.White;
-            this.bNapThemTien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bNapThemTien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNapThemTien.BackgroundImage")));
-            this.bNapThemTien.ButtonText = "Nạp thêm tiền";
-            this.bNapThemTien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bNapThemTien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNapThemTien.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bNapThemTien.IdleBorderThickness = 1;
-            this.bNapThemTien.IdleCornerRadius = 20;
-            this.bNapThemTien.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bNapThemTien.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bNapThemTien.Location = new System.Drawing.Point(40, 383);
-            this.bNapThemTien.Margin = new System.Windows.Forms.Padding(5);
-            this.bNapThemTien.Name = "bNapThemTien";
-            this.bNapThemTien.Size = new System.Drawing.Size(182, 42);
-            this.bNapThemTien.TabIndex = 0;
-            this.bNapThemTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bNapThemTien.Click += new System.EventHandler(this.bNapThemTien_Click);
             // 
             // QlyQuanNet
             // 

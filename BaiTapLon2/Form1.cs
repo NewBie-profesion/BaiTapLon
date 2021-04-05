@@ -15,6 +15,27 @@ namespace BaiTapLon2
 {
     public partial class QlyQuanNet : Form
     {
+        class ResponseError: Exception
+        {
+            ResponseError(string message): base(message)
+            {
+                if (GetType().ToString() == "SqlException")
+                    message = "Error database!";
+            }
+        }
+        class ThongTinNguoiChoi
+        {
+            public string taiKhoan { get; set; }
+            public string gioChoi { get; set; }
+            public int tienNap { get; set; }
+            public string gioBatDauChoi { get; set; }
+            public BunifuThinButton2 mayDangChoi { get; set; }
+        }
+        class ThongTinTaiKhoan
+        {
+            public string gioChoi { get; set; }
+            public int tienNap { get; set; }
+        }
         public QlyQuanNet()
         {
             InitializeComponent();
@@ -49,25 +70,29 @@ namespace BaiTapLon2
 
         ThreadStart start;
         Thread childThread;
-        List<string> TaiKhoanDangChoi = Enumerable.Repeat("", 51).ToList();
-        List<BunifuThinButton2> DSMayDangChoi = new List<BunifuThinButton2>();
-        List<Dictionary<string, List<string>>> DSThongTinCacMayDangChoi = Enumerable.Repeat(new Dictionary<string, List<string>>() { }, 51).ToList();
+        Dictionary<string, ThongTinNguoiChoi> DSThongTinNguoiChoi = new Dictionary<string, ThongTinNguoiChoi>();
+        Dictionary<string, ThongTinTaiKhoan> DSThongTinTaiKhoan = new Dictionary<string, ThongTinTaiKhoan>();
         DataTable bangThongKe = new DataTable();
 
         const double soGioChoiPhongThuong = 3600 / (5000 * 1.0);
         const double soGioChoiPhongVip = 3600 / (10000 * 1.0);
-        int phutTrongNhieuGio = 0;
         int index;
         bool flag = true;
         bool check = false;
+        const double tienTrenGiayPhongThuong = 5000 / (3600 * 1.0);
+        const double tienTrenGiayPhongVip = 10000 / (3600 * 1.0);
         
-
         /* Các hàm load */
         void CallThread()
         {
             while (true)
             {
-                for (int i = 0; i < bangThongKe.Rows.Count; ++i)
+                for (int i = 0; i < 10; ++i)
+                {
+                    HienThiThongBao(i.ToString());
+                    Thread.Sleep(1000);
+                }
+                /*for (int i = 0; i < bangThongKe.Rows.Count; ++i)
                 {
                     foreach (var info in DSThongTinCacMayDangChoi)
                     {
@@ -81,41 +106,70 @@ namespace BaiTapLon2
                             int gioChoiHienTai = 60 * phut + gio * 3600 + giay;
                             int soGioChoiConLai = gioChoiHienTai - 1000;
                             bangThongKe.Rows[i]["Số giờ chơi"] = dinhDangGio(soGioChoiConLai);
-                            phutTrongNhieuGio = soGioChoiConLai;
                             info[soMay][1] = dinhDangGio(soGioChoiConLai);
                         }
                     }
-                }
-                Thread.Sleep(10);
+                }*/
             }
         }
+
+        void KetNoiDanhSachTaiKhoanHienCo()
+        {
+            DSThongTinTaiKhoan.Clear();
+            SqlCommand cmd = ketnoi.CreateCommand();
+            cmd.CommandText = "SELECT Ten_tk, SoTien, SoGioChoi FROM Taikhoan;";
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            while (reader.Read())
+                {
+                    ThongTinTaiKhoan taikhoan = new ThongTinTaiKhoan() {
+                        tienNap = Convert.ToInt32(reader[1]),
+                        gioChoi = reader[2].ToString()
+                    };
+                    DSThongTinTaiKhoan[reader[0].ToString()] = taikhoan;
+                }
+        }
+
         void KiemTraCacMayDangChoi()
         {
-            DSThongTinCacMayDangChoi.Clear();
-            DSThongTinCacMayDangChoi = Enumerable.Repeat(new Dictionary<string, List<string>>() { }, 51).ToList();
+            DSThongTinNguoiChoi.Clear();
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT SoMay AS \"Số máy\", Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\" FROM May;";
+            cmd.CommandText = "SELECT May.SoMay AS \"Số máy\", Taikhoan.Ten_tk AS \"Tên tài khoản\", SoTien AS \"Số tiền\", SoGioChoi AS \"Số giờ chơi\", GioBatDauChoi AS \"Giờ bắt đầu chơi\"FROM Taikhoan INNER JOIN MAY ON May.ten_tk = Taikhoan.Ten_tk;";
 
             using(SqlDataReader reader = cmd.ExecuteReader())
             while (reader.Read())
             {
-                DSThongTinCacMayDangChoi[Convert.ToInt32(reader[0].ToString())]
-                    .Add(
-                        reader[0].ToString(), 
-                        new List<string>() 
-                        {
-                            reader[1].ToString(), 
-                            reader[3].ToString() 
-                        }
-                    );
-
-                TaiKhoanDangChoi[Convert.ToInt32(reader[0].ToString())] = reader[1].ToString();
-
                 foreach (BunifuThinButton2 b1 in tlpTang1.Controls)
-                    if (b1.ButtonText == reader[0].ToString()) HienThiCacMayDangChoi(b1);
+                    if (b1.ButtonText == reader[0].ToString())
+                    {
+                        ThongTinNguoiChoi thongTin = new ThongTinNguoiChoi()
+                        {
+                            taiKhoan = reader[1].ToString(),
+                            tienNap = Convert.ToInt32(reader[2]),
+                            gioChoi = reader[3].ToString(),
+                            mayDangChoi = b1,
+                            gioBatDauChoi = reader[4].ToString()
+                        };
+
+                        DSThongTinNguoiChoi[reader[0].ToString()] = thongTin;
+                        HienThiCacMayDangChoi(b1);
+                    }
 
                 foreach (BunifuThinButton2 b2 in tlpTang2.Controls)
-                    if (b2.ButtonText == reader[0].ToString()) HienThiCacMayDangChoi(b2);
+                    if (b2.ButtonText == reader[0].ToString())
+                    {
+                        ThongTinNguoiChoi thongTin = new ThongTinNguoiChoi()
+                        {
+                            taiKhoan = reader[1].ToString(),
+                            tienNap = Convert.ToInt32(reader[2]),
+                            gioChoi = reader[3].ToString(),
+                            mayDangChoi = b2,
+                            gioBatDauChoi = reader[4].ToString()
+                        };
+
+                        DSThongTinNguoiChoi[reader[0].ToString()] = thongTin;
+                        HienThiCacMayDangChoi(b2);
+                    }
             }
 
             SqlDataAdapter SDA = new SqlDataAdapter();
@@ -127,11 +181,33 @@ namespace BaiTapLon2
 
             dgvDSTaiKhoanDangChoi.DataSource = table;
         }
+        
+        void capNhatThoiGian(string taiKhoan, string gioChoi, int soTien)
+        {
+            try
+            {
+                SqlCommand capNhat = ketnoi.CreateCommand();
+                capNhat.CommandText = "UPDATE taikhoan SET SoGioChoi = @SoGioChoi, SoTien = @SoTien WHERE Ten_tk = @Ten_tk";
+                capNhat.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
+                capNhat.Parameters.Add("@SoTien", SqlDbType.Float);
+                capNhat.Parameters.Add("@Ten_tk", SqlDbType.VarChar);
+
+                capNhat.Parameters["@SoGioChoi"].Value = gioChoi;
+                capNhat.Parameters["@SoTien"].Value = soTien;
+                capNhat.Parameters["@Ten_tk"].Value = taiKhoan;
+
+                capNhat.ExecuteNonQuery();
+                KiemTraCacMayDangChoi();
+            } catch (Exception err)
+            {
+                HienThiThongBao(err.Message, 3);
+            }
+        }
 
         private void ketnoiDSTaiKhoan()
         {
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản',MatKhau as 'Mật khẩu' From TaiKhoan";
+            cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản', SoGioChoi AS 'So gio choi' From TaiKhoan";
             SqlDataAdapter SDA = new SqlDataAdapter();
             SDA.SelectCommand = cmd;
             DataTable table = new DataTable();
@@ -150,8 +226,30 @@ namespace BaiTapLon2
         {
             try
             {
+                string ten_tk = tbTaiKhoan.Text;
+                string matKhau = tbMatKhau.Text;
+                int tienNap = 0;
+                string soGioChoi = "00:00:00";
+
                 SqlCommand cmd = ketnoi.CreateCommand();
-                cmd.CommandText = "Insert into TaiKhoan values('" + tbTaiKhoan.Text + "','" + tbMatKhau.Text + "')";
+                cmd.CommandText = "INSERT INTO Taikhoan (Ten_tk, MatKhau, SoTien, SoGioChoi) VALUES (@Ten_tk, @MatKhau, @SoTien, @SoGioChoi);";
+                cmd.Parameters.Add("@Ten_tk", SqlDbType.VarChar);
+                cmd.Parameters.Add("@MatKhau", SqlDbType.VarChar);
+                cmd.Parameters.Add("@SoTien", SqlDbType.Float);
+                cmd.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
+
+                cmd.Parameters["@Ten_tk"].Value = ten_tk;
+                cmd.Parameters["@MatKhau"].Value = matKhau;
+                cmd.Parameters["@SoTien"].Value = tienNap;
+                cmd.Parameters["@SoGioChoi"].Value = soGioChoi;
+
+                ThongTinTaiKhoan tk = new ThongTinTaiKhoan()
+                {
+                    gioChoi = soGioChoi,
+                    tienNap = tienNap
+                };
+                DSThongTinTaiKhoan[ten_tk] = tk;
+
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 ketnoiDSTaiKhoan();
@@ -176,17 +274,7 @@ namespace BaiTapLon2
                 dgvDSTaiKhoan.DataSource = table;
             }
         }
-        List<string> SuDung()
-        {
-            List<String> QuanLyTaiKhoan = new List<String>();
-            SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "SELECT Ten_tk FROM TaiKhoan";
-            using (SqlDataReader sdr = cmd.ExecuteReader())
-            while (sdr.Read())
-                QuanLyTaiKhoan.Add(sdr[0].ToString());
 
-            return QuanLyTaiKhoan;
-        }
 
         /* Tab quản lý máy */
 
@@ -197,6 +285,27 @@ namespace BaiTapLon2
             int giay = ((seconds % 3600) % 60);
 
             return $"{gio}:{phut}:{giay}";
+        }
+
+        int gioChoiConLai(string soMay, string gioChoi)
+        {
+            int giayGioChoi = Convert.ToInt32(gioChoi.Split(':')[2]);
+            int phutGioChoi = Convert.ToInt32(gioChoi.Split(':')[1]);
+            int gioDeChoi = Convert.ToInt32(gioChoi.Split(':')[0]);
+
+            int giayBatDauChoi = Convert.ToInt32(DSThongTinNguoiChoi[soMay].gioBatDauChoi.Split(':')[2]);
+            int phutBatDauChoi = Convert.ToInt32(DSThongTinNguoiChoi[soMay].gioBatDauChoi.Split(':')[1]);
+            int gioBatDauCHoi = Convert.ToInt32(DSThongTinNguoiChoi[soMay].gioBatDauChoi.Split(':')[0]);
+
+            string thoiGianHienTai = DateTime.Now.ToString("HH:mm:ss");
+            int giayHienTai = Convert.ToInt32(thoiGianHienTai.Split(':')[2]);
+            int phutHienTai = Convert.ToInt32(thoiGianHienTai.Split(':')[1]);
+            int gioHienTai = Convert.ToInt32(thoiGianHienTai.Split(':')[0]);
+
+            int t = (giayHienTai + phutHienTai * 60 + gioHienTai * 3600) - (giayBatDauChoi + phutBatDauChoi * 60 + gioBatDauCHoi * 3600);
+            int gioConLai = (giayGioChoi + phutGioChoi * 60 + gioDeChoi * 3600) - t;
+
+            return gioConLai;
         }
 
         void XoaTextBoxTabQlyMay()
@@ -210,26 +319,29 @@ namespace BaiTapLon2
         {
             try
             {
-                string taiKhoan = "";
-                string gioChoi = "";
-                string tienNap = "";
+                string soMay = btn.ButtonText;
+                string taiKhoan = DSThongTinNguoiChoi[soMay].taiKhoan;
+                string gioChoi = DSThongTinNguoiChoi[soMay].gioChoi;
+                int tienNap = DSThongTinNguoiChoi[soMay].tienNap;
 
-                SqlCommand cmd = ketnoi.CreateCommand();
-                cmd.CommandText = "SELECT Taikhoan.Ten_tk, SoTien, SoGioChoi FROM May, Taikhoan WHERE Taikhoan.Ten_tk = May.Ten_tk and SoMay = @SoMay;";
-                cmd.Parameters.Add("@SoMay", SqlDbType.Int);
-                cmd.Parameters["@SoMay"].Value = btn.ButtonText;
+                int gioDaChoi = gioChoiConLai(soMay, gioChoi);
+                int soTienConLai = 0;
+                
+                if (Convert.ToInt32(btn.ButtonText) <= 25)
+                {
+                    soTienConLai = Convert.ToInt32(tienTrenGiayPhongThuong * (gioDaChoi * 1.0));
+                    tbNapTien.Text = soTienConLai.ToString();
+                }
+                else
+                {
+                    soTienConLai = Convert.ToInt32(tienTrenGiayPhongThuong * (gioDaChoi * 1.0));
+                    tbNapTien.Text = soTienConLai.ToString();
+                }
 
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                    while (reader.Read())
-                    {
-                        taiKhoan = reader[0].ToString();
-                        tienNap = reader[1].ToString();
-                        gioChoi = reader[2].ToString();
-                    }
-
+                DSThongTinNguoiChoi[soMay].gioChoi = dinhDangGio(gioDaChoi);
                 tbTKSuDung.Text = taiKhoan;
-                tbNapTien.Text = tienNap;
-                tbSoGioChoi.Text = gioChoi;
+                tbSoGioChoi.Text = dinhDangGio(gioDaChoi);
+
                 if (nutDangHoatDong == null)
                 {
                     nutTruocKhiHoatDong = btn;
@@ -273,12 +385,22 @@ namespace BaiTapLon2
             }
         }
 
+        void KiemTraThoiGianCacMayDangChoi()
+        {
+            foreach (var info in DSThongTinNguoiChoi)
+            {
+                string a = info.Value.gioBatDauChoi;
+            }
+        }
+
         void HienThiCacMayDangChoi(BunifuThinButton2 btn)
         {
-            btn.IdleFillColor = mauNenKhiHoatDong;
-            btn.IdleForecolor = mauChuKhiHoatDong;
-            btn.IdleLineColor = mauVienKhiHoatDong;
-            DSMayDangChoi.Add(btn);
+            foreach (var thongTin in DSThongTinNguoiChoi)
+            {
+                thongTin.Value.mayDangChoi.IdleFillColor = mauNenKhiHoatDong;
+                thongTin.Value.mayDangChoi.IdleForecolor = mauChuKhiHoatDong;
+                thongTin.Value.mayDangChoi.IdleLineColor = mauVienKhiHoatDong;
+            }
         }
         
             /**** Xử lý ngoại lệ ****/
@@ -315,9 +437,11 @@ namespace BaiTapLon2
             {
                 KetNoiCSDL(duongDan);
                 XoaTextBoxTabQlyMay();
+                KetNoiDanhSachTaiKhoanHienCo();
                 KiemTraCacMayDangChoi();
+                KiemTraThoiGianCacMayDangChoi();
 
-                start = new ThreadStart(CallThread);
+               start = new ThreadStart(CallThread);
                 childThread = new Thread(start);
                 childThread.Start();
             }
@@ -329,6 +453,7 @@ namespace BaiTapLon2
 
         private void QlyQuanNet_FormClosed(object sender, FormClosedEventArgs e)
         {
+            KiemTraThoiGianCacMayDangChoi();
             Application.Exit();
             childThread.Abort();
         }
@@ -338,8 +463,10 @@ namespace BaiTapLon2
             try
             {
                 BunifuThinButton2 btn = (BunifuThinButton2)sender;
-                foreach (BunifuThinButton2 b in DSMayDangChoi)
-                    if (b.ButtonText == btn.ButtonText)
+
+                foreach (var b in DSThongTinNguoiChoi)
+                {
+                    if (b.Key == btn.ButtonText)
                     {
                         if (nutTruocKhiAn != null)
                         {
@@ -347,10 +474,10 @@ namespace BaiTapLon2
                             nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
                             nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
                         }
-                        
                         hienThiThongTinMayDangChoi(btn);
                         return;
                     }
+                }
                 if (nutDangHoatDong != null)
                 {
                     nutDangHoatDong.IdleFillColor = mauNenKhiHoatDong;
@@ -410,7 +537,11 @@ namespace BaiTapLon2
 
         private void tbNapTien_TextChanged(object sender, EventArgs e)
         {
-            tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * Convert.ToInt32(tbNapTien.Text)));
+            try
+            {
+                if (tbNapTien.Text == "") return;
+                tbSoGioChoi.Text = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * Convert.ToInt32(tbNapTien.Text)));
+            }catch(Exception) { }
         }
 
         private void bDatMay_Click(object sender, EventArgs e)
@@ -426,7 +557,10 @@ namespace BaiTapLon2
                 string taiKhoan = tbTKSuDung.Text;
                 string gioChoi = dinhDangGio(Convert.ToInt32(soGioChoiPhongThuong * soTienNap));
 
-                if (soTienNap < 5000)
+                bool c = true;
+                foreach (var tk in DSThongTinTaiKhoan)
+                    if (tk.Key == taiKhoan && Convert.ToInt32(tk.Value.tienNap) != 0) c = false;
+                if (c && soTienNap < 5000)
                 {
                     HienThiThongBao("Số tiền nạp quá ít!", 0);
                     return;
@@ -443,23 +577,32 @@ namespace BaiTapLon2
                 }
 
                 string soMay = nutHienTai.ButtonText;
-                SqlCommand cmd = ketnoi.CreateCommand();
-                cmd.CommandText = "INSERT INTO MAY (SoMay, Ten_tk, SoTien, SoGioChoi) VALUES (@Somay, @TenTK, @Sotien, @SoGioChoi)";
+                SqlCommand cmdMay = ketnoi.CreateCommand();
+                
+                cmdMay.CommandText = "INSERT INTO May (SoMay, Ten_tk, GioBatDauChoi) VALUES (@Somay, @TenTK, @GioBatDauChoi)";
 
-                cmd.Parameters.Add("@Somay", SqlDbType.Int);
-                cmd.Parameters.Add("@TenTK", SqlDbType.VarChar);
-                cmd.Parameters.Add("@Sotien", SqlDbType.Float);
-                cmd.Parameters.Add("@SoGioChoi", SqlDbType.VarChar);
+                cmdMay.Parameters.Add("@Somay", SqlDbType.Int);
+                cmdMay.Parameters.Add("GioBatDauChoi", SqlDbType.Time);
+                cmdMay.Parameters.Add("@TenTK", SqlDbType.VarChar);
 
-                cmd.Parameters["@Somay"].Value = soMay;
-                cmd.Parameters["@TenTK"].Value = taiKhoan;
-                cmd.Parameters["@SoTien"].Value = soTienNap;
-                cmd.Parameters["@SoGioChoi"].Value = gioChoi;
+                cmdMay.Parameters["@Somay"].Value = soMay;
+                cmdMay.Parameters["GioBatDauChoi"].Value = DateTime.Now.ToString("HH:mm:ss");
+                cmdMay.Parameters["@TenTK"].Value = taiKhoan;
 
-                TaiKhoanDangChoi[Convert.ToInt32(soMay)] = taiKhoan;
+                ThongTinNguoiChoi thongTin = new ThongTinNguoiChoi()
+                {
+                    taiKhoan = taiKhoan,
+                    tienNap = soTienNap,
+                    gioChoi = gioChoi,
+                    mayDangChoi = nutHienTai,
+                    gioBatDauChoi = DateTime.Now.ToString("HH:mm:ss")
+                };
+
+                DSThongTinNguoiChoi[soMay] = thongTin;
+
                 nutTruocKhiAn = null;
+                cmdMay.ExecuteNonQuery();
 
-                cmd.ExecuteNonQuery();
                 KiemTraCacMayDangChoi();
                 XoaTextBoxTabQlyMay();
                 HienThiCacMayDangChoi(nutHienTai);
@@ -475,6 +618,7 @@ namespace BaiTapLon2
             {
                 if (!check) return;
                 string soMay = nutHienTai.ButtonText;
+                double soTienTrenThoiGian = tienTrenGiayPhongThuong;
 
                 SqlCommand cmd = ketnoi.CreateCommand();
                 cmd.CommandText = "DELETE FROM May WHERE SoMay = @SoMay;";
@@ -483,13 +627,24 @@ namespace BaiTapLon2
 
                 cmd.ExecuteNonQuery();
 
-                nutHienTai.IdleFillColor = mauNenMacDinh;
-                nutHienTai.IdleForecolor = mauChuMacDinh;
-                nutHienTai.IdleLineColor = mauVienMacDinh;
-                
-                DSMayDangChoi = DSMayDangChoi.Where(el => el.ButtonText != nutHienTai.ButtonText).ToList();
-                TaiKhoanDangChoi[Convert.ToInt32(nutHienTai.ButtonText)] = "";
+                DSThongTinNguoiChoi[soMay].mayDangChoi.IdleFillColor = mauNenMacDinh;
+                DSThongTinNguoiChoi[soMay].mayDangChoi.IdleForecolor = mauChuMacDinh;
+                DSThongTinNguoiChoi[soMay].mayDangChoi.IdleLineColor = mauVienMacDinh;
 
+                if (Convert.ToInt32(nutHienTai.ButtonText) > 25)
+                    soTienTrenThoiGian = tienTrenGiayPhongVip;
+
+                string taiKhoan = DSThongTinNguoiChoi[soMay].taiKhoan;
+                string gioChoi = DSThongTinNguoiChoi[soMay].gioChoi;
+                int giayGioChoi = Convert.ToInt32(gioChoi.Split(':')[2]);
+                int phutGioChoi = Convert.ToInt32(gioChoi.Split(':')[1]);
+                int gioDaChoi = Convert.ToInt32(gioChoi.Split(':')[0]);
+
+                int soTien = Convert.ToInt32(soTienTrenThoiGian * ((giayGioChoi + phutGioChoi * 50 + gioDaChoi * 3600) * 1.0));
+
+                capNhatThoiGian(taiKhoan, dinhDangGio(gioChoiConLai(soMay, gioChoi)), soTien);
+
+                DSThongTinNguoiChoi.Remove(soMay);
                 nutHienTai = null;
                 nutTruocKhiAn = null;
                 nutDangHoatDong = null;
@@ -498,6 +653,8 @@ namespace BaiTapLon2
 
                 KiemTraCacMayDangChoi();
                 XoaTextBoxTabQlyMay();
+                KetNoiDanhSachTaiKhoanHienCo();
+                ketnoiDSTaiKhoan();
             }
             catch (Exception err)
             {
@@ -582,10 +739,14 @@ namespace BaiTapLon2
         }
         private void bSuDung_Click(object sender, EventArgs e)
         {
-            List<string> TaiKhoan = SuDung();
-            if (TaiKhoan.Contains(tbTimKiem.Text) && TaiKhoanDangChoi.Contains(tbTimKiem.Text) == false)
+            foreach (var thongTin in DSThongTinNguoiChoi)
+                    if (tbTimKiem.Text == thongTin.Value.taiKhoan) return;
+
+            if (DSThongTinTaiKhoan.ContainsKey(tbTimKiem.Text))
             {
                 tbTKSuDung.Text = tbTimKiem.Text;
+                tbNapTien.Text = DSThongTinTaiKhoan[tbTimKiem.Text].tienNap.ToString();
+                tbSoGioChoi.Text = DSThongTinTaiKhoan[tbTimKiem.Text].gioChoi;
                 tbTimKiem.Text = "";
             }
         }
