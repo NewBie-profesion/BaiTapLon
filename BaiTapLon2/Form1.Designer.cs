@@ -130,18 +130,11 @@ namespace BaiTapLon2
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pnDangNhapNgDung = new System.Windows.Forms.Panel();
             this.pnGiaoDienNgDung = new System.Windows.Forms.Panel();
             this.pnHienThiNgDung = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbGiayDaChoiDuoc = new System.Windows.Forms.Label();
-            this.lbPhutDaChoiDuoc = new System.Windows.Forms.Label();
-            this.lbGioDaChoiDuoc = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbGiayChoiND = new System.Windows.Forms.Label();
-            this.lbPhutChoiND = new System.Windows.Forms.Label();
-            this.lbGioChoiND = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbThoiGianChoiDuoc = new System.Windows.Forms.Label();
+            this.lbTongThoiGian = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbSoMayNgDung = new System.Windows.Forms.TextBox();
@@ -157,8 +150,7 @@ namespace BaiTapLon2
             this.bunifuImageButton11 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pnDangNhapNgDung = new System.Windows.Forms.Panel();
-            this.tbRomdomSoMay = new System.Windows.Forms.TextBox();
+            this.tbRandomSoMay = new System.Windows.Forms.TextBox();
             this.lbSoMayNgDung = new System.Windows.Forms.Label();
             this.btDangNhapNgDung = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -199,6 +191,7 @@ namespace BaiTapLon2
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.pnDangNhapNgDung.SuspendLayout();
             this.pnGiaoDienNgDung.SuspendLayout();
             this.pnHienThiNgDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -208,7 +201,6 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            this.pnDangNhapNgDung.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2353,6 +2345,24 @@ namespace BaiTapLon2
             this.tabPage4.Text = "Người Dùng Sử Dụng Tài Khoản";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // pnDangNhapNgDung
+            // 
+            this.pnDangNhapNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pnDangNhapNgDung.Controls.Add(this.pnGiaoDienNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.tbRandomSoMay);
+            this.pnDangNhapNgDung.Controls.Add(this.lbSoMayNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.btDangNhapNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.panel11);
+            this.pnDangNhapNgDung.Controls.Add(this.panel12);
+            this.pnDangNhapNgDung.Controls.Add(this.lbKiemTraDnNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.tbTaiKhoanNgDung);
+            this.pnDangNhapNgDung.Controls.Add(this.tbMatKhauNgDung);
+            this.pnDangNhapNgDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnDangNhapNgDung.Location = new System.Drawing.Point(3, 3);
+            this.pnDangNhapNgDung.Name = "pnDangNhapNgDung";
+            this.pnDangNhapNgDung.Size = new System.Drawing.Size(1073, 521);
+            this.pnDangNhapNgDung.TabIndex = 0;
+            // 
             // pnGiaoDienNgDung
             // 
             this.pnGiaoDienNgDung.BackgroundImage = global::BaiTapLon2.Properties.Resources.background;
@@ -2362,8 +2372,9 @@ namespace BaiTapLon2
             this.pnGiaoDienNgDung.Controls.Add(this.panel8);
             this.pnGiaoDienNgDung.Controls.Add(this.bunifuImageButton5);
             this.pnGiaoDienNgDung.Controls.Add(this.bunifuImageButton2);
+            this.pnGiaoDienNgDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnGiaoDienNgDung.ForeColor = System.Drawing.Color.Black;
-            this.pnGiaoDienNgDung.Location = new System.Drawing.Point(49, 58);
+            this.pnGiaoDienNgDung.Location = new System.Drawing.Point(0, 0);
             this.pnGiaoDienNgDung.Name = "pnGiaoDienNgDung";
             this.pnGiaoDienNgDung.Size = new System.Drawing.Size(1073, 521);
             this.pnGiaoDienNgDung.TabIndex = 2;
@@ -2373,16 +2384,8 @@ namespace BaiTapLon2
             // 
             this.pnHienThiNgDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnHienThiNgDung.BackColor = System.Drawing.Color.White;
-            this.pnHienThiNgDung.Controls.Add(this.label7);
-            this.pnHienThiNgDung.Controls.Add(this.lbGiayDaChoiDuoc);
-            this.pnHienThiNgDung.Controls.Add(this.lbPhutDaChoiDuoc);
-            this.pnHienThiNgDung.Controls.Add(this.lbGioDaChoiDuoc);
-            this.pnHienThiNgDung.Controls.Add(this.label11);
-            this.pnHienThiNgDung.Controls.Add(this.label6);
-            this.pnHienThiNgDung.Controls.Add(this.lbGiayChoiND);
-            this.pnHienThiNgDung.Controls.Add(this.lbPhutChoiND);
-            this.pnHienThiNgDung.Controls.Add(this.lbGioChoiND);
-            this.pnHienThiNgDung.Controls.Add(this.label2);
+            this.pnHienThiNgDung.Controls.Add(this.lbThoiGianChoiDuoc);
+            this.pnHienThiNgDung.Controls.Add(this.lbTongThoiGian);
             this.pnHienThiNgDung.Controls.Add(this.label3);
             this.pnHienThiNgDung.Controls.Add(this.label1);
             this.pnHienThiNgDung.Controls.Add(this.tbSoMayNgDung);
@@ -2390,101 +2393,29 @@ namespace BaiTapLon2
             this.pnHienThiNgDung.Controls.Add(this.btDangXuatNgDung);
             this.pnHienThiNgDung.Controls.Add(this.lbTenTKNgDung);
             this.pnHienThiNgDung.Controls.Add(this.lbTenNgDung);
-            this.pnHienThiNgDung.Location = new System.Drawing.Point(880, 0);
+            this.pnHienThiNgDung.Location = new System.Drawing.Point(886, 3);
             this.pnHienThiNgDung.Name = "pnHienThiNgDung";
-            this.pnHienThiNgDung.Size = new System.Drawing.Size(193, 214);
+            this.pnHienThiNgDung.Size = new System.Drawing.Size(184, 214);
             this.pnHienThiNgDung.TabIndex = 2;
             this.pnHienThiNgDung.Visible = false;
             // 
-            // label7
+            // lbThoiGianChoiDuoc
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(112, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(15, 18);
-            this.label7.TabIndex = 7;
-            this.label7.Text = ":";
+            this.lbThoiGianChoiDuoc.AutoSize = true;
+            this.lbThoiGianChoiDuoc.Location = new System.Drawing.Point(35, 142);
+            this.lbThoiGianChoiDuoc.Name = "lbThoiGianChoiDuoc";
+            this.lbThoiGianChoiDuoc.Size = new System.Drawing.Size(82, 18);
+            this.lbThoiGianChoiDuoc.TabIndex = 13;
+            this.lbThoiGianChoiDuoc.Text = "00:00:00";
             // 
-            // lbGiayDaChoiDuoc
+            // lbTongThoiGian
             // 
-            this.lbGiayDaChoiDuoc.AutoSize = true;
-            this.lbGiayDaChoiDuoc.Location = new System.Drawing.Point(123, 141);
-            this.lbGiayDaChoiDuoc.Name = "lbGiayDaChoiDuoc";
-            this.lbGiayDaChoiDuoc.Size = new System.Drawing.Size(28, 18);
-            this.lbGiayDaChoiDuoc.TabIndex = 8;
-            this.lbGiayDaChoiDuoc.Text = "00";
-            // 
-            // lbPhutDaChoiDuoc
-            // 
-            this.lbPhutDaChoiDuoc.AutoSize = true;
-            this.lbPhutDaChoiDuoc.Location = new System.Drawing.Point(88, 141);
-            this.lbPhutDaChoiDuoc.Name = "lbPhutDaChoiDuoc";
-            this.lbPhutDaChoiDuoc.Size = new System.Drawing.Size(28, 18);
-            this.lbPhutDaChoiDuoc.TabIndex = 9;
-            this.lbPhutDaChoiDuoc.Text = "00";
-            // 
-            // lbGioDaChoiDuoc
-            // 
-            this.lbGioDaChoiDuoc.AutoSize = true;
-            this.lbGioDaChoiDuoc.Location = new System.Drawing.Point(48, 141);
-            this.lbGioDaChoiDuoc.Name = "lbGioDaChoiDuoc";
-            this.lbGioDaChoiDuoc.Size = new System.Drawing.Size(28, 18);
-            this.lbGioDaChoiDuoc.TabIndex = 10;
-            this.lbGioDaChoiDuoc.Text = "00";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(74, 141);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(15, 18);
-            this.label11.TabIndex = 11;
-            this.label11.Text = ":";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(112, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(15, 18);
-            this.label6.TabIndex = 6;
-            this.label6.Text = ":";
-            // 
-            // lbGiayChoiND
-            // 
-            this.lbGiayChoiND.AutoSize = true;
-            this.lbGiayChoiND.Location = new System.Drawing.Point(123, 88);
-            this.lbGiayChoiND.Name = "lbGiayChoiND";
-            this.lbGiayChoiND.Size = new System.Drawing.Size(28, 18);
-            this.lbGiayChoiND.TabIndex = 6;
-            this.lbGiayChoiND.Text = "00";
-            // 
-            // lbPhutChoiND
-            // 
-            this.lbPhutChoiND.AutoSize = true;
-            this.lbPhutChoiND.Location = new System.Drawing.Point(88, 88);
-            this.lbPhutChoiND.Name = "lbPhutChoiND";
-            this.lbPhutChoiND.Size = new System.Drawing.Size(28, 18);
-            this.lbPhutChoiND.TabIndex = 6;
-            this.lbPhutChoiND.Text = "00";
-            // 
-            // lbGioChoiND
-            // 
-            this.lbGioChoiND.AutoSize = true;
-            this.lbGioChoiND.Location = new System.Drawing.Point(48, 88);
-            this.lbGioChoiND.Name = "lbGioChoiND";
-            this.lbGioChoiND.Size = new System.Drawing.Size(28, 18);
-            this.lbGioChoiND.TabIndex = 6;
-            this.lbGioChoiND.Text = "00";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = ":";
+            this.lbTongThoiGian.AutoSize = true;
+            this.lbTongThoiGian.Location = new System.Drawing.Point(31, 83);
+            this.lbTongThoiGian.Name = "lbTongThoiGian";
+            this.lbTongThoiGian.Size = new System.Drawing.Size(82, 18);
+            this.lbTongThoiGian.TabIndex = 12;
+            this.lbTongThoiGian.Text = "00:00:00";
             // 
             // label3
             // 
@@ -2602,9 +2533,9 @@ namespace BaiTapLon2
             this.panel8.Controls.Add(this.btBatHienThiNgDung);
             this.panel8.Controls.Add(this.bunifuImageButton12);
             this.panel8.Controls.Add(this.bunifuImageButton11);
-            this.panel8.Location = new System.Drawing.Point(-2, 487);
+            this.panel8.Location = new System.Drawing.Point(0, 484);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1076, 37);
+            this.panel8.Size = new System.Drawing.Size(1073, 37);
             this.panel8.TabIndex = 1;
             this.panel8.Visible = false;
             // 
@@ -2700,34 +2631,17 @@ namespace BaiTapLon2
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             // 
-            // pnDangNhapNgDung
+            // tbRandomSoMay
             // 
-            this.pnDangNhapNgDung.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pnDangNhapNgDung.Controls.Add(this.pnGiaoDienNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.tbRomdomSoMay);
-            this.pnDangNhapNgDung.Controls.Add(this.lbSoMayNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.btDangNhapNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.panel11);
-            this.pnDangNhapNgDung.Controls.Add(this.panel12);
-            this.pnDangNhapNgDung.Controls.Add(this.lbKiemTraDnNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.tbTaiKhoanNgDung);
-            this.pnDangNhapNgDung.Controls.Add(this.tbMatKhauNgDung);
-            this.pnDangNhapNgDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDangNhapNgDung.Location = new System.Drawing.Point(3, 3);
-            this.pnDangNhapNgDung.Name = "pnDangNhapNgDung";
-            this.pnDangNhapNgDung.Size = new System.Drawing.Size(1073, 521);
-            this.pnDangNhapNgDung.TabIndex = 0;
-            // 
-            // tbRomdomSoMay
-            // 
-            this.tbRomdomSoMay.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tbRomdomSoMay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRomdomSoMay.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRomdomSoMay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbRomdomSoMay.Location = new System.Drawing.Point(179, 24);
-            this.tbRomdomSoMay.Name = "tbRomdomSoMay";
-            this.tbRomdomSoMay.Size = new System.Drawing.Size(100, 33);
-            this.tbRomdomSoMay.TabIndex = 43;
+            this.tbRandomSoMay.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tbRandomSoMay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRandomSoMay.Enabled = false;
+            this.tbRandomSoMay.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRandomSoMay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.tbRandomSoMay.Location = new System.Drawing.Point(179, 24);
+            this.tbRandomSoMay.Name = "tbRandomSoMay";
+            this.tbRandomSoMay.Size = new System.Drawing.Size(100, 33);
+            this.tbRandomSoMay.TabIndex = 43;
             // 
             // lbSoMayNgDung
             // 
@@ -2849,6 +2763,7 @@ namespace BaiTapLon2
             this.Name = "QlyQuanNet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý quán Net (Lê Thanh Sơn, Phan Tiến Dũng)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QlyQuanNet_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QlyQuanNet_FormClosed);
             this.Load += new System.EventHandler(this.QlyQuanNet_Load);
             this.tabControl1.ResumeLayout(false);
@@ -2889,6 +2804,8 @@ namespace BaiTapLon2
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.pnDangNhapNgDung.ResumeLayout(false);
+            this.pnDangNhapNgDung.PerformLayout();
             this.pnGiaoDienNgDung.ResumeLayout(false);
             this.pnHienThiNgDung.ResumeLayout(false);
             this.pnHienThiNgDung.PerformLayout();
@@ -2900,8 +2817,6 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            this.pnDangNhapNgDung.ResumeLayout(false);
-            this.pnDangNhapNgDung.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3013,7 +2928,7 @@ namespace BaiTapLon2
         private Bunifu.Framework.UI.BunifuImageButton btBatHienThiNgDung;
         private System.Windows.Forms.Label lbSoMayNgDung;
         private System.Windows.Forms.TextBox tbSoMayNgDung;
-        private System.Windows.Forms.TextBox tbRomdomSoMay;
+        private System.Windows.Forms.TextBox tbRandomSoMay;
         private Bunifu.Framework.UI.BunifuThinButton2 btDangNhapNgDung;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
@@ -3021,17 +2936,7 @@ namespace BaiTapLon2
         private System.Windows.Forms.TextBox tbTaiKhoanNgDung;
         private System.Windows.Forms.TextBox tbMatKhauNgDung;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbGiayChoiND;
-        private System.Windows.Forms.Label lbPhutChoiND;
-        private System.Windows.Forms.Label lbGioChoiND;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lbGiayDaChoiDuoc;
-        private System.Windows.Forms.Label lbPhutDaChoiDuoc;
-        private System.Windows.Forms.Label lbGioDaChoiDuoc;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgvDSTaiKhoanDangChoi;
@@ -3046,6 +2951,8 @@ namespace BaiTapLon2
         private System.Windows.Forms.TextBox tbMatKhau;
         private System.Windows.Forms.TextBox tbTaiKhoan;
         private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label lbTongThoiGian;
+        private System.Windows.Forms.Label lbThoiGianChoiDuoc;
     }
 }
 
