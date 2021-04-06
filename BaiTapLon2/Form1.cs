@@ -37,10 +37,6 @@ namespace BaiTapLon2
 
         SqlConnection ketnoi;
 
-        BunifuThinButton2 nutTruocKhiAn = null;
-        BunifuThinButton2 nutHienTai = null;
-        BunifuThinButton2 nutDangHoatDong = null;
-        BunifuThinButton2 nutTruocKhiHoatDong = null;
         Color mauNenMacDinh = Color.Aquamarine;
         Color mauChuMacDinh = Color.Black;
         Color mauVienMacDinh = Color.Gray;
@@ -64,12 +60,10 @@ namespace BaiTapLon2
         int randomSoMay = 1;
         int index;
         bool flag = true;
-        bool check = false;
         float soTienNap = 0;
         string LuuTenTaiKhoan;
         int s;
         string giuTenDeThaoTac;
-        double SoTienDaDungDeChoi = 0;
 
         /* Các hàm load */
         void KiemTraCacMayDangChoi()
@@ -131,6 +125,15 @@ namespace BaiTapLon2
         {
             SqlCommand cmd = ketnoi.CreateCommand();
             cmd.CommandText = "SELECT Ten_tk as 'Tên Tài Khoản',SoTien as 'Tổng Tiền' From TaiKhoan";
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            while (reader.Read())
+            {
+                foreach (var thongTin in DSThongTinNguoiChoi)
+                    if (thongTin.Value.tenTk == reader[0].ToString())
+                        thongTin.Value.soTien = Convert.ToDouble(reader[1]);
+            }
+
             SqlDataAdapter SDA = new SqlDataAdapter();
             SDA.SelectCommand = cmd;
             DataTable table = new DataTable();
@@ -232,6 +235,12 @@ namespace BaiTapLon2
             cmdInsert.ExecuteNonQuery();
         }
 
+        void loadChuotPhai()
+        {
+            foreach (var thongTin in DSThongTinNguoiChoi)
+                thongTin.Value.mayDangChoi.ContextMenuStrip = cms;
+        }
+
         BunifuThinButton2 layPhongChoi(string soMay)
         {
             foreach (BunifuThinButton2 b in tlpTang1.Controls)
@@ -274,54 +283,6 @@ namespace BaiTapLon2
             int giay = ((seconds % 3600) % 60);
 
             return $"{gio}:{phut}:{giay}";
-        }
-
-        void hienThiThongTinMayDangChoi(BunifuThinButton2 btn)
-        {
-            try
-            {
-                if (nutDangHoatDong == null)
-                {
-                    nutTruocKhiHoatDong = btn;
-                    btn.IdleFillColor = Color.Orange;
-                    btn.IdleForecolor = Color.Black;
-                    check = true;
-                    nutDangHoatDong = btn;
-                    nutHienTai = btn;
-                }
-                else
-                {
-                    if (nutTruocKhiHoatDong.ButtonText.ToString() != btn.ButtonText.ToString())
-                    {
-                        nutTruocKhiHoatDong.IdleFillColor = mauNenKhiHoatDong;
-                        nutTruocKhiHoatDong.IdleForecolor = mauChuKhiHoatDong;
-                        nutTruocKhiHoatDong.IdleLineColor = mauVienKhiHoatDong;
-
-                        nutTruocKhiHoatDong = btn;
-
-                        btn.IdleFillColor = Color.Orange;
-                        btn.IdleForecolor = Color.Black;
-
-                        nutDangHoatDong = btn;
-                        nutHienTai = btn;
-                    }
-                    else
-                    {
-                        nutDangHoatDong.IdleFillColor = mauNenKhiHoatDong;
-                        nutDangHoatDong.IdleForecolor = mauChuKhiHoatDong;
-                        nutDangHoatDong.IdleLineColor = mauVienKhiHoatDong;
-                        nutDangHoatDong = null;
-                        check = false;
-                        nutHienTai = null;
-                        nutTruocKhiHoatDong = null;
-                    }
-                }
-                nutTruocKhiAn = null;
-            }
-            catch (Exception err)
-            {
-                HienThiThongBao(err.Message, 3);
-            }
         }
 
         int tongGiayChoiConLai(string gioChoi)
@@ -376,7 +337,8 @@ namespace BaiTapLon2
                 KetNoiCSDL(duongDan);
                 KiemTraCacMayDangChoi();
                 capNhatDanhSachThongKe();
-                
+                loadChuotPhai();
+
                 if (flag == false)
                     ketnoiDSTaiKhoan();
 
@@ -392,75 +354,7 @@ namespace BaiTapLon2
         {
             Application.Exit();
         }
-        private void buttons_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                BunifuThinButton2 btn = (BunifuThinButton2)sender;
-                foreach (BunifuThinButton2 b in DSMayDangChoi)
-                    if (b.ButtonText == btn.ButtonText)
-                    {
-                        if (nutTruocKhiAn != null)
-                        {
-                            nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
-                            nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
-                            nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
-                        }
-
-                        hienThiThongTinMayDangChoi(btn);
-                        return;
-                    }
-                if (nutDangHoatDong != null)
-                {
-                    nutDangHoatDong.IdleFillColor = mauNenKhiHoatDong;
-                    nutDangHoatDong.IdleForecolor = mauChuKhiHoatDong;
-                    nutDangHoatDong.IdleLineColor = mauVienKhiHoatDong;
-                    nutDangHoatDong = null;
-                    nutTruocKhiAn = null;
-                    check = false;
-                }
-                if (nutTruocKhiAn != null)
-                {
-                    nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
-                    nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
-                    nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
-
-                }
-                else
-                {
-                    nutTruocKhiAn = btn;
-                    btn.IdleFillColor = mauNenKhiDiChuot;
-                    btn.IdleForecolor = mauChuKhiDiChuot;
-                    btn.IdleLineColor = mauVienKhiDiChuot;
-                    nutHienTai = btn;
-                    return;
-                }
-                if (nutTruocKhiAn.ButtonText.ToString() != btn.ButtonText.ToString())
-                {
-                    nutTruocKhiAn = btn;
-                    btn.IdleFillColor = mauNenKhiDiChuot;
-                    btn.IdleForecolor = mauChuKhiDiChuot;
-                    btn.IdleLineColor = mauVienKhiDiChuot;
-
-                }
-                else
-                {
-                    nutTruocKhiAn.IdleFillColor = mauNenMacDinh;
-                    nutTruocKhiAn.IdleForecolor = mauChuMacDinh;
-                    nutTruocKhiAn.IdleLineColor = mauVienMacDinh;
-                    nutTruocKhiAn = null;
-                    nutHienTai = null;
-                    return;
-                }
-                nutHienTai = btn;
-                int soTienNap = Convert.ToInt32(tbNapTien.Text);
-
-            }
-            catch (Exception err)
-            {
-                HienThiThongBao(err.Message, 3);
-            }
-        }
+        private void buttons_Click(object sender, EventArgs e) {}
 
         /* tab quản lý tài khoản  */
         private void bDangKi_Click(object sender, EventArgs e)
@@ -681,12 +575,12 @@ namespace BaiTapLon2
                             int tongThoiGian = Convert.ToInt32(tongGiayChoiConLai(lbThoiGianChoiDuoc.Text) + SoTienDaNap);
                             lbTongThoiGian.Text = dinhDangGio(tongThoiGian);
                             s = tongThoiGian;
-
+                            ketnoiDSTaiKhoan();
                             tbNapTien.Text = "";
                             return;
                         }
                     }
-
+                    ketnoiDSTaiKhoan();
                 }
                 catch (Exception){
                     HienThiThongBao("Kiểm Tra Lại Thông Tin Nhập", 3);
@@ -728,9 +622,11 @@ namespace BaiTapLon2
                     DSThongTinNguoiChoi[randomSoMay.ToString()] = thongTin;
 
                     tbSoMayNgDung.Text = "Máy số: " + randomSoMay.ToString();
+                    
                     themPhongChoiVaoDB(randomSoMay, TK, DSThongTinNguoiChoi[randomSoMay.ToString()].thoiGianBD);
                     HienThiCacMayDangChoi(DSThongTinNguoiChoi[randomSoMay.ToString()].mayDangChoi);
                     capNhatDanhSachThongKe();
+                    loadChuotPhai();
 
                     timer1.Start();
                     pnGiaoDienNgDung.Visible = true;
@@ -776,6 +672,11 @@ namespace BaiTapLon2
             KiemTraCacMayDangChoi();
             ketnoiDSTaiKhoan();
             capNhatDanhSachThongKe();
+            loadChuotPhai();
+
+            tbTaiKhoanNgDung.Text = "";
+            tbMatKhauNgDung.Text = "";
+
             tbTaiKhoanNgDung.Focus();
             randomSoMay = random.Next(1, 50);
             tbRandomSoMay.Text = randomSoMay.ToString();
@@ -827,9 +728,9 @@ namespace BaiTapLon2
             if (randomSoMay > 25)
                 tienCuaPhongChoi = soGioChoiPhongVip;
 
-            int gioND = Convert.ToInt32(soTienTrongTK * tienCuaPhongChoi / 3600);
-            int phutND = Convert.ToInt32((soTienTrongTK * tienCuaPhongChoi % 3600)/60);
-            int giayND = Convert.ToInt32((soTienTrongTK * tienCuaPhongChoi % 3600) % 60);
+            int gioND = Convert.ToInt32(Convert.ToInt32(soTienTrongTK * tienCuaPhongChoi) / 3600);
+            int phutND = Convert.ToInt32((Convert.ToInt32(soTienTrongTK * tienCuaPhongChoi) % 3600)/60);
+            int giayND = Convert.ToInt32((Convert.ToInt32(soTienTrongTK * tienCuaPhongChoi) % 3600) % 60);
             int tongThoiGianChoi = gioND * 3600 + phutND * 60 + giayND;
             lbTongThoiGian.Text = dinhDangGio(tongThoiGianChoi);
             s = tongThoiGianChoi;
@@ -861,6 +762,7 @@ namespace BaiTapLon2
                 CapNhatTienSauKhiChoi(DSThongTinNguoiChoi[randomSoMay.ToString()].soTien);
                 capNhatDanhSachThongKe();
                 ketnoiDSTaiKhoan();
+                loadChuotPhai();
 
                 pnDangNhapNgDung.Visible = true;
                 pnGiaoDienNgDung.Visible = false;
@@ -882,6 +784,44 @@ namespace BaiTapLon2
             SqlCommand cmd = ketnoi.CreateCommand();
             cmd.CommandText = "DELETE FROM May;";
             cmd.ExecuteNonQuery();
+        }
+
+        private void tToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnDangNhapNgDung.Visible = true;
+            pnGiaoDienNgDung.Visible = false;
+            panel8.Visible = false;
+            pnHienThiNgDung.Visible = false;
+
+            SqlCommand cmd = ketnoi.CreateCommand();
+            cmd.CommandText = "DELETE FROM May WHERE SoMay = " + randomSoMay;
+
+            timer1.Stop();
+
+            double SoTienDaDungDeChoi =
+                (randomSoMay > 25 ? soTienChoiPhongVip : soTienChoiPhongThuong) * (tongGiayChoiConLai(lbTongThoiGian.Text) - tongGiayChoiConLai(lbThoiGianChoiDuoc.Text));
+
+            CapNhatTienSauKhiChoi(SoTienDaDungDeChoi);
+
+            lbThoiGianChoiDuoc.Text = "00:00:00";
+            cmd.ExecuteNonQuery();
+
+            DSThongTinNguoiChoi[randomSoMay.ToString()].mayDangChoi.IdleFillColor = mauNenMacDinh;
+            DSThongTinNguoiChoi[randomSoMay.ToString()].mayDangChoi.IdleForecolor = mauChuMacDinh;
+            DSThongTinNguoiChoi[randomSoMay.ToString()].mayDangChoi.IdleLineColor = mauVienMacDinh;
+
+            DSThongTinNguoiChoi.Remove(randomSoMay.ToString());
+            KiemTraCacMayDangChoi();
+            ketnoiDSTaiKhoan();
+            capNhatDanhSachThongKe();
+            loadChuotPhai();
+
+            tbTaiKhoanNgDung.Text = "";
+            tbMatKhauNgDung.Text = "";
+
+            tbTaiKhoanNgDung.Focus();
+            randomSoMay = random.Next(1, 50);
+            tbRandomSoMay.Text = randomSoMay.ToString();
         }
     }
 }

@@ -159,6 +159,8 @@ namespace BaiTapLon2
             this.tbTaiKhoanNgDung = new System.Windows.Forms.TextBox();
             this.tbMatKhauNgDung = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -201,6 +203,7 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            this.cms.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2316,7 +2319,7 @@ namespace BaiTapLon2
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.ForeColor = System.Drawing.Color.Black;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1073, 521);
@@ -2748,6 +2751,20 @@ namespace BaiTapLon2
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cms
+            // 
+            this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tToolStripMenuItem});
+            this.cms.Name = "cms";
+            this.cms.Size = new System.Drawing.Size(181, 48);
+            // 
+            // tToolStripMenuItem
+            // 
+            this.tToolStripMenuItem.Name = "tToolStripMenuItem";
+            this.tToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tToolStripMenuItem.Text = "Tắt máy";
+            this.tToolStripMenuItem.Click += new System.EventHandler(this.tToolStripMenuItem_Click);
+            // 
             // QlyQuanNet
             // 
             this.AccessibleName = "";
@@ -2817,6 +2834,7 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            this.cms.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2953,6 +2971,8 @@ namespace BaiTapLon2
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label lbTongThoiGian;
         private System.Windows.Forms.Label lbThoiGianChoiDuoc;
+        private System.Windows.Forms.ContextMenuStrip cms;
+        private System.Windows.Forms.ToolStripMenuItem tToolStripMenuItem;
     }
 }
 
