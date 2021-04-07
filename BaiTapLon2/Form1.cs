@@ -47,8 +47,9 @@ namespace BaiTapLon2
         Color mauChuKhiHoatDong = Color.Black;
         Color mauVienKhiHoatDong = Color.Red;
 
-        Random random = new Random(50);
+        Random random = new Random();
         Dictionary<string, ThongTinNguoiChoi> DSThongTinNguoiChoi = new Dictionary<string, ThongTinNguoiChoi>();
+        Dictionary<string, double> DSTaiKhoan = new Dictionary<string, double>();
         List<BunifuThinButton2> DSMayDangChoi = new List<BunifuThinButton2>();
         List<Dictionary<string, List<string>>> DSThongTinCacMayDangChoi = Enumerable.Repeat(new Dictionary<string, List<string>>() { }, 51).ToList();
         DataTable bangThongKe = new DataTable();
@@ -81,8 +82,8 @@ namespace BaiTapLon2
                 {
                     if (b1.ButtonText == reader[0].ToString()) 
                     {
-                        HienThiCacMayDangChoi(b1);
 
+                        HienThiCacMayDangChoi(b1);
                         ThongTinNguoiChoi thongTin = new ThongTinNguoiChoi()
                         {
                             tenTk = reader[1].ToString(),
@@ -129,6 +130,7 @@ namespace BaiTapLon2
             using (SqlDataReader reader = cmd.ExecuteReader())
             while (reader.Read())
             {
+                if (Convert.ToDouble(reader[1]) > 0) DSTaiKhoan[reader[0].ToString()] = Convert.ToDouble(reader[1]);
                 foreach (var thongTin in DSThongTinNguoiChoi)
                     if (thongTin.Value.tenTk == reader[0].ToString())
                         thongTin.Value.soTien = Convert.ToDouble(reader[1]);
@@ -139,6 +141,28 @@ namespace BaiTapLon2
             DataTable table = new DataTable();
             SDA.Fill(table);
             dgvDSTaiKhoan.DataSource = table;
+        }
+
+        void randomTaiKhoanChoi(Dictionary<string, double> dstk)
+        {
+            SqlCommand cmd = ketnoi.CreateCommand();
+            cmd.CommandText = "INSERT INTO May (SoMay, Ten_tk, GioBD) VALUES (@SoMay, @Ten_tk, @GioBD);";
+            cmd.Parameters.Add("@SoMay", SqlDbType.Int);
+            cmd.Parameters.Add("@Ten_tk", SqlDbType.VarChar);
+            cmd.Parameters.Add("@GioBD", SqlDbType.VarChar);
+            int randomSoTK = random.Next(1, dstk.Count+1);
+            List<bool> temp = Enumerable.Repeat(false, dstk.Count + 1).ToList();
+            for (int i = 0; i < randomSoTK; ++i)
+            {
+                int rd = random.Next(0, dstk.Count);
+                while (temp[rd]) rd = random.Next(0, dstk.Count);
+
+                temp[rd] = true;
+                cmd.Parameters["@SoMay"].Value = random.Next(1, 51);
+                cmd.Parameters["@Ten_tk"].Value = dstk.ElementAt(rd).Key;
+                cmd.Parameters["@GioBD"].Value = DateTime.Now.ToString("HH:mm:ss");
+                cmd.ExecuteNonQuery();
+            }
         }
 
         /**** Phần code các hàm tự xây dựng ****/
@@ -335,14 +359,16 @@ namespace BaiTapLon2
             try
             {
                 KetNoiCSDL(duongDan);
+                ketnoiDSTaiKhoan();
+                randomTaiKhoanChoi(DSTaiKhoan);
                 KiemTraCacMayDangChoi();
                 capNhatDanhSachThongKe();
                 loadChuotPhai();
 
-                if (flag == false)
-                    ketnoiDSTaiKhoan();
-
                 randomSoMay = random.Next(1, 50);
+                while (DSThongTinNguoiChoi.ContainsKey(randomSoMay.ToString()))
+                    randomSoMay = random.Next(1, 50);
+
                 tbRandomSoMay.Text = randomSoMay.ToString();
             }
             catch (Exception err)
@@ -596,6 +622,12 @@ namespace BaiTapLon2
                 string TK = tbTaiKhoanNgDung.Text;
                 string mk = tbMatKhauNgDung.Text;
                 double soTien = LaySoTien(TK);
+                foreach(var thongTin in DSThongTinNguoiChoi)
+                    if (thongTin.Value.tenTk == TK)
+                    {
+                        HienThiThongBao("Tài khoản đang có người sử dụng!", 0);
+                        return;
+                    }
 
                 SqlCommand cmd = ketnoi.CreateCommand();
                 cmd.CommandText = "SELECT count(*) FROM TaiKhoan WHERE Ten_tk = '" +TK+ "' and MatKhau = '" +mk+ "'";
@@ -679,6 +711,9 @@ namespace BaiTapLon2
 
             tbTaiKhoanNgDung.Focus();
             randomSoMay = random.Next(1, 50);
+            while (DSThongTinNguoiChoi.ContainsKey(randomSoMay.ToString()))
+                randomSoMay = random.Next(1, 50);
+
             tbRandomSoMay.Text = randomSoMay.ToString();
         }
 
@@ -788,18 +823,25 @@ namespace BaiTapLon2
 
         private void tToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Control c = cms.SourceControl as Control;
+            BunifuThinButton2 btn = (BunifuThinButton2)c;
+            string soMay = btn.ButtonText;
+
             pnDangNhapNgDung.Visible = true;
             pnGiaoDienNgDung.Visible = false;
             panel8.Visible = false;
             pnHienThiNgDung.Visible = false;
+            randomSoMay = Convert.ToInt32(soMay);
 
             SqlCommand cmd = ketnoi.CreateCommand();
-            cmd.CommandText = "DELETE FROM May WHERE SoMay = " + randomSoMay;
+            cmd.CommandText = "DELETE FROM May WHERE SoMay = " + Convert.ToInt32(soMay);
 
             timer1.Stop();
+            int tongTGConLai = tongGiayChoiConLai(DateTime.Now.ToString("HH:mm:ss")) - tongGiayChoiConLai(DSThongTinNguoiChoi[soMay].thoiGianBD);
+            // double tongThoiGianHienCo = DSThongTinNguoiChoi[soMay].soTien * (randomSoMay > 25 ? soGioChoiPhongVip : soGioChoiPhongThuong);
 
             double SoTienDaDungDeChoi =
-                (randomSoMay > 25 ? soTienChoiPhongVip : soTienChoiPhongThuong) * (tongGiayChoiConLai(lbTongThoiGian.Text) - tongGiayChoiConLai(lbThoiGianChoiDuoc.Text));
+                (randomSoMay > 25 ? soTienChoiPhongVip : soTienChoiPhongThuong) * (tongTGConLai);
 
             CapNhatTienSauKhiChoi(SoTienDaDungDeChoi);
 
@@ -821,6 +863,9 @@ namespace BaiTapLon2
 
             tbTaiKhoanNgDung.Focus();
             randomSoMay = random.Next(1, 50);
+            while(DSThongTinNguoiChoi.ContainsKey(randomSoMay.ToString()))
+                randomSoMay = random.Next(1, 50);
+
             tbRandomSoMay.Text = randomSoMay.ToString();
         }
     }

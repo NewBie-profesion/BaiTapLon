@@ -128,7 +128,6 @@ namespace BaiTapLon2
             this.bunifuThinButton229 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pnDangNhapNgDung = new System.Windows.Forms.Panel();
             this.pnGiaoDienNgDung = new System.Windows.Forms.Panel();
@@ -161,6 +160,8 @@ namespace BaiTapLon2
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.dgvDSTaiKhoanDangChoi = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -191,7 +192,6 @@ namespace BaiTapLon2
             this.tlpTang2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.pnDangNhapNgDung.SuspendLayout();
             this.pnGiaoDienNgDung.SuspendLayout();
@@ -204,6 +204,8 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.cms.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2307,6 +2309,7 @@ namespace BaiTapLon2
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.ForeColor = System.Drawing.Color.Black;
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -2317,25 +2320,15 @@ namespace BaiTapLon2
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.groupBox5.Controls.Add(this.dgvDSTaiKhoanDangChoi);
+            this.groupBox5.Controls.Add(this.panel17);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.ForeColor = System.Drawing.Color.Black;
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1073, 521);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Quản Lý máy đang chơi";
-            // 
-            // dgvDSTaiKhoanDangChoi
-            // 
-            this.dgvDSTaiKhoanDangChoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDSTaiKhoanDangChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSTaiKhoanDangChoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(3, 23);
-            this.dgvDSTaiKhoanDangChoi.Name = "dgvDSTaiKhoanDangChoi";
-            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1067, 495);
-            this.dgvDSTaiKhoanDangChoi.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -2756,7 +2749,7 @@ namespace BaiTapLon2
             this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tToolStripMenuItem});
             this.cms.Name = "cms";
-            this.cms.Size = new System.Drawing.Size(181, 48);
+            this.cms.Size = new System.Drawing.Size(117, 26);
             // 
             // tToolStripMenuItem
             // 
@@ -2764,6 +2757,26 @@ namespace BaiTapLon2
             this.tToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tToolStripMenuItem.Text = "Tắt máy";
             this.tToolStripMenuItem.Click += new System.EventHandler(this.tToolStripMenuItem_Click);
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.dgvDSTaiKhoanDangChoi);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.ForeColor = System.Drawing.Color.Black;
+            this.panel17.Location = new System.Drawing.Point(3, 23);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1067, 495);
+            this.panel17.TabIndex = 0;
+            // 
+            // dgvDSTaiKhoanDangChoi
+            // 
+            this.dgvDSTaiKhoanDangChoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSTaiKhoanDangChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSTaiKhoanDangChoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSTaiKhoanDangChoi.Location = new System.Drawing.Point(0, 0);
+            this.dgvDSTaiKhoanDangChoi.Name = "dgvDSTaiKhoanDangChoi";
+            this.dgvDSTaiKhoanDangChoi.Size = new System.Drawing.Size(1067, 495);
+            this.dgvDSTaiKhoanDangChoi.TabIndex = 1;
             // 
             // QlyQuanNet
             // 
@@ -2819,7 +2832,6 @@ namespace BaiTapLon2
             this.tlpTang2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.pnDangNhapNgDung.ResumeLayout(false);
             this.pnDangNhapNgDung.PerformLayout();
@@ -2835,6 +2847,8 @@ namespace BaiTapLon2
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.cms.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTaiKhoanDangChoi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2957,7 +2971,6 @@ namespace BaiTapLon2
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dgvDSTaiKhoanDangChoi;
         private Bunifu.Framework.UI.BunifuThinButton2 btHuy;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel13;
@@ -2973,6 +2986,8 @@ namespace BaiTapLon2
         private System.Windows.Forms.Label lbThoiGianChoiDuoc;
         private System.Windows.Forms.ContextMenuStrip cms;
         private System.Windows.Forms.ToolStripMenuItem tToolStripMenuItem;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.DataGridView dgvDSTaiKhoanDangChoi;
     }
 }
 
